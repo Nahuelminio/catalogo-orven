@@ -1,0 +1,6 @@
+node_modules/
+.env
+catalogo/.env
+server/.env
+catalogo/dist/
+*.log

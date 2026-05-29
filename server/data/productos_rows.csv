@@ -1,0 +1,1820 @@
+id,marca,categoria,nombre,descripcion,foto,precio_costo_usd,precio_costo_ars,precio_minorista,precio_mayorista,stock,en_stock,created_at,updated_at,tipo_seccion,es_caja
+2,Casio,Metal Caballero,MTP-VD03D-2A,"Reloj clásico con malla de acero, resistente al
+agua y con calendario.",/relojes/casio-metal-cab/p01_i000.jpg,29.00,43500.00,85000.00,60.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+3,Casio,Metal Caballero,MTP-VD03D-7A,"Reloj clásico con malla de acero, resistente al
+agua y con calendario.",/relojes/casio-metal-cab/p01_i001.jpg,29.00,43500.00,85000.00,60.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+4,Casio,Metal Caballero,MTP-VD03D-2A2,"Reloj clásico con malla de acero,
+resistente al agua y con calendario.",/relojes/casio-metal-cab/p01_i002.jpg,29.00,43500.00,85000.00,60.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+5,Casio,Metal Caballero,MTP-VD02D-3A1,"Reloj clásico con malla de acero,
+resistente al agua y con calendario.",/relojes/casio-metal-cab/p01_i003.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+6,Casio,Metal Caballero,MTP-V002D-7E,"Reloj clásico de caballero con caja de
+44 mm, correa de acero inoxidable.",/relojes/casio-metal-cab/p02_i004.jpg,0.00,0.00,70000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+7,Casio,Metal Caballero,MTP-V002D-1E,"Reloj clásico de caballero con caja de
+44 mm, correa de acero inoxidable.",/relojes/casio-metal-cab/p02_i005.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+8,Casio,Metal Caballero,MTP-V002D-2E,"Reloj clásico de caballero con caja de
+44 mm, correa de acero inoxidable.",/relojes/casio-metal-cab/p02_i006.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+9,Casio,Metal Caballero,MTP-VD02G-9E,"Reloj clásico de caballero con caja
+dorada de 48 mm, brazalete metálico
+dorado y esfera negra con ventana de
+fecha a las 6.",/relojes/casio-metal-cab/p03_i007.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+10,Casio,Metal Caballero,MTP-VD02G-1E,"Reloj clásico de caballero con caja
+dorada de 48 mm, brazalete metálico
+dorado y esfera negra con ventana de
+fecha a las 6.",/relojes/casio-metal-cab/p03_i008.jpg,34.00,51000.00,85000.00,60.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+11,Casio,Metal Caballero,MTP-1335D-2A,"Reloj analógico con visualización de la fecha,
+resistente al agua, con caja y correa de acero
+inoxidable.",/relojes/casio-metal-cab/p04_i010.jpg,0.00,0.00,85000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+12,Casio,Metal Caballero,MTP-VD01D-1E2,"Reloj analógico con visualización de la fecha,
+resistente al agua, con caja y correa de acero
+inoxidable.",/relojes/casio-metal-cab/p04_i011.jpg,0.00,0.00,85000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+13,Casio,Metal Caballero,MTP-VD01D-3E1,"Reloj analógico con visualización de la fecha,
+resistente al agua, con caja y correa de acero
+inoxidable.",/relojes/casio-metal-cab/p04_i012.jpg,0.00,0.00,85000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+14,Casio,Metal Caballero,MTP-VD01D-3B,"Reloj analógico con visualización de la fecha,
+resistente al agua, con caja y correa de acero
+inoxidable.",/relojes/casio-metal-cab/p04_i013.jpg,28.00,42000.00,85000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+15,Casio,Metal Caballero,MTP-VD01D-1C,"Reloj analógico con visualización de la fecha,
+resistente al agua, con caja y correa de acero
+inoxidable.",/relojes/casio-metal-cab/p04_i010.jpg,28.00,42000.00,0.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+16,Casio,Metal Caballero,MTP-VD01D-2E,"Reloj analógico con visualización de la fecha,
+resistente al agua, con caja y correa de acero
+inoxidable.",/relojes/casio-metal-cab/p04_i010.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+17,Casio,Metal Caballero,MTP-VD01D-1B,"Reloj clásico de caballero con caja de 49 mm, correa de
+acero inoxidable con ventana de fecha.",/relojes/casio-metal-cab/p05_i014.jpg,0.00,0.00,85000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+18,Casio,Metal Caballero,MTP-VD01D-1E,"Reloj clásico de caballero con caja de 49 mm, correa de
+acero inoxidable con ventana de fecha.",/relojes/casio-metal-cab/p05_i015.jpg,0.00,0.00,85000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+19,Casio,Metal Caballero,MTP-VD01D-7C,"Reloj clásico de caballero con caja de 49 mm, correa de
+acero inoxidable con ventana de fecha.",/relojes/casio-metal-cab/p05_i016.jpg,28.00,42000.00,85000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+20,Casio,Metal Caballero,MTP-VT01D-7B,"Reloj clásico de caballero con
+caja de 40 mm, brazalete de
+acero inoxidable y esfera
+blanca y negra minimalista.",/relojes/casio-metal-cab/p06_i017.jpg,28.00,42000.00,80000.00,55.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+21,Casio,Metal Caballero,MTP-VT01D-1B,"Reloj clásico de caballero con
+caja de 40 mm, brazalete de
+acero inoxidable y esfera
+blanca y negra minimalista.",/relojes/casio-metal-cab/p06_i018.jpg,28.00,42000.00,80000.00,55.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+22,Casio,Metal Caballero,MTP-VT01G-7B,"Reloj clásico de caballero con caja dorada de 40 mm,
+brazalete metálico dorado y esfera minimalista.",/relojes/casio-metal-cab/p07_i019.jpg,34.00,51000.00,85000.00,60.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+23,Casio,Metal Caballero,MTP-VT01G-2B,"Reloj clásico de caballero con caja dorada de 40 mm,
+brazalete metálico dorado y esfera minimalista.",/relojes/casio-metal-cab/p07_i020.jpg,34.00,51000.00,85000.00,60.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+24,Casio,Metal Caballero,MTP-VT01G-1B,"Reloj clásico de caballero con caja dorada de 40 mm,
+brazalete metálico dorado y esfera minimalista.",/relojes/casio-metal-cab/p07_i021.jpg,34.00,51000.00,85000.00,60.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+25,Casio,Metal Caballero,MTP-V001D-1B,"Reloj clásico de caballero con
+caja de 38 mm, brazalete
+metálico y con números
+arábigos plateados.",/relojes/casio-metal-cab/p08_i022.jpg,22.00,33000.00,70000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+26,Casio,Metal Caballero,MTP-V001D-7B,"Reloj clásico de caballero con
+caja de 38 mm, brazalete
+metálico y con números
+arábigos plateados.",/relojes/casio-metal-cab/p08_i023.jpg,22.00,33000.00,70000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+27,Casio,Metal Caballero,MTP-1302D-7B,"Reloj clásico de caballero con
+caja de 41 mm, brazalete
+metálico y esfera blanca con
+ventana de fecha.",/relojes/casio-metal-cab/p09_i024.jpg,32.00,48000.00,85000.00,60.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+28,Casio,Metal Caballero,MTP-1302DS-1A,"Reloj clásico de caballero con
+caja de 41 mm, brazalete
+metálico y esfera negra con
+ventana de fecha.",/relojes/casio-metal-cab/p09_i025.jpg,50.00,75000.00,85000.00,60.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+29,Casio,Metal Caballero,MTP-1335D-7A,"Reloj clásico de caballero con caja de 38 mm,
+brazalete metálico, con ventana de día y fecha.",/relojes/casio-metal-cab/p10_i026.jpg,32.00,48000.00,90000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+30,Casio,Metal Caballero,MTP-1335D-1A,"Reloj clásico de caballero con caja de 38 mm,
+brazalete metálico, con ventana de día y fecha.",/relojes/casio-metal-cab/p10_i027.jpg,32.00,48000.00,90000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+31,Casio,Metal Caballero,MTP-1335D-2A,"Reloj clásico de caballero con caja de 38 mm,
+brazalete metálico, con ventana de día y fecha.",/relojes/casio-metal-cab/p10_i028.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+32,Casio,Metal Caballero,MTP-1335D-1A2,"Reloj clásico de caballero con
+caja de 38 mm, brazalete
+metálico, con ventana de día y
+fecha.",/relojes/casio-metal-cab/p11_i029.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+33,Casio,Metal Caballero,MTP-1335D-3A2,"Reloj clásico de caballero con
+caja de 38 mm, brazalete
+metálico, con ventana de día y
+fecha.",/relojes/casio-metal-cab/p11_i030.jpg,0.00,0.00,90000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+34,Casio,Metal Caballero,MTP-V004D-7B,"Reloj clásico con caja de 41 mm,
+brazalete metálico y esfera blanca con
+números arábigos y ventana de fecha.",/relojes/casio-metal-cab/p12_i032.jpg,24.00,36000.00,90000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+35,Casio,Metal Caballero,MTP-V004D-1B,"Reloj clásico con caja de 41 mm,
+brazalete metálico y esfera negra con
+números arábigos y ventana de fecha.",/relojes/casio-metal-cab/p12_i033.jpg,24.00,36000.00,90000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+36,Casio,Metal Caballero,MTP-V004G-9B,"Reloj clásico con caja de 41 mm,
+brazalete metálico y esfera blanca con
+números arábigos y ventana de fecha.",/relojes/casio-metal-cab/p12_i034.jpg,30.00,45000.00,80000.00,55.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+37,Casio,Metal Caballero,MTP-1381D-1A,"Reloj clásico, con caja dorada de 41 mm,
+brazalete metálico bicolor y esfera negra
+con ventana de día y fecha.",/relojes/casio-metal-cab/p13_i035.jpg,0.00,0.00,100000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+38,Casio,Metal Caballero,MTP-1381D-7A,"Reloj clásico, con caja de 41 mm, brazalete
+metálico y esfera azul con ventana de día y
+fecha.",/relojes/casio-metal-cab/p13_i036.jpg,42.00,63000.00,100000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+39,Casio,Metal Caballero,MTP-1381D-2A,"Reloj clásico, con caja de 41 mm,
+brazalete metálico y esfera blanca con
+ventana de día y fecha.",/relojes/casio-metal-cab/p13_i037.jpg,42.00,63000.00,115000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+40,Casio,Metal Caballero,MTP-1381G-1A,"Reloj clásico, con caja de 41 mm,
+brazalete metálico y esfera negra con
+ventana de día y fecha.",/relojes/casio-metal-cab/p13_i038.jpg,45.00,67500.00,100000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+41,Casio,Metal Caballero,MTP-B145D-3A,"Reloj analógico, con caja y correa de acero
+inoxidable de color dorado, con calendario
+y resistente al agua.",/relojes/casio-metal-cab/p14_i039.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+42,Casio,Metal Caballero,MTP-B145D-7B,"Reloj analógico con caja y correa de acero
+inoxidable color plateado, con calendario y
+resistente al agua.",/relojes/casio-metal-cab/p14_i040.jpg,45.00,67500.00,130000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+43,Casio,Metal Caballero,MTP-B145D-2A2,"Reloj analógico con caja y correa de acero
+inoxidable color plateado, con calendario
+y resistente al agua.",/relojes/casio-metal-cab/p14_i041.jpg,0.00,0.00,130000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+44,Casio,Metal Caballero,MTP-B145G-9A,"Reloj analógico con caja y correa de acero
+inoxidable color plateado, con calendario
+y resistente al agua.",/relojes/casio-metal-cab/p14_i042.jpg,52.00,78000.00,115000.00,82.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+45,Casio,Metal Caballero,MTP-B146D-2AV,"Reloj analógico de diseño clásico y
+minimalista, con correa y caja de acero
+inoxidable.",/relojes/casio-metal-cab/p15_i043.jpg,0.00,0.00,130000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+46,Casio,Metal Caballero,MTP-B146D-1AV,"Reloj analógico de diseño clásico y
+minimalista, con correa y caja de acero
+inoxidable.",/relojes/casio-metal-cab/p15_i044.jpg,0.00,0.00,130000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+47,Casio,Metal Caballero,MTP-V002D-7B,"Reloj clásico, con caja de 38 mm,
+brazalete metálico y esfera blanca con
+números arábigos y ventana de fecha.",/relojes/casio-metal-cab/p16_i045.jpg,23.00,34500.00,0.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+48,Casio,Metal Caballero,MTP-1239D-1A,"Reloj clásico, con caja de 38 mm,
+brazalete metálico y esfera negra con
+números arábigos y ventana de fecha.",/relojes/casio-metal-cab/p16_i046.jpg,30.00,45000.00,75000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+49,Casio,Metal Caballero,MTP-VD03D-3A2,"Reloj clásico, con caja de 41 mm,
+brazalete metálico y esfera verde con
+ventana de fecha.",/relojes/casio-metal-cab/p16_i047.jpg,29.00,43500.00,80000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+50,Casio,Metal Caballero,MTP-V004D-2B,"Reloj analógico, con caja y correa de
+acero inoxidable de color plateado, con
+calendario y resistente a salpicaduras.",/relojes/casio-metal-cab/p17_i048.jpg,24.00,36000.00,85000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+51,Casio,Metal Caballero,MTP-V004D-7B2,"Reloj analógico con caja y correa de
+acero inoxidable color plateado, con
+calendario y resistente a salpicaduras.",/relojes/casio-metal-cab/p17_i049.jpg,0.00,0.00,85000.00,0.00,0,true,2026-05-17 21:17:44.847354+00,2026-05-17 21:17:44.847354+00,pedido,false
+52,Casio,Metal Caballero,MTP-V004D-1B2,"Reloj analógico con caja y correa de
+acero inoxidable color plateado, con
+calendario y resistente a salpicaduras.",/relojes/casio-metal-cab/p17_i050.jpg,0.00,0.00,90000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+53,Casio,Metal Caballero,MTP-V004G-1B,"Reloj analógico con caja y correa de
+acero inoxidable color dorado, con
+calendario y resistente a salpicaduras.",/relojes/casio-metal-cab/p17_i051.jpg,34.00,51000.00,90000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+54,Casio,Metal Caballero,MTP-V005D-7B,"Reloj analógico con caja y correa de
+acero inoxidable, con números
+romanos que le dan un acabado
+sofisticado, resistencia al agua, ideal
+para el uso diario.",/relojes/casio-metal-cab/p18_i052.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+55,Casio,Metal Caballero,MTP-V005D-1B5,"Reloj analógico con caja y correa de
+acero inoxidable, con números
+romanos que le dan un acabado
+sofisticado, resistencia al agua, ideal
+para el uso diario.",/relojes/casio-metal-cab/p18_i053.jpg,20.00,30000.00,75000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+56,Casio,Metal Caballero,MTP-V005D-2B5,"Reloj analógico con caja y correa de
+acero inoxidable, con números
+romanos que le dan un acabado
+sofisticado, resistencia al agua, ideal
+para el uso diario.",/relojes/casio-metal-cab/p18_i054.jpg,0.00,0.00,72000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+57,Casio,Metal Caballero,MTP-V004D-2B,"Reloj analógico de diseño elegante,
+con correa de acero inoxidable color
+negro, numeración romana y
+resistente al agua.",/relojes/casio-metal-cab/p19_i056.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+58,Casio,Metal Caballero,MTP-V004D-1B2,"Reloj analógico de diseño elegante,
+con correa de acero inoxidable color
+negro, numeración romana y
+resistente al agua.",/relojes/casio-metal-cab/p19_i057.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+59,Casio,Metal Caballero,MTP-VT01B-2B,"Reloj analógico de diseño elegante, con
+correa de acero inoxidable color negro,
+numeración romana y resistente al agua.",/relojes/casio-metal-cab/p19_i058.jpg,0.00,0.00,90000.00,60.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+60,Casio,Metal Caballero,MTP-VD03B-1B,"Reloj analógico con diseño clásico y elegante, ideal
+para el uso diario.",/relojes/casio-metal-cab/p20_i060.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+61,Casio,Metal Caballero,MTP-VD03B-3A,"Reloj analógico con diseño clásico y elegante, ideal
+para el uso diario.",/relojes/casio-metal-cab/p20_i061.jpg,36.00,54000.00,95000.00,67.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+62,Casio,Metal Caballero,MTP-VD03B-2A,"Reloj analógico con diseño clásico y elegante, ideal
+para el uso diario.",/relojes/casio-metal-cab/p20_i062.jpg,0.00,0.00,95000.00,67.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+63,Casio,Metal Caballero,MTP-VD03G-2A,"Reloj analógico con diseño clásico y elegante, ideal
+para el uso diario.",/relojes/casio-metal-cab/p20_i063.jpg,36.00,54000.00,95000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+64,Casio,Metal Caballero,MTP-VT04D-7E,"Reloj analógico de diseño
+minimalista y clásico, con caja y
+correa de acero inoxidable,
+resistente al agua.",/relojes/casio-metal-cab/p21_i064.jpg,28.00,42000.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+65,Casio,Metal Caballero,MTP-VT01D-1E,"Reloj analógico de diseño
+minimalista y clásico, con caja y
+correa de acero inoxidable,
+resistente al agua.",/relojes/casio-metal-cab/p21_i065.jpg,28.00,42000.00,80000.00,57.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+66,Casio,Metal Caballero,MTP-VT04D-8E,"Reloj analógico de diseño
+minimalista y clásico, con caja y
+correa de acero inoxidable,
+resistente al agua.",/relojes/casio-metal-cab/p21_i066.jpg,28.00,42000.00,70000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+67,Casio,Metal Caballero,MTP-1314D-7A,"Reloj analógico de diseño clásico y
+elegante, con caja y correa de acero
+inoxidable y revestimiento iónico.",/relojes/casio-metal-cab/p22_i068.jpg,31.00,46500.00,90000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+68,Casio,Metal Caballero,MTP-1314D-1A,"Reloj analógico de diseño clásico y
+elegante, con caja y correa de acero
+inoxidable y revestimiento iónico.",/relojes/casio-metal-cab/p22_i069.jpg,31.00,46500.00,90000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+69,Casio,Metal Caballero,MTP-1314SG-1A,"Reloj analógico de diseño clásico y elegante, con caja y correa de acero
+inoxidable en tonos plateado y dorado, con revestimiento iónico.",/relojes/casio-metal-cab/p22_i070.jpg,0.00,0.00,105000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+70,Casio,Metal Caballero,MTP-1308D-1A,,/relojes/casio-metal-cab/p23_i071.jpg,30.00,45000.00,87000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+71,Casio,Metal Caballero,MTP-1308D-2A,,/relojes/casio-metal-cab/p23_i072.jpg,30.00,45000.00,87000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+72,Casio,Metal Caballero,MTP-V006D-1B2,,/relojes/casio-metal-cab/p24_i073.jpg,24.00,36000.00,75000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+73,Casio,Metal Caballero,MTP-V006D-2B2,,/relojes/casio-metal-cab/p24_i074.jpg,0.00,0.00,75000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+74,Casio,Metal Caballero,MTP-V006D-7B,,/relojes/casio-metal-cab/p25_i075.jpg,0.00,0.00,75000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+75,Casio,Metal Caballero,MTP-V006D-1B,,/relojes/casio-metal-cab/p25_i076.jpg,0.00,0.00,75000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+76,Casio,Metal Caballero,MTP-VD01G-1B,"Reloj analógico con diseño elegante y casual,
+movimiento de cuarzo japonés.",/relojes/casio-metal-cab/p26_i077.jpg,34.00,51000.00,85000.00,60.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+77,Casio,Metal Caballero,MTP-VD01G-1C,"Reloj analógico con diseño elegante y casual,
+movimiento de cuarzo japonés.",/relojes/casio-metal-cab/p26_i078.jpg,34.00,51000.00,85000.00,60.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+78,Casio,Metal Caballero,MTP-VD01G-9E,"Reloj analógico con diseño elegante y casual,
+movimiento de cuarzo japonés.",/relojes/casio-metal-cab/p26_i079.jpg,34.00,51000.00,85000.00,60.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+79,Casio,Metal Caballero,MTP-VD01SG-1B,"Reloj analógico con diseño elegante y casual,
+movimiento de cuarzo japonés.",/relojes/casio-metal-cab/p26_i080.jpg,33.00,49500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+80,Casio,Metal Caballero,MTP-E340D-7A,"Reloj analógico de diseño sofisticado, con
+caja y correa de acero inoxidable.",/relojes/casio-metal-cab/p27_i081.jpg,55.00,82500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+81,Casio,Metal Caballero,MTP-E340D-1A,"Reloj analógico de diseño sofisticado, con
+caja y correa de acero inoxidable.",/relojes/casio-metal-cab/p27_i082.jpg,55.00,82500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+82,Casio,Metal Caballero,MTP-E340D-2A,"Reloj analógico de diseño sofisticado, con
+caja y correa de acero inoxidable.",/relojes/casio-metal-cab/p27_i083.jpg,55.00,82500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+83,Casio,Metal Caballero,MTP-VD300D-7E,"Reloj analógico, caja y correa de acero
+inoxidable con cristal mineral, indicadores
+de fecha, día de la semana y formato de 24
+horas a través de tres subdiales, resistente
+al agua.",/relojes/casio-metal-cab/p28_i084.jpg,43.00,64500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+84,Casio,Metal Caballero,MTP-VD300D-2E,"Reloj analógico, caja y correa de acero
+inoxidable con cristal mineral, indicadores
+de fecha, día de la semana y formato de 24
+horas a través de tres subdiales, resistente
+al agua.",/relojes/casio-metal-cab/p28_i085.jpg,43.00,64500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+85,Casio,Metal Caballero,MTP-VD300G-1E,"Reloj analógico, caja y correa de acero inoxidable
+con cristal mineral, indicadores de fecha, día de la
+semana y formato de 24 horas a través de tres
+subdiales, resistente al agua.",/relojes/casio-metal-cab/p28_i086.jpg,50.00,75000.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+86,Casio,Metal Caballero,MTD-135D-1A,"Reloj analógico de diseño elegante y versátil,
+con caja de acero inoxidable y bisel de
+aluminio.",/relojes/casio-metal-cab/p29_i087.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+87,Casio,Metal Caballero,MTD-135D-7A,"Reloj analógico de diseño elegante y versátil,
+con caja de acero inoxidable y bisel de
+aluminio.",/relojes/casio-metal-cab/p29_i088.jpg,65.00,97500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+88,Casio,Metal Caballero,MTD-135D-2A,"Reloj analógico de diseño elegante y versátil,
+con caja de acero inoxidable y bisel de
+aluminio.",/relojes/casio-metal-cab/p29_i089.jpg,65.00,97500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+89,Casio,Metal Caballero,MTD-135D-3A,"Reloj analógico de diseño elegante y versátil,
+con caja de acero inoxidable y bisel de
+aluminio.",/relojes/casio-metal-cab/p29_i090.jpg,65.00,97500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+90,Casio,Metal Caballero,MTP-1374D-1A3,"Reloj analógico de movimiento de cuarzo
+japonés, con caja y correa de acero inoxidable
+con baño de iones y cristal mineral resistente a
+rayaduras.",/relojes/casio-metal-cab/p30_i091.jpg,48.00,72000.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+91,Casio,Metal Caballero,MTP-1374SG-7A,"Reloj analógico de movimiento de cuarzo japonés,
+con caja y correa de acero inoxidable con baño de
+iones y cristal mineral resistente a rayaduras.",/relojes/casio-metal-cab/p30_i092.jpg,42.00,63000.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+92,Casio,Metal Caballero,MTP-1374D-1A,"Reloj analógico de movimiento de cuarzo
+japonés, con caja y correa de acero inoxidable
+con baño de iones y cristal mineral resistente a
+rayaduras.",/relojes/casio-metal-cab/p30_i093.jpg,43.00,64500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+93,Casio,Metal Caballero,MTP-1374D-2A3,"Reloj analógico de movimiento de cuarzo
+japonés, con caja y correa de acero inoxidable
+con baño de iones y cristal mineral resistente a
+rayaduras.",/relojes/casio-metal-cab/p30_i094.jpg,43.00,64500.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+94,Casio,Metal Caballero,MTP-1335D-2A,"Reloj analógico y digital de diseño vintage,
+con caja de resina cromada y correa de
+acero inoxidable.",/relojes/casio-metal-cab/p31_i095.jpg,32.00,48000.00,0.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+95,Casio,Metal Caballero,AQ-230A-1D,"Reloj analógico y digital de diseño vintage,
+con caja de resina cromada y correa de
+acero inoxidable.",/relojes/casio-metal-cab/p31_i096.jpg,33.00,49500.00,85000.00,60.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+96,Casio,Metal Caballero,AQ-230A-9A,"Reloj analógico y digital de diseño
+vintage, con caja de resina cromada y
+correa de acero inoxidable.",/relojes/casio-metal-cab/p31_i097.jpg,33.00,49500.00,90000.00,70.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+97,Casio,Metal Caballero,AQ-230-2A1,"Reloj analógico y digital de diseño vintage, con
+caja de resina cromada y correa de acero
+inoxidable.",/relojes/casio-metal-cab/p31_i098.jpg,0.00,0.00,85000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+98,Casio,Metal Caballero,AQ-230A-7A,"Reloj analógico y digital de diseño vintage, con caja de
+resina cromada y correa de acero inoxidable.",/relojes/casio-metal-cab/p31_i095.jpg,33.00,49500.00,85000.00,60.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+99,Casio,Metal Caballero,AQ-230-2A2,"Reloj analógico y digital de diseño vintage,
+con caja de resina cromada y correa de
+acero inoxidable.",/relojes/casio-metal-cab/p31_i095.jpg,0.00,0.00,85000.00,0.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+100,Casio,Metal Caballero,AQ-230GA-9B,"Reloj retro de caballero con caja
+rectangular dorada de 27 mm, brazalete
+metálico dorado y doble visualización
+analógica-digital.",/relojes/casio-metal-cab/p32_i099.jpg,41.00,61500.00,100000.00,75.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+101,Casio,Metal Caballero,AQ-230GA-9A,"Reloj retro de caballero con caja
+rectangular dorada de 27 mm, brazalete
+metálico dorado y doble visualización
+analógica-digital.",/relojes/casio-metal-cab/p32_i100.jpg,41.00,61500.00,95000.00,70.00,0,true,2026-05-17 21:17:45.223892+00,2026-05-17 21:17:45.223892+00,pedido,false
+102,Casio,Metal Caballero,AMW-870DA-2A2,"Reloj de caballero analógico-
+digital con caja de 44 mm,
+brazalete metálico y esfera
+azul degradada.",/relojes/casio-metal-cab/p36_i107.jpg,65.00,97500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+103,Casio,Metal Caballero,MTP-E515D-1A,"Reloj de caballero con caja de
+41 mm, brazalete metálico y
+esfera negra con cronógrafo y
+ventana de fecha.",/relojes/casio-metal-cab/p37_i109.jpg,70.00,105000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+104,Casio,Metal Dama,LTP-VT01D-1B,"Reloj de dama analógico con
+caja de acero inoxidable de
+34 mm, brazalete metálico
+plateado y esfera fina.",/relojes/casio-metal-dama/p01_i000.jpg,29.00,43500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+105,Casio,Metal Dama,LTP-VT01D-4B,"Reloj de dama analógico con
+caja de acero inoxidable de
+34 mm, brazalete metálico
+plateado y esfera fina.",/relojes/casio-metal-dama/p01_i001.jpg,29.00,43500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+106,Casio,Metal Dama,LTP-V002D-1A,"Reloj de dama analógico con
+caja y brazalete de acero
+inoxidable de 28 mm,
+calendario de fecha y
+resistencia al agua para uso
+diario.",/relojes/casio-metal-dama/p02_i002.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+107,Casio,Metal Dama,LTP-V002D-7B3,"Reloj de dama analógico con
+caja y brazalete de acero
+inoxidable de 28 mm,
+calendario de fecha y
+resistencia al agua para uso
+diario.",/relojes/casio-metal-dama/p02_i003.jpg,24.00,36000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+108,Casio,Metal Dama,LTP-V005D-1B,"El Casio LTP-V005D-1B es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera negra con marcadores
+plateados y fecha, cristal mineral,
+tres agujas, elegante, ligero y
+resistente al agua para uso diario.",/relojes/casio-metal-dama/p03_i004.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+109,Casio,Metal Dama,LTP-V005D-4B,"El Casio LTP-V005D-4B es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera rosada con marcadores
+plateados y fecha, cristal mineral,
+tres agujas, elegante, ligero y
+resistente al agua para uso diario.",/relojes/casio-metal-dama/p03_i005.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+110,Casio,Metal Dama,LTP-V005D-1B,"El Casio LTP-V005D-1B es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera negra con marcadores
+plateados y fecha, cristal mineral,
+tres agujas, elegante, ligero y
+resistente al agua para uso diario.",/relojes/casio-metal-dama/p03_i006.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+111,Casio,Metal Dama,LTP-V005D-4B,"El Casio LTP-V005D-1B es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera negra con marcadores
+plateados y fecha, cristal mineral,
+tres agujas, elegante, ligero y
+resistente al agua para uso diario.",/relojes/casio-metal-dama/p03_i004.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+112,Casio,Metal Dama,LTP-V009D-1E,,/relojes/casio-metal-dama/p04_i007.jpg,29.00,43500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+113,Casio,Metal Dama,LTP-V009D-7E,,/relojes/casio-metal-dama/p04_i008.jpg,29.00,43500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+114,Casio,Metal Dama,LTP-V009D-4E,,/relojes/casio-metal-dama/p04_i009.jpg,29.00,43500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+115,Casio,Metal Dama,MDV-10D-1A1,"El Casio MDV-10D-1A1 es un reloj
+femenino de cuarzo con caja y
+brazalete de acero inoxidable,
+esfera negra con marcadores
+plateados y fecha, cristal mineral,
+bisel fijo, tres agujas, elegante,
+resistente y preparado para uso
+diario.",/relojes/casio-metal-dama/p05_i010.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+116,Casio,Metal Dama,MDV-10D-2A1,"El Casio MDV-10D-2A1 es un reloj
+femenino de cuarzo con caja y
+brazalete de acero inoxidable,
+esfera azul con marcadores
+plateados y fecha, cristal mineral,
+bisel fijo, tres agujas, elegante,
+resistente y preparado para uso
+diario.",/relojes/casio-metal-dama/p05_i011.jpg,58.00,87000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+117,Casio,Metal Dama,MDV-10D-1A1,"El Casio MDV-10D-1A1 es un reloj
+femenino de cuarzo con caja y
+brazalete de acero inoxidable,
+esfera negra con marcadores
+plateados y fecha, cristal mineral,
+bisel fijo, tres agujas, elegante,
+resistente y preparado para uso
+diario.",/relojes/casio-metal-dama/p05_i010.jpg,58.00,87000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+118,Casio,Metal Dama,MDV-10D-2A1,"El Casio MDV-10D-1A1 es un reloj
+femenino de cuarzo con caja y
+brazalete de acero inoxidable,
+esfera negra con marcadores
+plateados y fecha, cristal mineral,
+bisel fijo, tres agujas, elegante,
+resistente y preparado para uso
+diario.",/relojes/casio-metal-dama/p05_i010.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+119,Casio,Metal Dama,LTP-1335D-7A,"El Casio LTP-1335D-7A es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera blanca con marcadores
+plateados y ventana de fecha,
+cristal mineral, tres agujas, diseño
+elegante y resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p06_i012.jpg,34.00,51000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+120,Casio,Metal Dama,LTP-1335D-4AV,"El Casio LTP-1335D-4AV es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera rosada con marcadores
+plateados y ventana de fecha,
+cristal mineral, tres agujas,
+elegante, ligero y resistente al
+agua para uso diario.",/relojes/casio-metal-dama/p06_i013.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+121,Casio,Metal Dama,LTP-1335D-7A,"El Casio LTP-1335D-7A es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera blanca con marcadores
+plateados y ventana de fecha,
+cristal mineral, tres agujas, diseño
+elegante y resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p06_i014.jpg,34.00,51000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+122,Casio,Metal Dama,LTP-1335D-4AV,"El Casio LTP-1335D-7A es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera blanca con marcadores
+plateados y ventana de fecha,
+cristal mineral, tres agujas, diseño
+elegante y resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p06_i012.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+123,Casio,Metal Dama,LTP-V002D-2B,"El Casio LTP-V002D-2B es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera azul con números grandes
+y ventana de fecha, cristal
+mineral, tres agujas, elegante,
+ligero y resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p07_i015.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+124,Casio,Metal Dama,LTP-V002D-1B,"El Casio LTP-V002D-1B es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera negra con números
+grandes y ventana de fecha,
+cristal mineral, tres agujas,
+elegante, ligero y resistente al
+agua para uso diario.",/relojes/casio-metal-dama/p07_i016.jpg,24.00,36000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+125,Casio,Metal Dama,LTP-V002D-2B,"El Casio LTP-V002D-2B es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera azul con números grandes
+y ventana de fecha, cristal
+mineral, tres agujas, elegante,
+ligero y resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p07_i017.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+126,Casio,Metal Dama,LTP-V002D-1B,"El Casio LTP-V002D-2B es un
+reloj femenino de cuarzo con caja
+y brazalete de acero inoxidable,
+esfera azul con números grandes
+y ventana de fecha, cristal
+mineral, tres agujas, elegante,
+ligero y resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p07_i015.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+127,Casio,Metal Dama,LTP-V006D-4B,,/relojes/casio-metal-dama/p08_i018.jpg,25.00,37500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+128,Casio,Metal Dama,LTP-V006D-2B,,/relojes/casio-metal-dama/p08_i019.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+129,Casio,Metal Dama,LTP-V006D-7B,,/relojes/casio-metal-dama/p08_i020.jpg,25.00,37500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+130,Casio,Metal Dama,LTP-V006D-1B,,/relojes/casio-metal-dama/p08_i021.jpg,25.00,37500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+131,Casio,Metal Dama,LTP-1314D-5A,,/relojes/casio-metal-dama/p09_i022.jpg,30.00,45000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+132,Casio,Metal Dama,LTP-1314SG-1A,,/relojes/casio-metal-dama/p09_i023.jpg,42.00,63000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+133,Casio,Metal Dama,LTP-V300D-7A,,/relojes/casio-metal-dama/p10_i024.jpg,44.00,66000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+134,Casio,Metal Dama,LTP-2085D-7A,,/relojes/casio-metal-dama/p10_i025.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+135,Casio,Metal Dama,LTP-V300D-7A,,/relojes/casio-metal-dama/p10_i026.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+136,Casio,Metal Dama,LTP-V300D-1A2,,/relojes/casio-metal-dama/p10_i027.jpg,44.00,66000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+137,Casio,Metal Dama,LA670WGA-9,"El Casio LA670WGA-9 es un
+reloj femenino digital con caja y
+brazalete de acero inoxidable
+dorado, pantalla LCD con fondo
+dorado, funciones clásicas
+como cronómetro, alarma diaria
+y calendario automático, diseño
+retro compacto, ligero y
+resistente al agua para uso
+diario.",/relojes/casio-metal-dama/p11_i028.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+138,Casio,Metal Dama,LA670WGA-1,"El Casio LA670WGA-1 es un
+reloj femenino digital con caja y
+brazalete de acero inoxidable
+dorado, pantalla LCD con fondo
+negro, funciones clásicas como
+cronómetro, alarma diaria y
+calendario automático, diseño
+retro compacto, ligero y
+resistente al agua para uso
+diario.",/relojes/casio-metal-dama/p11_i029.jpg,30.00,45000.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+139,Casio,Metal Dama,LA670WGA-9,"El Casio LA670WGA-9 es un
+reloj femenino digital con caja y
+brazalete de acero inoxidable
+dorado, pantalla LCD con fondo
+dorado, funciones clásicas
+como cronómetro, alarma diaria
+y calendario automático, diseño
+retro compacto, ligero y
+resistente al agua para uso
+diario.",/relojes/casio-metal-dama/p11_i030.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+140,Casio,Metal Dama,LA670WGA-1,"El Casio LA670WGA-9 es un
+reloj femenino digital con caja y
+brazalete de acero inoxidable
+dorado, pantalla LCD con fondo
+dorado, funciones clásicas
+como cronómetro, alarma diaria
+y calendario automático, diseño
+retro compacto, ligero y
+resistente al agua para uso
+diario.",/relojes/casio-metal-dama/p11_i028.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+141,Casio,Metal Dama,LA670WA-1,"El Casio LA670WA-2 es
+un reloj femenino digital
+con caja y brazalete de
+acero inoxidable
+plateado, pantalla LCD
+con fondo azul,
+funciones clásicas como
+cronómetro, alarma
+diaria y calendario
+automático, diseño retro
+compacto, ligero y
+resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p12_i031.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+142,Casio,Metal Dama,LA670WA-7,"El Casio LA670WA-7D es un reloj femenino digital con caja y
+brazalete de acero inoxidable plateado, pantalla LCD con fondo
+claro invertido, funciones clásicas como cronómetro, alarma diaria y
+calendario automático, diseño retro compacto, ligero y resistente al
+agua para uso diario.",/relojes/casio-metal-dama/p12_i032.jpg,25.00,37500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+143,Casio,Metal Dama,LA670WA-7D,"El Casio LA670WA-1D es un reloj femenino digital con caja y
+brazalete de acero inoxidable plateado, pantalla LCD con fondo
+negro invertido, funciones clásicas como cronómetro, alarma
+diaria y calendario automático, diseño retro compacto, ligero y
+resistente al agua para uso diario.",/relojes/casio-metal-dama/p12_i033.jpg,25.00,37500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+144,Casio,Metal Dama,LA670WA-1D,"El Casio LA670WA-7 es un
+reloj femenino digital con
+caja y brazalete de acero
+inoxidable plateado,
+pantalla LCD con fondo
+claro, funciones clásicas
+como cronómetro, alarma
+diaria y calendario
+automático, diseño retro
+compacto, ligero y
+resistente al agua para uso
+diario.",/relojes/casio-metal-dama/p12_i034.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+145,Casio,Metal Dama,LA670WA-2,"El Casio LA670WA-1 es
+un reloj femenino digital
+con caja y brazalete de
+acero inoxidable plateado,
+pantalla LCD con fondo
+negro, funciones clásicas
+como cronómetro, alarma
+diaria y calendario
+automático, diseño retro
+compacto, ligero y
+resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p12_i031.jpg,25.00,37500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+146,Casio,Metal Dama,LA670WA-2,"El Casio LA670WA-2 es
+un reloj femenino digital
+con caja y brazalete de
+acero inoxidable
+plateado, pantalla LCD
+con fondo azul,
+funciones clásicas como
+cronómetro, alarma
+diaria y calendario
+automático, diseño retro
+compacto, ligero y
+resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p12_i031.jpg,25.00,37500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+147,Casio,Metal Dama,LA670WA-7D,"El Casio LA670WA-2 es
+un reloj femenino digital
+con caja y brazalete de
+acero inoxidable
+plateado, pantalla LCD
+con fondo azul,
+funciones clásicas como
+cronómetro, alarma
+diaria y calendario
+automático, diseño retro
+compacto, ligero y
+resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p12_i031.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+148,Casio,Metal Dama,LA670WA-1D,"El Casio LA670WA-2 es
+un reloj femenino digital
+con caja y brazalete de
+acero inoxidable
+plateado, pantalla LCD
+con fondo azul,
+funciones clásicas como
+cronómetro, alarma
+diaria y calendario
+automático, diseño retro
+compacto, ligero y
+resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p12_i031.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+149,Casio,Metal Dama,LA670WA-7,"El Casio LA670WA-2 es
+un reloj femenino digital
+con caja y brazalete de
+acero inoxidable
+plateado, pantalla LCD
+con fondo azul,
+funciones clásicas como
+cronómetro, alarma
+diaria y calendario
+automático, diseño retro
+compacto, ligero y
+resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p12_i031.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+150,Casio,Metal Dama,LA670WA-1,"El Casio LA670WA-2 es
+un reloj femenino digital
+con caja y brazalete de
+acero inoxidable
+plateado, pantalla LCD
+con fondo azul,
+funciones clásicas como
+cronómetro, alarma
+diaria y calendario
+automático, diseño retro
+compacto, ligero y
+resistente al agua para
+uso diario.",/relojes/casio-metal-dama/p12_i031.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+151,Casio,Metal Dama,LTP-V002G-7B,,/relojes/casio-metal-dama/p14_i039.jpg,31.00,46500.00,0.00,0.00,0,true,2026-05-17 21:17:45.434793+00,2026-05-17 21:17:45.434793+00,pedido,false
+152,Casio,Metal Dama,LTP-V002G-9B3,,/relojes/casio-metal-dama/p14_i040.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+153,Casio,Metal Dama,LTP-1130N-7B,,/relojes/casio-metal-dama/p14_i041.jpg,31.00,46500.00,90000.00,70.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+154,Casio,Metal Dama,LTP-1129N-7A,"El Casio LTP-1129N-7A es
+un reloj femenino analógico
+con caja y correa de acero
+inoxidable dorado, esfera
+blanca sencilla con
+números grandes, cristal
+mineral y resistencia al
+agua de 30 m.",/relojes/casio-metal-dama/p15_i043.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+155,Casio,Metal Dama,LTP-1275G-9A,"El Casio LTP-1275G-9A es
+un reloj femenino analógico
+con caja y correa de acero
+inoxidable dorado, esfera
+dorada sencilla con
+números grandes, cristal
+mineral y resistencia al
+agua de 30 m.",/relojes/casio-metal-dama/p15_i044.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+156,Casio,Metal Dama,LTP-1129N-7A,"El Casio LTP-1129N-7A es
+un reloj femenino analógico
+con caja y correa de acero
+inoxidable dorado, esfera
+blanca sencilla con
+números grandes, cristal
+mineral y resistencia al
+agua de 30 m.",/relojes/casio-metal-dama/p15_i045.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+157,Casio,Metal Dama,LTP-1275G-9A,"El Casio LTP-1129N-7A es
+un reloj femenino analógico
+con caja y correa de acero
+inoxidable dorado, esfera
+blanca sencilla con
+números grandes, cristal
+mineral y resistencia al
+agua de 30 m.",/relojes/casio-metal-dama/p15_i043.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+158,Casio,Metal Dama,LTP-V007SG-9B,"El Casio LTP-V007SG-9B es un
+reloj femenino analógico con
+caja y correa de acero
+inoxidable bicolor plateado y
+dorado, esfera dorada con
+números romanos, cristal
+mineral y resistencia al agua de
+30 m.",/relojes/casio-metal-dama/p16_i046.jpg,28.00,42000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+159,Casio,Metal Dama,LTP-1235SG-7A,"El Casio LTP-1235SG-7A es un
+reloj femenino analógico con
+caja rectangular y correa de
+acero inoxidable bicolor
+plateado y dorado, esfera
+blanca con números romanos,
+cristal mineral y resistencia al
+agua de 30 m.",/relojes/casio-metal-dama/p16_i047.jpg,0.00,0.00,90000.00,70.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+160,Casio,Metal Dama,LTP-V007SG-9B,"El Casio LTP-V007SG-9B es un
+reloj femenino analógico con
+caja y correa de acero
+inoxidable bicolor plateado y
+dorado, esfera dorada con
+números romanos, cristal
+mineral y resistencia al agua de
+30 m.",/relojes/casio-metal-dama/p16_i048.jpg,28.00,42000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+161,Casio,Metal Dama,LTP-1235SG-7A,"El Casio LTP-V007SG-9B es un
+reloj femenino analógico con
+caja y correa de acero
+inoxidable bicolor plateado y
+dorado, esfera dorada con
+números romanos, cristal
+mineral y resistencia al agua de
+30 m.",/relojes/casio-metal-dama/p16_i046.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+162,Casio,Metal Dama,LTP-V006SG-9B,"El Casio LTP-V006SG-9B es un
+reloj femenino analógico de acero
+inoxidable bicolor plateado y
+dorado, con esfera dorada,
+números romanos, calendario de
+fecha, cristal mineral y resistencia
+al agua de 30 m.",/relojes/casio-metal-dama/p17_i049.jpg,28.00,42000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+163,Casio,Metal Dama,LTP-V005SG-7A,"El Casio LTP-V005SG-7A es un
+reloj femenino analógico de acero
+inoxidable bicolor plateado y
+dorado, con esfera blanca, cristal
+mineral y resistencia al agua de 30
+m.",/relojes/casio-metal-dama/p17_i050.jpg,26.00,39000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+164,Casio,Metal Dama,LTP-V005SG-7A,"El Casio LTP-V006SG-9B es un
+reloj femenino analógico de acero
+inoxidable bicolor plateado y
+dorado, con esfera dorada,
+números romanos, calendario de
+fecha, cristal mineral y resistencia
+al agua de 30 m.",/relojes/casio-metal-dama/p17_i051.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+165,Casio,Metal Dama,LTP-V006SG-9B,"El Casio LTP-V006SG-9B es un
+reloj femenino analógico de acero
+inoxidable bicolor plateado y
+dorado, con esfera dorada,
+números romanos, calendario de
+fecha, cristal mineral y resistencia
+al agua de 30 m.",/relojes/casio-metal-dama/p17_i049.jpg,28.00,42000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+166,Casio,Metal Dama,LTP-V007G-9E,"El Casio LTP-V007G-9E es un
+reloj femenino analógico de
+acero inoxidable dorado, con
+esfera dorada, números
+romanos, cristal mineral y
+resistencia al agua de 30 m.",/relojes/casio-metal-dama/p18_i052.jpg,31.00,46500.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+167,Casio,Metal Dama,LTP-V007G-9B,"El Casio LTP-V007G-9B es un
+reloj femenino analógico de
+acero inoxidable dorado, con
+esfera dorada, números
+romanos, cristal mineral y
+resistencia al agua de 30 m.",/relojes/casio-metal-dama/p18_i053.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+168,Casio,Metal Dama,LTP-V007G-9B,"El Casio LTP-V007G-9E es un
+reloj femenino analógico de
+acero inoxidable dorado, con
+esfera dorada, números
+romanos, cristal mineral y
+resistencia al agua de 30 m.",/relojes/casio-metal-dama/p18_i052.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+169,Casio,Metal Dama,LTP-V007G-9E,"El Casio LTP-V007G-9E es un
+reloj femenino analógico de
+acero inoxidable dorado, con
+esfera dorada, números
+romanos, cristal mineral y
+resistencia al agua de 30 m.",/relojes/casio-metal-dama/p18_i052.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+170,Casio,Metal Dama,LTP-V005G-9A,,/relojes/casio-metal-dama/p19_i054.jpg,29.00,43500.00,90000.00,70.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+171,Casio,Metal Dama,LTP-V005G-7A,,/relojes/casio-metal-dama/p19_i055.jpg,29.00,43500.00,90000.00,70.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+172,Casio,Metal Dama,LTP-V300G-9A,,/relojes/casio-metal-dama/p20_i056.jpg,52.00,78000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+173,Casio,Metal Dama,LTP-V300G-1A,,/relojes/casio-metal-dama/p20_i057.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+174,Casio,Metal Dama,LTP-V004G-9B,,/relojes/casio-metal-dama/p21_i059.jpg,35.00,52500.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+175,Casio,Metal Dama,LTP-V004G-7B,,/relojes/casio-metal-dama/p21_i060.jpg,35.00,52500.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+176,Casio,Metal Dama,LTP-1169D-1A,,/relojes/casio-metal-dama/p22_i061.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+177,Casio,Metal Dama,LTP-1169N-7A,,/relojes/casio-metal-dama/p22_i062.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+178,Casio,Metal Dama,LTP-V005G-1B,,/relojes/casio-metal-dama/p23_i064.jpg,29.00,43500.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+179,Casio,Metal Dama,LTP-V005G-7B,,/relojes/casio-metal-dama/p23_i065.jpg,29.00,43500.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+180,Casio,Cuero Caballero,MTP-1314L-7A,"Reloj analógico de estilo clásico
+con caja de acero inoxidable y
+correa de cuero marrón.",/relojes/casio-cuero-cab/p01_i000.jpg,29.00,43500.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+181,Casio,Cuero Caballero,MTP-1314L-8A,"Reloj analógico de estilo clásico con
+caja de acero inoxidable y correa de
+cuero negra.",/relojes/casio-cuero-cab/p01_i001.jpg,29.00,43500.00,115000.00,82.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+182,Casio,Cuero Caballero,MTP-1374L-7A,"Reloj analógico de estilo deportivo
+con caja de acero inoxidable y
+correa de cuero marrón.",/relojes/casio-cuero-cab/p02_i002.jpg,51.00,76500.00,115000.00,82.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+183,Casio,Cuero Caballero,MTP-1374L-7A1,"Reloj analógico de estilo deportivo
+con caja de acero inoxidable y
+correa de cuero marrón.",/relojes/casio-cuero-cab/p02_i003.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+184,Casio,Cuero Caballero,MTP-VD02L-7E,"Reloj analógico de estilo clásico
+con caja de acero inoxidable y
+correa de cuero negra.",/relojes/casio-cuero-cab/p03_i005.jpg,26.00,39000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+185,Casio,Cuero Caballero,MTP-V002BL-2E,"Reloj analógico de diseño clásico con
+caja de acero inoxidable y correa de
+cuero negra.",/relojes/casio-cuero-cab/p03_i006.jpg,0.00,0.00,70000.00,50.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+186,Casio,Cuero Caballero,MTP-V002L-5B3,"Reloj analógico de estilo clásico con
+caja de acero inoxidable y correa de
+cuero marrón.",/relojes/casio-cuero-cab/p04_i008.jpg,20.00,30000.00,70000.00,50.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+187,Casio,Cuero Caballero,MTP-V002L-2B3,"Reloj analógico de estilo clásico con
+caja de acero inoxidable y correa de
+cuero marrón.",/relojes/casio-cuero-cab/p04_i009.jpg,20.00,30000.00,70000.00,50.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+188,Casio,Cuero Caballero,MTP-V004L-7C,"Reloj analógico con caja plateada de
+41 mm, correa de cuero marrón y
+esfera blanca con calendario de
+fecha.",/relojes/casio-cuero-cab/p05_i010.jpg,22.00,33000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+189,Casio,Cuero Caballero,MTP-V006L-7C,"Reloj  analógico con caja
+plateada de 38 mm, correa de
+cuero marrón y esfera blanca
+con calendario de día y fecha.",/relojes/casio-cuero-cab/p05_i011.jpg,22.00,33000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+190,Casio,Cuero Caballero,MTP-V001L-1B,"Reloj analógico con caja plateada de
+38 mm, correa de cuero negro y
+esfera negra elegante.",/relojes/casio-cuero-cab/p06_i012.jpg,20.00,30000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+191,Casio,Cuero Caballero,MTP-V005L-7B4,"Reloj analógico con caja plateada
+de 41 mm, correa de cuero
+marrón y esfera blanca con
+números arábigos grandes.",/relojes/casio-cuero-cab/p06_i013.jpg,20.00,30000.00,70000.00,50.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+192,Casio,Cuero Caballero,MTP-VD300L-1E,"Reloj analógico de estilo clásico
+con caja de acero inoxidable y
+correa de cuero negra.",/relojes/casio-cuero-cab/p07_i014.jpg,37.00,55500.00,90000.00,65.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+193,Casio,Cuero Caballero,MTP-VD200L-1B,"Reloj analógico de estilo clásico con
+caja de acero inoxidable y correa de
+cuero negra.",/relojes/casio-cuero-cab/p07_i015.jpg,36.00,54000.00,90000.00,65.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+194,Casio,Cuero Caballero,MTP-VD01BL-1B,"Reloj analógico con caja
+negra de 45 mm, correa de
+cuero y esfera negra con
+calendario de fecha.",/relojes/casio-cuero-cab/p08_i016.jpg,28.00,42000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+195,Casio,Cuero Caballero,MTP-VD03L-1A,"Reloj analógico con caja plateada
+de 41 mm, correa de cuero negro y
+esfera negra con calendario de
+fecha.",/relojes/casio-cuero-cab/p08_i017.jpg,30.00,45000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+196,Casio,Cuero Caballero,MTP-V005L-2B5,"Reloj de caballero
+analógico con caja
+plateada de 41 mm, correa
+de cuero marron y esfera
+azul con números romano
+grandes.",/relojes/casio-cuero-cab/p09_i018.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+197,Casio,Cuero Caballero,MTP-V006GL-7B,"Reloj de caballero analógico, con
+caja dorada de 38 mm, correa de
+cuero marrón y esfera blanca con
+números romanos, calendario de
+día y fecha.",/relojes/casio-cuero-cab/p09_i019.jpg,24.00,36000.00,70000.00,50.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+198,Casio,Cuero Caballero,MTP-1381L-7A,"Reloj analógico con caja
+plateada de 40 mm, correa
+de cuero marrón tipo
+cocodrilo y esfera plateada
+con textura radial y
+calendario de día y fecha.",/relojes/casio-cuero-cab/p10_i020.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+199,Casio,Cuero Caballero,MTP-1302L-7B,"Reloj analógico con caja
+plateada de 41 mm, correa
+de cuero negro y esfera
+blanca con calendario de
+fecha.",/relojes/casio-cuero-cab/p10_i021.jpg,28.00,42000.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+200,Casio,Cuero Caballero,MTP-V005L-1B4,"Reloj analógico con caja y correa de acero
+inoxidable dorada, esfera blanca con
+marcadores dorados y ventana de fecha.",/relojes/casio-cuero-cab/p11_i022.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+201,Casio,Cuero Caballero,MTP-V001GL-1B,"Reloj analógico con caja de acero inoxidable, correa
+de cuero negra, esfera negra con marcadores
+plateados y ventana de fecha.",/relojes/casio-cuero-cab/p11_i023.jpg,20.00,30000.00,70000.00,50.00,0,true,2026-05-17 21:17:45.642368+00,2026-05-17 21:17:45.642368+00,pedido,false
+202,Casio,Cuero Caballero,MTP-V001GL-7B,"Reloj analógico con caja y correa de acero
+inoxidable dorada, esfera negra con marcadores
+dorados y ventana de fecha.",/relojes/casio-cuero-cab/p11_i024.jpg,20.00,30000.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+203,Casio,Cuero Caballero,MTP-V001GL-9B,"Reloj analógico con caja y correa de acero
+inoxidable dorada, esfera blanca con
+marcadores dorados y ventana de fecha.",/relojes/casio-cuero-cab/p11_i025.jpg,20.00,30000.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+204,Casio,Cuero Caballero,MTP-V002L-7B2,"Reloj analógico para caballero con caja de
+acero inoxidable y correa de cuero negro.",/relojes/casio-cuero-cab/p12_i026.jpg,21.00,31500.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+205,Casio,Cuero Caballero,MTP-V002L-1B,"Reloj analógico para caballero con caja de
+acero inoxidable y correa de cuero negra.",/relojes/casio-cuero-cab/p12_i027.jpg,20.00,30000.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+206,Casio,Cuero Caballero,MTP-V002GL-1B,"Reloj analógico para caballero con caja y
+correa de acero inoxidable dorado.",/relojes/casio-cuero-cab/p12_i028.jpg,22.00,33000.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+207,Casio,Cuero Caballero,MTP-VT01L-7B1,"Reloj analógico para caballero con caja de acero
+inoxidable y correa de cuero marron.",/relojes/casio-cuero-cab/p13_i029.jpg,25.00,37500.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+208,Casio,Cuero Caballero,MTP-VT01L-3B,"Reloj analógico para caballero con caja de acero
+inoxidable y correa de cuero marrón.",/relojes/casio-cuero-cab/p13_i030.jpg,25.00,37500.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+209,Casio,Cuero Caballero,MTP-VT01L-1B,"Reloj analógico para caballero con caja de acero
+inoxidable y correa de cuero negra.",/relojes/casio-cuero-cab/p13_i031.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+210,Casio,Cuero Caballero,MTP-VT01L-2B2,"Reloj analógico para caballero con caja de
+acero inoxidable y correa de cuero marrón.",/relojes/casio-cuero-cab/p14_i033.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+211,Casio,Cuero Caballero,MTP-VT01BL-1B,"Reloj analógico para caballero con caja de
+acero inoxidable y correa de cuero marrón.",/relojes/casio-cuero-cab/p14_i034.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+212,Casio,Cuero Caballero,MTP-VT01GL-1B2,"Reloj analógico para caballero con caja de
+acero inoxidable dorado y correa de cuero
+negro.",/relojes/casio-cuero-cab/p14_i035.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+213,Casio,Cuero Caballero,MTP-V004GL-9A,"Reloj analógico con correa de cuero negro,
+caja de acero inoxidable dorada, esfera
+blanca con marcadores dorados y ventana
+de fecha.",/relojes/casio-cuero-cab/p15_i037.jpg,22.00,33000.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+214,Casio,Cuero Caballero,MTP-V004L-1B,"Reloj analógico para caballero con caja de
+acero inoxidable y correa de cuero negra.",/relojes/casio-cuero-cab/p15_i038.jpg,22.00,33000.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+215,Casio,Cuero Caballero,MTP-V004L-1B2,"Reloj analógico para caballero con caja de acero
+inoxidable y correa de cuero marron.",/relojes/casio-cuero-cab/p15_i039.jpg,0.00,0.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+216,Casio,Cuero Dama,LTP-V300L-4A,"Reloj
+analógico para dama con caja
+de acero inoxidable, correa de
+cuero rosa y esfera blanca.",/relojes/casio-cuero-dama/p01_i000.jpg,36.00,54000.00,90000.00,65.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+217,Casio,Cuero Dama,LTP-V300L-1A,"Reloj
+analógico para dama con caja
+de acero inoxidable, correa de
+cuero negra y esfera negra.",/relojes/casio-cuero-dama/p01_i001.jpg,36.00,54000.00,90000.00,65.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+218,Casio,Cuero Dama,LTP-V004L-1A,,/relojes/casio-cuero-dama/p02_i002.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+219,Casio,Cuero Dama,LTP-V004L-7A,,/relojes/casio-cuero-dama/p02_i003.jpg,21.00,31500.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+220,Casio,Cuero Dama,LTP-V004L-1B,,/relojes/casio-cuero-dama/p02_i004.jpg,21.00,31500.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+221,Casio,Cuero Dama,LTP-V002GL-7B,,/relojes/casio-cuero-dama/p03_i006.jpg,0.00,0.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+222,Casio,Cuero Dama,LTP-V002L-7B,,/relojes/casio-cuero-dama/p03_i007.jpg,21.00,31500.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+223,Casio,Cuero Dama,LTP-V002GL-9B,,/relojes/casio-cuero-dama/p03_i008.jpg,21.00,31500.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+224,Casio,Cuero Dama,LTP-V001L-1B,,/relojes/casio-cuero-dama/p04_i009.jpg,18.00,27000.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+225,Casio,Cuero Dama,LTP-V001GL-1B,,/relojes/casio-cuero-dama/p04_i010.jpg,18.00,27000.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+226,Casio,Cuero Dama,LTP-V001L-1B,,/relojes/casio-cuero-dama/p04_i009.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+227,Casio,Cuero Dama,LTP-V001GL-1B,,/relojes/casio-cuero-dama/p04_i009.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+228,Casio,Cuero Dama,LTP-V005L-7B3,"El Casio LTP-V005L-7B3 es un reloj
+femenino de cuarzo con caja de
+acero inoxidable, correa de cuero
+negro y esfera blanca con
+marcadores plateados y fecha,
+cristal mineral, tres agujas, ligero y
+resistente al agua para uso diario.",/relojes/casio-cuero-dama/p05_i011.jpg,19.00,28500.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+229,Casio,Cuero Dama,LTP-V005L-2B,"El Casio LTP-V005L-2B es un reloj
+femenino de cuarzo con caja de
+acero inoxidable, correa de cuero
+negro y esfera azul con marcadores
+plateados y fecha, cristal mineral,
+tres agujas, ligero y resistente al
+agua para uso diario.",/relojes/casio-cuero-dama/p05_i012.jpg,19.00,28500.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+230,Casio,Cuero Dama,LTP-V005L-7B3,"El Casio LTP-V005L-7B3 es un reloj
+femenino de cuarzo con caja de
+acero inoxidable, correa de cuero
+negro y esfera blanca con
+marcadores plateados y fecha,
+cristal mineral, tres agujas, ligero y
+resistente al agua para uso diario.",/relojes/casio-cuero-dama/p05_i011.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+231,Casio,Cuero Dama,LTP-V005L-2B,"El Casio LTP-V005L-7B3 es un reloj
+femenino de cuarzo con caja de
+acero inoxidable, correa de cuero
+negro y esfera blanca con
+marcadores plateados y fecha,
+cristal mineral, tres agujas, ligero y
+resistente al agua para uso diario.",/relojes/casio-cuero-dama/p05_i011.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+232,Casio,Cuero Dama,LTP-V002L-1B3,"El Casio LTP-V002L-1B3 es un
+reloj femenino de cuarzo con
+caja de acero inoxidable, correa
+de cuero negro y esfera negra
+con números grandes y fecha,
+cristal mineral, tres agujas,
+ligero y resistente al agua para
+uso diario.",/relojes/casio-cuero-dama/p06_i013.jpg,21.00,31500.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+233,Casio,Cuero Dama,LTP-V002GL-7B3,"El Casio LTP-V002GL-7B3 es un
+reloj femenino de cuarzo con caja
+dorada, correa de cuero marrón y
+esfera blanca con números
+grandes y fecha, cristal mineral,
+tres agujas, ligero y resistente al
+agua para uso diario.",/relojes/casio-cuero-dama/p06_i014.jpg,21.00,31500.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+234,Casio,Cuero Dama,LTP-V002L-1B3,"El Casio LTP-V002L-1B3 es un
+reloj femenino de cuarzo con
+caja de acero inoxidable, correa
+de cuero negro y esfera negra
+con números grandes y fecha,
+cristal mineral, tres agujas,
+ligero y resistente al agua para
+uso diario.",/relojes/casio-cuero-dama/p06_i015.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+235,Casio,Cuero Dama,LTP-V002GL-7B3,"El Casio LTP-V002L-1B3 es un
+reloj femenino de cuarzo con
+caja de acero inoxidable, correa
+de cuero negro y esfera negra
+con números grandes y fecha,
+cristal mineral, tres agujas,
+ligero y resistente al agua para
+uso diario.",/relojes/casio-cuero-dama/p06_i013.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+236,Casio,Cuero Dama,LTP-V002GL-7B3,"El Casio LTP-V002GL-7B3 es un
+reloj femenino de cuarzo con caja
+dorada, correa de cuero marrón y
+esfera blanca con números
+grandes y fecha, cristal mineral,
+tres agujas, ligero y resistente al
+agua para uso diario.",/relojes/casio-cuero-dama/p07_i016.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+237,Casio,Cuero Dama,LTP-V005L-1B,"El Casio LTP-V005L-1B es un
+reloj femenino de cuarzo con caja
+de acero inoxidable, correa de
+cuero negro y esfera negra con
+marcadores plateados y fecha,
+cristal mineral, tres agujas, ligero
+y resistente al agua para uso
+diario.",/relojes/casio-cuero-dama/p07_i017.jpg,19.00,28500.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+238,Casio,Cuero Dama,LTP-V005L-7B,"El Casio LTP-V002GL-7B3 es un
+reloj femenino de cuarzo con caja
+dorada, correa de cuero marrón y
+esfera blanca con números
+grandes y fecha, cristal mineral,
+tres agujas, ligero y resistente al
+agua para uso diario.",/relojes/casio-cuero-dama/p07_i016.jpg,19.00,28500.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+239,Casio,Cuero Dama,LTP-V005L-1B,"El Casio LTP-V002GL-7B3 es un
+reloj femenino de cuarzo con caja
+dorada, correa de cuero marrón y
+esfera blanca con números
+grandes y fecha, cristal mineral,
+tres agujas, ligero y resistente al
+agua para uso diario.",/relojes/casio-cuero-dama/p07_i016.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+240,Casio,Cuero Dama,LTP-VT01GL-4B,"El Casio LTP-VT01GL-4B es un
+reloj femenino de cuarzo con caja
+dorada, correa de cuero marrón y
+esfera rosada minimalista con
+marcadores dorados, cristal
+mineral, tres agujas, ligero y
+resistente al agua para uso diario.",/relojes/casio-cuero-dama/p08_i018.jpg,28.00,42000.00,80000.00,55.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+241,Casio,Cuero Dama,LTP-VT02BL-2A,"El Casio LTP-VT02BL-2A es un
+reloj femenino de cuarzo con caja
+de acero inoxidable, correa de
+cuero azul y esfera azul
+minimalista con marcadores
+plateados, cristal mineral, tres
+agujas, ligero y resistente al agua
+para uso diario
+LTP-VT01GL-4B
+LTP-VT02BL-2A
+Precio: 315.",/relojes/casio-cuero-dama/p08_i019.jpg,0.00,0.00,80000.00,60.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+242,Casio,Cuero Dama,LTP-VT01GL-4B,"El Casio LTP-VT01GL-4B es un
+reloj femenino de cuarzo con caja
+dorada, correa de cuero marrón y
+esfera rosada minimalista con
+marcadores dorados, cristal
+mineral, tres agujas, ligero y
+resistente al agua para uso diario.",/relojes/casio-cuero-dama/p08_i018.jpg,28.00,42000.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+243,Casio,Cuero Dama,LTP-VT02BL-2A,"El Casio LTP-VT01GL-4B es un
+reloj femenino de cuarzo con caja
+dorada, correa de cuero marrón y
+esfera rosada minimalista con
+marcadores dorados, cristal
+mineral, tres agujas, ligero y
+resistente al agua para uso diario.",/relojes/casio-cuero-dama/p08_i018.jpg,21.00,31500.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+244,Casio,Cuero Dama,LTP-V006GL-9B,"Reloj analógico de acero inoxidable,
+resistente al agua y con función de doble
+calendario.",/relojes/casio-cuero-dama/p09_i020.jpg,23.00,34500.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+245,Casio,Cuero Dama,LTP-V002L-1B,"Reloj analógico de acero inoxidable,
+resistente al agua y con función de doble
+calendario.",/relojes/casio-cuero-dama/p09_i021.jpg,21.00,31500.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+246,Casio,Cuero Dama,LTP-V005L-1A,"Reloj analógico de acero inoxidable,
+resistente al agua y con función de doble
+calendario.",/relojes/casio-cuero-dama/p09_i022.jpg,19.00,28500.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+247,Casio,Cuero Dama,LTP-V002L-1A,"Reloj analógico de acero inoxidable,
+resistente al agua y con función de doble
+calendario.",/relojes/casio-cuero-dama/p09_i023.jpg,0.00,0.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+248,Casio,Cuero Dama,LTP-V007L-9E,"Reloj de dama analógico
+con caja dorada
+rectangular de 22 mm,
+correa de cuero marrón y
+esfera dorada con números
+romanos.",/relojes/casio-cuero-dama/p10_i024.jpg,20.00,30000.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+249,Casio,Cuero Dama,LTP-V007L-7E2,"Reloj de dama analógico
+con caja dorada
+rectangular de 22 mm,
+correa de cuero marrón y
+esfera dorada con números
+romanos.",/relojes/casio-cuero-dama/p10_i025.jpg,0.00,0.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+250,Casio,Deportivo Caballero,MTP-1335D-2A,,/relojes/casio-deportivo/p02_i003.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+251,Casio,Deportivo Caballero,AE-1300WH-1A2,,/relojes/casio-deportivo/p02_i004.jpg,0.00,0.00,70000.00,50.00,0,true,2026-05-17 21:17:45.851144+00,2026-05-17 21:17:45.851144+00,pedido,false
+252,Casio,Deportivo Caballero,AE-1300WH-4A,,/relojes/casio-deportivo/p02_i005.jpg,0.00,0.00,70000.00,50.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+253,Casio,Deportivo Caballero,AE-1300WH-8A,,/relojes/casio-deportivo/p02_i006.jpg,24.00,36000.00,70000.00,50.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+254,Casio,Deportivo Caballero,AE-1300WH-2A,,/relojes/casio-deportivo/p02_i003.jpg,24.00,36000.00,70000.00,50.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+255,Casio,Deportivo Caballero,AE-1300WH-1A,,/relojes/casio-deportivo/p02_i003.jpg,24.00,36000.00,70000.00,50.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+256,Casio,Deportivo Caballero,AE-1200WHB-1B,,/relojes/casio-deportivo/p06_i017.jpg,29.00,43500.00,80000.00,58.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+257,Casio,Deportivo Caballero,AE-1200WHB-3B,,/relojes/casio-deportivo/p06_i018.jpg,29.00,43500.00,80000.00,58.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+258,Casio,Deportivo Caballero,AE-1500WH-1A,,/relojes/casio-deportivo/p08_i021.jpg,28.00,42000.00,70000.00,50.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+259,Casio,Deportivo Caballero,AE-1500WHX-3A,,/relojes/casio-deportivo/p08_i022.jpg,26.00,39000.00,70000.00,50.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+260,Casio,Deportivo Caballero,AE-1500WH-8B,,/relojes/casio-deportivo/p09_i023.jpg,28.00,42000.00,70000.00,50.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+261,Casio,Deportivo Caballero,AE-1500WH-2A,,/relojes/casio-deportivo/p09_i024.jpg,28.00,42000.00,70000.00,50.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+262,Casio,Deportivo Caballero,AW-48HE-7A,"Reloj analógico-digital con
+diseño clásico y funcional.",/relojes/casio-deportivo/p11_i027.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+263,Casio,Deportivo Caballero,AW-48HE-8A,"Reloj analógico-digital con caja y correa
+de resina negra.",/relojes/casio-deportivo/p11_i028.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+264,Casio,Deportivo Caballero,HDC-700-3AV,,/relojes/casio-deportivo/p12_i029.jpg,36.00,54000.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+265,Casio,Deportivo Caballero,HDC-700-3A3,,/relojes/casio-deportivo/p13_i031.jpg,0.00,0.00,90000.00,65.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+266,Casio,Deportivo Caballero,HDC-700-3A2,,/relojes/casio-deportivo/p14_i033.jpg,36.00,54000.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+267,Casio,Edifice,EFR-571D-1A,"Reloj con cronógrafo de acero
+inoxidable con estilo deportivo y
+elegante.",/relojes/casio-edifice/p01_i000.jpg,100.00,150000.00,190000.00,140.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+268,Casio,Edifice,EFV-C110D-2A,,/relojes/casio-edifice/p02_i002.jpg,95.00,142500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+269,Casio,Edifice,EF-558D-1A,"Reloj con cronógrafo de acero
+inoxidable con diseño imponente y
+deportivo.",/relojes/casio-edifice/p03_i004.jpg,115.00,172500.00,220000.00,160.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+270,Casio,Edifice,EFV-C120D-1A4,,/relojes/casio-edifice/p04_i006.jpg,95.00,142500.00,190000.00,140.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+271,Casio,Edifice,EFV-650D-3A,,/relojes/casio-edifice/p05_i008.jpg,95.00,142500.00,190000.00,140.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+272,Casio,Edifice,EFV-C100L-1A,,/relojes/casio-edifice/p06_i010.jpg,95.00,142500.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+273,Casio,Edifice,EFR-552L-5A,,/relojes/casio-edifice/p07_i012.jpg,95.00,142500.00,190000.00,140.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+274,Casio,Edifice,EFR-526L-1A,"Reloj con cronógrafo clásico y
+elegante con caja de acero
+inoxidable y correa de cuero
+negro.",/relojes/casio-edifice/p08_i014.jpg,90.00,135000.00,190000.00,140.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+275,Casio,Edifice,EF-539D-1A2,"Reloj con cronógrafo de acero
+inoxidable con diseño imponente y
+deportivo.",/relojes/casio-edifice/p09_i016.jpg,105.00,157500.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+276,Casio,Edifice,EF-556SG-7A,,/relojes/casio-edifice/p10_i018.jpg,130.00,195000.00,240000.00,170.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+277,Casio,Edifice,EFV-620D-2A,"Reloj con ronógrafo de acero
+inoxidable con caja de 55 mm,
+esfera azul con detalles plateados
+y subesferas dinámicas.",/relojes/casio-edifice/p11_i020.jpg,95.00,142500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+278,Casio,Edifice,EF-556D-1,,/relojes/casio-edifice/p12_i022.jpg,120.00,180000.00,230000.00,165.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+279,Casio,Edifice,EFV-C100D-1B,"Reloj analógico-digital con caja de
+51.",/relojes/casio-edifice/p13_i024.jpg,95.00,142500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+280,Casio,Edifice,EFV-100D-2A,,/relojes/casio-edifice/p14_i026.jpg,75.00,112500.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+281,Casio,Edifice,EFV-C120D-2A,,/relojes/casio-edifice/p15_i028.jpg,95.00,142500.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+282,Casio,Edifice,EFV-610DE-2A,,https://lh3.googleusercontent.com/d/1ch5Aw2vjHdpoICd0pPAixQg-sylKFQO2,95.00,142500.00,190000.00,140.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+283,Casio,Edifice,EF-539D-7A2,,/relojes/casio-edifice/p17_i033.jpg,90.00,135000.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+284,Casio,Edifice,EFV-610D-1A,,/relojes/casio-edifice/p18_i035.jpg,95.00,142500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+285,Casio,Edifice,EFR-526D-1A,,/relojes/casio-edifice/p19_i037.jpg,80.00,120000.00,160000.00,120.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+286,Casio,Edifice,EF-544D-7A,,/relojes/casio-edifice/p20_i039.jpg,80.00,120000.00,160000.00,120.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+287,Casio,Edifice,EF-544D-1A,,/relojes/casio-edifice/p21_i041.jpg,80.00,120000.00,160000.00,120.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+288,Casio,Edifice,EFV-640DC-3A,,/relojes/casio-edifice/p22_i043.jpg,0.00,0.00,190000.00,140.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+289,Casio,Edifice,EFV-640DC-1AV,"Reloj con cronógrafo elegante y
+moderno que combina caja y
+brazalete de acero inoxidable con
+acabado ionizado negro, junto a
+una esfera negra sobria y
+sofisticada.",/relojes/casio-edifice/p23_i045.jpg,0.00,0.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+290,Casio,Edifice,EFR-542BK-1A,,/relojes/casio-edifice/p24_i047.jpg,165.00,247500.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+291,Casio,Edifice,EFV-610D-3C,"Reloj con cronógrafo elegante y
+deportivo que combina caja y
+brazalete de acero inoxidable
+plateado con una esfera verde
+intensa, aportando un estilo
+moderno y distintivo.",/relojes/casio-edifice/p25_i049.jpg,0.00,0.00,190000.00,140.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+292,Casio,Edifice,EFR-539D-1A2,"Reloj con ronógrafo imponente y
+deportivo que combina caja y
+brazalete de acero inoxidable
+plateado con una esfera negra de
+gran tamaño, destacada por
+detalles en azul que aportan
+dinamismo y estilo.",/relojes/casio-edifice/p26_i051.jpg,105.00,157500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+293,Casio,Edifice,EF-548D-2AV,,/relojes/casio-edifice/p27_i053.jpg,95.00,142500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+294,Casio,Edifice,EFV-600D-3C,"Reloj con cronógrafo elegante y
+moderno que combina caja y
+brazalete de acero inoxidable
+plateado con una esfera verde
+intensa, aportando un estilo
+distintivo y sofisticado.",/relojes/casio-edifice/p28_i055.jpg,80.00,120000.00,160000.00,120.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+295,Casio,Edifice,EFV-540D-2A,,/relojes/casio-edifice/p29_i057.jpg,80.00,120000.00,190000.00,140.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+296,Casio,G-Shock,DW-5610UU-3D,,/relojes/casio-gshock/p01_i000.jpg,0.00,0.00,170000.00,120.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+297,Casio,G-Shock,GA-110HR-1A,,/relojes/casio-gshock/p02_i002.jpg,95.00,142500.00,182000.00,125.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+298,Casio,G-Shock,GBA-900UU-3A,,/relojes/casio-gshock/p03_i004.jpg,105.00,157500.00,190000.00,130.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+299,Casio,G-Shock,DW-5600UBB-1D,,/relojes/casio-gshock/p04_i006.jpg,85.00,127500.00,17000.00,120.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+300,Casio,G-Shock,DWE-5657RE-1D,,/relojes/casio-gshock/p05_i008.jpg,0.00,0.00,235000.00,165.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+301,Casio,G-Shock,GBM-2100-1A,,/relojes/casio-gshock/p06_i010.jpg,200.00,300000.00,0.00,0.00,0,true,2026-05-17 21:17:46.061182+00,2026-05-17 21:17:46.061182+00,pedido,false
+302,Casio,G-Shock,GA-120TR-1A,,/relojes/casio-gshock/p07_i012.jpg,105.00,157500.00,215000.00,150.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+303,Casio,G-Shock,GA-100-1A4,,/relojes/casio-gshock/p08_i014.jpg,90.00,135000.00,200000.00,145.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+304,Casio,G-Shock,GA-100CM-4A,,/relojes/casio-gshock/p09_i016.jpg,110.00,165000.00,230000.00,165.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+305,Casio,G-Shock,GA-110SL-3AE,,/relojes/casio-gshock/p10_i018.jpg,0.00,0.00,250000.00,175.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+306,Casio,G-Shock,GA-110RD-4A,,/relojes/casio-gshock/p13_i024.jpg,95.00,142500.00,200000.00,145.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+307,Casio,G-Shock,GA-110NM-4A,,/relojes/casio-gshock/p14_i026.jpg,0.00,0.00,200000.00,145.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+308,Casio,G-Shock,GA-110NM-2A,,/relojes/casio-gshock/p15_i028.jpg,95.00,142500.00,20000.00,145.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+309,Casio,G-Shock,GA-110TU-1A5,,/relojes/casio-gshock/p16_i030.jpg,105.00,157500.00,210000.00,150.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+310,Casio,G-Shock,DW-6900TU-1A5,,/relojes/casio-gshock/p17_i032.jpg,80.00,120000.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+311,Casio,G-Shock,GA-400GB-1A,,/relojes/casio-gshock/p18_i034.jpg,115.00,172500.00,230000.00,165.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+312,Casio,G-Shock,GA-110HC-1A,,/relojes/casio-gshock/p19_i036.jpg,105.00,157500.00,210000.00,150.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+313,Casio,G-Shock,GA-110-1A,,/relojes/casio-gshock/p20_i038.jpg,105.00,157500.00,220000.00,160.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+314,Casio,G-Shock,GD-100-1A,,/relojes/casio-gshock/p21_i040.jpg,110.00,165000.00,175000.00,125.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+315,Citizen,Caballero,BI1054-12E,"Reloj de caballero con caja de
+acero inoxidable en acabado
+bicolor dorado y plateado, esfera
+negra con índices dorados y
+fechador a las 3, movimiento de
+cuarzo japonés y cristal mineral
+resistente.",/relojes/citizen-cab/p01_i000.jpg,87.00,130500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+316,Citizen,Caballero,BF2013-56E,,/relojes/citizen-cab/p02_i002.jpg,87.00,130500.00,190000.00,140.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+317,Citizen,Caballero,BI5000-52L,"Reloj de caballero en acero
+inoxidable con acabado plateado,
+esfera azul con índices plateados y
+fechador a las 3, movimiento de
+cuarzo japonés y cristal mineral
+resistente.",/relojes/citizen-cab/p03_i004.jpg,75.00,112500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+318,Citizen,Caballero,BI5000-87A,"Reloj de caballero en acero
+inoxidable con acabado plateado,
+esfera blanca con índices
+plateados y fechador a las 3,
+movimiento de cuarzo japonés y
+cristal mineral resistente.",/relojes/citizen-cab/p04_i006.jpg,75.00,112500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+319,Citizen,Caballero,BI5000-87E,"Reloj de caballero en acero
+inoxidable con acabado plateado,
+esfera negra con índices plateados
+y fechador a las 3, movimiento de
+cuarzo japonés y cristal mineral
+resistente.",/relojes/citizen-cab/p05_i008.jpg,75.00,112500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+320,Citizen,Caballero,BI5000-52B,"Reloj de caballero en acero
+inoxidable con acabado plateado
+uniforme, esfera clara con
+fechador a las 3, movimiento de
+cuarzo japonés y cristal mineral
+resistente.",/relojes/citizen-cab/p06_i010.jpg,75.00,112500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+321,Citizen,Dama,EQ0530-51N,"Reloj de dama analógico con
+caja y brazalete de acero
+inoxidable de 26 mm, esfera
+azul madre perla con calendario
+de día y fecha.",https://lh3.googleusercontent.com/d/10-smKauYPqF3m8EYG6-uqsKzSH0dxNAv,90.00,135000.00,195000.00,140.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+322,Citizen,Dama,EU6060-55D,"Reloj de dama analógico con
+caja y brazalete de acero
+inoxidable de 26 mm, esfera
+nácar con calendario de fecha.",/relojes/citizen-dama/p02_i002.jpg,0.00,0.00,195000.00,140.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+323,Citizen,Dama,EU6062-50D,"Reloj de dama analógico con
+caja y brazalete dorados de 28
+mm, esfera madre perla y bisel
+con cristales Swarovski.",/relojes/citizen-dama/p03_i004.jpg,95.00,142500.00,195000.00,140.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+324,Citizen,Dama,EU6062-50P,"Reloj de dama analógico con
+caja y brazalete dorados de 26
+mm, esfera madre perla y bisel
+con cristales Swarovski.",/relojes/citizen-dama/p04_i006.jpg,95.00,142500.00,195000.00,140.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+325,Citizen,Dama,EQ0608-55A,"Reloj de dama analógico con
+caja de acero inoxidable de
+28 mm y brazalete
+combinado en acero
+plateado y dorado, esfera
+blanca con calendario de
+fecha.",/relojes/citizen-dama/p05_i008.jpg,85.00,127500.00,190000.00,140.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+326,Citizen,Dama,EQ0603-59P,"Reloj de dama analógico con
+caja dorada de 28 mm,
+brazalete dorado de acero
+inoxidable y esfera dorada
+con calendario de fecha.",/relojes/citizen-dama/p06_i010.jpg,85.00,127500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+327,Citizen,Dama,EQ0603-59F,"Reloj de dama analógico con
+caja dorada de 28 mm,
+brazalete dorado de acero
+inoxidable y esfera negra con
+calendario de fecha.",/relojes/citizen-dama/p07_i012.jpg,85.00,127500.00,190000.00,140.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+328,Citizen,Dama,EU6072-56D,"Reloj de dama analógico con
+caja y brazalete dorados de 28
+mm, esfera madre perla con
+calendario de fecha.",/relojes/citizen-dama/p08_i014.jpg,85.00,127500.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+329,Orient,Caballero,FAB05003C9,"Reloj de caballero en acero
+inoxidable con acabado plateado,
+esfera champagne con índices
+dorados y fechador a las 3,
+movimiento automático japonés y
+cristal mineral resistente.",/relojes/orient/p01_i000.jpg,0.00,0.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+330,Orient,Caballero,FAB00002B9,"Reloj de caballero en acero
+inoxidable con acabado plateado,
+esfera negra con índices plateados
+y dorados, además de fechador a
+las 3, movimiento automático
+japonés y cristal mineral
+resistente.",/relojes/orient/p02_i002.jpg,0.00,0.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+331,Orient,Caballero,FAB0000CB9,"Reloj de caballero en acero
+inoxidable con acabado plateado,
+esfera azul con índices plateados y
+dorados, además de fechador a las
+3, movimiento automático japonés
+y cristal mineral resistente.",/relojes/orient/p03_i004.jpg,0.00,0.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+332,Orient,Caballero,FAB00002WE,"Reloj de caballero en acero
+inoxidable con acabado plateado,
+esfera blanca con índices
+plateados y dorados, además de
+fechador a las 3, movimiento
+automático japonés y cristal
+mineral resistente.",/relojes/orient/p04_i006.jpg,0.00,0.00,180000.00,130.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+333,Seiko,5 Caballero,SNKL43K1,"El Seiko 5 plateado es un reloj
+automático japonés con
+movimiento de 21 rubí, caja de 37 -
+38mmy brazalete de acero
+inoxidable en acabado plateado, cr,
+calendario día y fecha en dos
+idiomas, resistencia al agua de 30
+m y tapa trasera transparente que
+deja ver el mecanismo,
+combinando elegancia clásica con
+la fiabilidad mecánica
+característica de la línea Seiko 5.",/relojes/seiko/p01_i000.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+334,Seiko,5 Caballero,SNKL83K1,"El Seiko 5 plateado es un reloj
+automático japonés con
+movimiento de 21 rubí, caja y
+brazalete de acero inoxidable en
+acabado plateado, cristal Hardlex,
+calendario día y fecha en dos
+idiomas, resistencia al agua de 30
+m y tapa trasera transparente que
+deja ver el mecanismo,
+combinando elegancia clásica con
+la fiabilidad mecánica
+característica de la línea Seiko 5.",/relojes/seiko/p02_i002.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+335,Seiko,5 Caballero,SNKL19K1,"Reloj automático con caja de acero
+inoxidable de 37 mm de diámetro,
+brazalete metálico de acero
+inoxidable de 18 mm de ancho,
+esfera gris con agujas y
+marcadores dorados
+luminiscentes, ventana de día y
+fecha a las 3, cristal Hardlex y
+calibre 7S26 con 21 joyas.",/relojes/seiko/p03_i004.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+336,Seiko,5 Caballero,SNKK11K1,"Reloj automático con caja de
+acero inoxidable de 38 mm de
+diámetro, brazalete metálico de 20
+mm de ancho, esfera azul sunburst
+con agujas y marcadores dorados
+luminiscentes, ventana de día y
+fecha a las 3, cristal Hardlex,
+calibre 7S26 con 21 joyas y fondo
+transparente que muestra el
+mecanismo.",/relojes/seiko/p04_i006.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+337,Seiko,5 Caballero,SNKE51K1,"Reloj automático con caja de acero
+inoxidable de 37 mm de diámetro,
+brazalete metálico de 18 mm de
+ancho, esfera azul y marcadores
+plateados luminiscentes, ventana
+de día y fecha a las 3, cristal
+Hardlex, movimiento automatico 21
+rubis y fondo transparente que
+permite ver el mecanismo.",/relojes/seiko/p05_i008.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+338,Seiko,5 Caballero,SNK615K1,"Reloj caja de acero inoxidable de
+37 mm de diámetro, brazalete
+metálico de 18 mm de ancho,
+esfera azul sunburst con agujas y
+marcadores dorados
+luminiscentes, ventana de día y
+fecha a las 3, cristal Hardlex,
+calibre 7S26 con 21 joyas y fondo
+transparente que permite ver el
+mecanismo.",/relojes/seiko/p06_i010.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+339,Seiko,5 Caballero,SNKK17K1,"Reloj automático con caja de acero
+inoxidable de 38 mm de diámetro,
+brazalete metálico de 20 mm de
+ancho, esfera negra sunburst con
+agujas y marcadores dorados
+luminiscentes, ventana de día y
+fecha a las 3, cristal Hardlex,
+calibre 7S26 con 21 joyas y fondo
+transparente que permite ver el
+mecanismo.",/relojes/seiko/p07_i012.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+340,Seiko,5 Caballero,SNKK25K1,"Reloj automático con caja de acero
+inoxidable de 38 mm de diámetro,
+brazalete metálico de 20 mm de
+ancho, esfera blanca sunburst con
+detalles en gris y rojo, agujas y
+marcadores plateados
+luminiscentes, ventana de día y
+fecha a las 3, cristal Hardlex,
+calibre 7S26 con 21 joyas y fondo
+transparente que permite ver el
+mecanismo.",/relojes/seiko/p08_i014.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+341,Seiko,5 Caballero,SNKK31K1,"Reloj Automático con caja de
+acero inoxidable de 38 mm,
+brazalete metálico de 20 mm,
+esfera negra con detalles en rojo,
+agujas y marcadores plateados
+luminiscentes, ventana de día y
+fecha a las 3, cristal Hardlex,
+calibre 7S26 con 21 joyas y fondo
+transparente.",/relojes/seiko/p09_i016.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+342,Seiko,5 Caballero,SNKK67K1,"Reloj  con caja de acero inoxidable
+de 38 mm de diámetro y 12 mm de
+grosor, brazalete metálico de 17–
+20 mm de ancho, esfera gris con
+detalles dorados, agujas y
+marcadores luminosos, ventana de
+día y fecha a las 3, corona a las 4,
+cristal Hardlex, calibre 7S26 con 21
+joyas y fondo transparente que
+muestra el mecanismo.",/relojes/seiko/p10_i018.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+343,Seiko,5 Caballero,SNKK13K1,,/relojes/seiko/p11_i020.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+344,Seiko,5 Caballero,SNKK27K1,,/relojes/seiko/p12_i022.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+345,Seiko,5 Caballero,SNKL81K1,,/relojes/seiko/p13_i024.jpg,0.00,0.00,290000.00,210.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+346,Seiko,5 Caballero,SNKL86K1,"El Seiko 5 dorado es un reloj
+automático japonés con
+movimiento de 21 rubí, caja y
+brazalete de acero inoxidable en
+acabado dorado, cristal Hardlex,
+calendario día y fecha en dos
+idiomas, resistencia al agua de 30
+m y tapa trasera transparente que
+deja ver el mecanismo,
+combinando elegancia clásica con
+la fiabilidad mecánica
+característica de la línea Seiko 5.",/relojes/seiko/p15_i028.jpg,0.00,0.00,320000.00,230.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+347,Seiko,5 Caballero,SNKK22K1,"El Seiko 5 dorado es un reloj
+automático japonés con
+movimiento de 21 rubí, caja y
+brazalete de acero inoxidable en
+acabado dorado, cristal Hardlex,
+calendario día y fecha en dos
+idiomas, resistencia al agua de 30
+m y tapa trasera transparente que
+deja ver el mecanismo,
+combinando elegancia clásica con
+la fiabilidad mecánica
+característica de la línea Seiko 5.",/relojes/seiko/p16_i030.jpg,0.00,0.00,320000.00,230.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+348,Seiko,5 Caballero,SNKK86K1,"El Seiko 5 dorado es un reloj
+automático japonés con
+movimiento de 21 rubí, caja y
+brazalete de acero inoxidable en
+acabado dorado, cristal Hardlex,
+calendario día y fecha en dos
+idiomas, resistencia al agua de 30
+m y tapa trasera transparente que
+deja ver el mecanismo,
+combinando elegancia clásica con
+la fiabilidad mecánica
+característica de la línea Seiko 5.",/relojes/seiko/p17_i032.jpg,0.00,0.00,320000.00,230.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+349,Seiko,5 Caballero,SNKL40K1,"El Seiko 5 dorado es un reloj
+automático japonés con
+movimiento de 21 rubí, caja y
+brazalete de acero inoxidable en
+acabado dorado, cristal Hardlex,
+calendario día y fecha en dos
+idiomas, resistencia al agua de 30
+m y tapa trasera transparente que
+deja ver el mecanismo,
+combinando elegancia clásica con
+la fiabilidad mecánica
+característica de la línea Seiko 5.",/relojes/seiko/p18_i034.jpg,0.00,0.00,320000.00,230.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+350,Seiko,5 Caballero,SNKE56K1,"El Seiko 5 dorado es un reloj
+automático japonés con
+movimiento de 21 rubí, caja y
+brazalete de acero inoxidable en
+acabado dorado, cristal Hardlex,
+calendario día y fecha en dos
+idiomas, resistencia al agua de 30
+m y tapa trasera transparente que
+deja ver el mecanismo,
+combinando elegancia clásica con
+la fiabilidad mecánica
+característica de la línea Seiko 5.",/relojes/seiko/p19_i036.jpg,0.00,0.00,320000.00,230.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+351,Seiko,5 Caballero,SNKK76K1,"El Seiko 5 dorado es un reloj
+automático japonés con
+movimiento de 21 rubí, caja y
+brazalete de acero inoxidable en
+acabado dorado, cristal Hardlex,
+calendario día y fecha en dos
+idiomas, resistencia al agua de 30
+m y tapa trasera transparente que
+deja ver el mecanismo,
+combinando elegancia clásica con
+la fiabilidad mecánica
+característica de la línea Seiko 5.",/relojes/seiko/p20_i038.jpg,0.00,0.00,320000.00,230.00,0,true,2026-05-17 21:17:46.269806+00,2026-05-17 21:17:46.269806+00,pedido,false
+352,Seiko,5 Caballero,SNKK74K1,"El Seiko 5 dorado es un reloj
+automático japonés con
+movimiento de 21 rubí, caja y
+brazalete de acero inoxidable en
+acabado dorado, cristal Hardlex,
+calendario día y fecha en dos
+idiomas, resistencia al agua de 30
+m y tapa trasera transparente que
+deja ver el mecanismo,
+combinando elegancia clásica con
+la fiabilidad mecánica
+característica de la línea Seiko 5.",/relojes/seiko/p21_i040.jpg,0.00,0.00,320000.00,230.00,0,true,2026-05-17 21:17:46.466683+00,2026-05-17 21:17:46.466683+00,pedido,false
+353,Seiko,5 Caballero,SNXS80K,"El Seiko 5 dorado es un reloj
+automático japonés con
+movimiento de 21 rubí, caja y
+brazalete de acero inoxidable en
+acabado dorado, cristal Hardlex,
+calendario día y fecha en dos
+idiomas, resistencia al agua de 30
+m y tapa trasera transparente que
+deja ver el mecanismo,
+combinando elegancia clásica con
+la fiabilidad mecánica
+característica de la línea Seiko 5.",/relojes/seiko/p22_i042.jpg,0.00,0.00,320000.00,230.00,0,true,2026-05-17 21:17:46.466683+00,2026-05-17 21:17:46.466683+00,pedido,false
+354,Casio,Caballero,Casio Metal,,https://lh3.googleusercontent.com/d/16ol-ijHjyERdgLtgrjC0hBgupMQapliD,23.00,34500.00,65000.00,45.00,0,true,2026-05-17 21:17:46.466683+00,2026-05-17 21:17:46.466683+00,pedido,false
+355,Casio,Metal Dama,LTP-V007G-9E,"Reloj Casio LTP-V007G-9E, un modelo elegante y clásico con diseño rectangular y acabado dorado. Su estilo tipo vintage lo hace ideal para uso diario o para complementar looks más formales. Cuenta con malla de acero inoxidable, cierre triple, cristal mineral y movimiento analógico de 3 agujas.
+
+**Características:**
+- **Modelo:** Casio LTP-V007G-9E
+- Diseño rectangular elegante
+- Color dorado
+- Malla de acero inoxidable
+- Cristal mineral
+- Resistente al agua
+- **Medidas de caja:** 31 × 22 × 7,5 mm
+- **Peso aproximado:** 51 g
+- Batería con duración aproximada de 3 años",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779054144728-pja8jantuta.JPG,0.00,45000.00,85000.00,50.00,1,true,2026-05-17 21:42:56.637064+00,2026-05-17 21:42:56.637064+00,stock,false
+356,Casio,Deportivo Caballero,w-218h-1b,"Reloj Casio W-218H-1B, digital, deportivo y muy práctico para uso diario. Su diseño negro con pantalla de fácil lectura lo convierte en una opción cómoda, resistente y versátil para todos los días. Cuenta con luz LED, cronómetro, alarma diaria, calendario automático y formato de hora 12/24 hs.
+
+**Características:**
+- **Modelo:** Casio W-218H-1B
+- Pantalla digital
+- Caja y correa de resina
+- Luz LED color ámbar
+- Cronómetro 1/100 segundos
+- Alarma diaria y señal horaria
+- Calendario automático
+- Formato 12/24 horas
+- **Resistencia al agua:** 50 metros
+- **Batería aproximada:** 7 años
+- **Medidas:** 44,4 × 43,2 × 10,8 mm
+- **Peso aproximado:** 37 g",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779054930596-bevmgnatbtl.JPG,0.00,30000.00,60000.00,40.00,1,true,2026-05-17 21:56:02.220334+00,2026-05-17 21:56:02.220334+00,stock,false
+357,Casio,Metal Caballero,MTP-VT01B-1B,"Reloj Casio MTP-VT01B-1B, analógico para hombre, con diseño minimalista en color negro total. Su estilo sobrio y moderno lo hace ideal para uso diario, looks urbanos o combinaciones más elegantes. Cuenta con caja y malla de acero inoxidable con baño negro, cristal mineral y cierre triple.
+
+**Características:**
+- **Modelo:** Casio MTP-VT01B-1B
+- Reloj analógico de 3 agujas
+- Caja y malla de acero inoxidable
+- Color negro total
+- Cristal mineral
+- Cierre triple
+- Resistente al agua
+- **Precisión:** ±20 segundos por mes
+- **Batería aproximada:** 3 años
+- **Medidas:** 46 × 40 × 8,2 mm
+- **Peso aproximado:** 92 g",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779055207020-frmeno8y11v.JPG,0.00,60000.00,110000.00,60.00,1,true,2026-05-17 22:00:56.443249+00,2026-05-17 22:00:56.443249+00,stock,false
+358,Casio,Metal Caballero,Mtp-1302d-1a1,"Reloj Casio MTP-1302D-1A1, analógico para hombre, con diseño clásico y elegante en acero plateado. Su cuadrante negro con acabado sobrio y visor de fecha a las 3 en punto lo convierte en una opción ideal para uso diario, oficina o eventos más formales.
+
+**Características:**
+- **Modelo:** Casio MTP-1302D-1A1
+- Reloj analógico de 3 agujas
+- Caja con baño ionizado
+- Malla de acero inoxidable
+- Cierre triple
+- Cristal mineral
+- Visor de fecha
+- **Resistencia al agua:** 50 metros
+- **Batería aproximada:** 3 años
+- **Medidas:** 44,2 × 38,5 × 9,2 mm
+- **Peso aproximado:** 105 g
+- **Precisión:** ±20 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779055974845-z8duiz81sd.JPG,0.00,50000.00,90000.00,50.00,1,true,2026-05-17 22:14:59.867764+00,2026-05-17 22:14:59.867764+00,stock,false
+359,Casio,Metal Caballero,mtp-1302d-1a2,"Reloj Casio MTP-1302D-1A2, analógico para hombre, con diseño clásico y elegante en acero plateado. Su cuadrante oscuro con acabado tipo sunray y visor de fecha a las 3 en punto le dan un estilo sobrio, moderno y fácil de combinar.
+
+**Características:**
+- **Modelo:** Casio MTP-1302D-1A2
+- Reloj analógico de 3 agujas
+- Caja con baño ionizado
+- Malla de acero inoxidable
+- Cierre triple
+- Cristal mineral
+- Visor de fecha
+- **Resistencia al agua:** 50 metros
+- **Batería aproximada:** 3 años
+- **Medidas:** 44,2 × 38,5 × 9,2 mm
+- **Peso aproximado:** 105 g
+- **Precisión:** ±20 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779056226943-s9zle1lbvrn.JPG,0.00,50000.00,90000.00,50.00,1,true,2026-05-17 22:18:06.732705+00,2026-05-17 22:18:06.732705+00,stock,false
+360,Casio,Metal Dama,Ltp-v007sg-9b,"Reloj Casio LTP-V007SG-9B, analógico para mujer, con diseño rectangular estilo vintage y combinación bicolor plateado/dorado. Su cuadrante champagne y formato clásico lo convierten en una opción elegante, delicada y fácil de combinar para uso diario o looks más formales.
+
+**Características:**
+- **Modelo:** Casio LTP-V007SG-9B
+- Reloj analógico de 3 agujas
+- Caja rectangular cromada
+- Malla de acero inoxidable
+- Cierre triple
+- Cristal mineral
+- Resistente al agua
+- **Batería aproximada:** 3 años
+- **Medidas:** 31 × 22 × 7,5 mm
+- **Peso aproximado:** 51 g
+- **Precisión:** ±20 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779056461070-cl3tif89sqb.JPG,0.00,41000.00,75000.00,40.00,1,true,2026-05-17 22:22:09.214984+00,2026-05-17 22:22:09.214984+00,stock,false
+361,Casio,Metal Caballero,MTP-1302D-7A2,"Reloj Casio MTP-1302D-7A2, analógico para hombre, con diseño clásico en acero plateado y cuadrante claro. Su estilo elegante y atemporal lo convierte en una excelente opción para uso diario, oficina o eventos más formales. Cuenta con visor de fecha a las 3 en punto, cristal mineral y resistencia al agua de 50 metros.
+
+**Características:**
+- **Modelo:** MTP-1302D-7A2
+- Reloj analógico de 3 agujas
+- Cuadrante plateado/claro
+- Caja con baño ionizado
+- Malla de acero inoxidable
+- Cierre triple
+- Cristal mineral
+- Visor de fecha
+- **Resistencia al agua:** 50 metros
+- **Batería aproximada:** 3 años
+- **Medidas:** 44,2 × 38,5 × 9,2 mm
+- **Peso aproximado:** 105 g
+- **Precisión:** ±20 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779056722363-i17gk5j0sv.JPG,0.00,50000.00,90000.00,50.00,0,true,2026-05-17 22:29:18.569954+00,2026-05-17 22:29:18.569954+00,stock,false
+362,Casio,Cuero Caballero,MTP-B190L-2BV,"Reloj Casio MTP-B190L-2BV, analógico para hombre, con diseño rectangular elegante y moderno. Su cuadrante azul combinado con correa de cuero negra le da un estilo sobrio, clásico y fácil de usar tanto para el día a día como para ocasiones más formales. Cuenta con caja de acero inoxidable, cristal mineral y resistencia al agua de 50 metros.
+
+**Características:**
+- **Modelo:** MTP-B190L-2BV
+- Reloj analógico de 3 agujas
+- Cuadrante azul
+- Caja de acero inoxidable
+- Correa de cuero genuino negra
+- Cristal mineral
+- Cierre con hebilla
+- **Resistencia al agua:** 50 metros
+- **Batería aproximada:** 3 años
+- **Medidas:** 41 × 31,5 × 8,1 mm
+- **Peso aproximado:** 43 g
+- **Precisión:** ±20 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779057170126-i1mo0u2ysxc.JPG,0.00,88000.00,120000.00,80.00,0,true,2026-05-17 22:33:37.024765+00,2026-05-17 22:33:37.024765+00,stock,false
+363,Casio,Deportivo Caballero,F-91W-1D,"Reloj Casio F-91W-1D, digital clásico, liviano y cómodo para uso diario. Es uno de los modelos más icónicos de Casio, con diseño retro, caja negra de resina y funciones prácticas como luz LED, alarma diaria, cronómetro y calendario automático. Ideal para quienes buscan un reloj simple, resistente y funcional.
+
+**Características:**
+- **Modelo:** F-91W-1D
+- Pantalla digital
+- Caja y correa de resina
+- Cristal de resina
+- Luz LED
+- Cronómetro 1/100 segundos
+- Alarma diaria y señal horaria
+- Calendario automático
+- Formato 12/24 horas
+- Resistente al agua
+- **Batería aproximada:** 7 años
+- **Medidas:** 38,2 × 35,2 × 8,5 mm
+- **Peso aproximado:** 21 g
+- **Precisión:** ±30 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779057259715-rr18mtxgln8.JPG,0.00,22000.00,44000.00,25.00,1,true,2026-05-17 22:36:45.033721+00,2026-05-17 22:36:45.033721+00,stock,false
+364,Casio,Metal Dama,LTP-1129N-7ARDF,"Reloj Casio Mujer LTP-1129N-7ARDF, analógico, delicado y elegante, con diseño clásico en acero plateado. Su cuadrante claro y formato compacto lo convierten en una opción ideal para uso diario, oficina o para complementar looks más formales. Cuenta con malla de acero inoxidable, cristal mineral y cierre triple.
+
+**Características:**
+- **Modelo:** LTP-1129N-7ARDF
+- Reloj analógico para mujer
+- Diseño clásico y delicado
+- Caja con acabado paladiado
+- Malla de acero inoxidable
+- Cierre triple
+- Cristal mineral
+- Resistente al agua
+- **Batería aproximada:** 3 años
+- **Medidas:** 32 × 26 × 7 mm
+- **Peso aproximado:** 38 g",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779057764297-ms42293prqn.JPG,0.00,52000.00,90000.00,55.00,1,true,2026-05-17 22:44:51.116806+00,2026-05-17 22:44:51.116806+00,stock,false
+365,Casio,Cuero Dama,LTP-V006GL-9BUDF,"Reloj Casio Mujer LTP-V006GL-9BUDF, analógico, elegante y clásico, con caja dorada y correa de cuero marrón. Su cuadrante color champagne con números romanos le da un estilo fino y delicado, ideal para uso diario, oficina o looks más formales. Además, cuenta con visor de día y fecha, un detalle práctico para todos los días.
+
+**Características:**
+- **Modelo:** LTP-V006GL-9BUDF / LTP-V006GL-9B
+- Reloj analógico para mujer
+- Movimiento de 3 agujas
+- Visor de día y fecha
+- Caja dorada con baño de iones
+- Correa de cuero
+- Cristal mineral
+- Resistente al agua
+- **Batería aproximada:** 3 años
+- **Medidas:** 30,4 × 25 × 9,2 mm
+- **Peso aproximado:** 22 g
+- **Precisión:** ±20 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779058330151-kixevks77tt.JPG,0.00,34000.00,60000.00,35.00,1,true,2026-05-17 22:53:20.493755+00,2026-05-17 22:53:20.493755+00,stock,false
+366,Casio,Metal Caballero,MTP-VD01D-1E,"Reloj Casio MTP-VD01D-1E, analógico para hombre, con diseño deportivo y elegante en acero plateado. Su cuadrante negro de fácil lectura y su caja robusta le dan una presencia moderna, ideal para uso diario, oficina o salidas casuales. Cuenta con visor de fecha, cristal mineral y resistencia al agua de 50 metros.
+
+**Características:**
+- **Modelo:** MTP-VD01D-1E / MTP-VD01D-1EV
+- Reloj analógico de 3 agujas
+- Cuadrante negro
+- Caja y malla de acero inoxidable
+- Cierre triple
+- Cristal mineral
+- Visor de fecha
+- **Resistencia al agua:** 50 metros
+- **Batería aproximada:** 3 años
+- **Medidas:** 49 × 45 × 10,3 mm
+- **Peso aproximado:** 118 g
+- **Precisión:** ±20 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779058624262-xbzwx7e8eq.JPG,0.00,45000.00,85000.00,50.00,0,true,2026-05-17 23:01:22.164947+00,2026-05-17 23:01:22.164947+00,stock,false
+367,Casio,Metal Caballero,A-158WA-1DF,"Reloj Casio A-158WA, digital clásico estilo vintage, con caja cromada y malla metálica plateada. Es un modelo liviano, cómodo y muy fácil de combinar, ideal para uso diario. Cuenta con luz LED, cronómetro, alarma diaria, señal horaria y calendario automático.
+
+**Características:**
+- **Modelo:** A-158WA / A158WA-1
+- Pantalla digital
+- Caja de resina cromada
+- Malla de acero inoxidable
+- Cierre ajustable
+- Cristal de resina
+- Luz LED
+- Cronómetro 1/100 segundos
+- Alarma diaria y señal horaria
+- Calendario automático
+- Formato 12/24 horas
+- Resistente al agua
+- **Batería aproximada:** 7 años
+- **Medidas:** 36,8 × 33,2 × 8,2 mm
+- **Peso aproximado:** 46 g
+- **Precisión:** ±30 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779059039324-qe9msqqhmcd.JPG,0.00,31000.00,55000.00,30.00,1,true,2026-05-17 23:05:27.872762+00,2026-05-17 23:05:27.872762+00,stock,false
+368,Casio,Caballero,MTP-B145G-9AVDF,"Reloj Casio MTP-B145G-9AVDF, analógico, elegante y moderno, con diseño vintage en color dorado. Su cuadrante champagne/dorado y su caja compacta de acero inoxidable le dan un estilo clásico, sofisticado y muy fácil de combinar. Es ideal para uso diario, oficina o salidas, manteniendo una estética retro muy buscada.
+
+**Características:**
+- **Modelo:** MTP-B145G-9AVDF / MTP-B145G-9AV
+- Reloj analógico de 3 agujas
+- Cuadrante dorado/champagne
+- Caja y malla de acero inoxidable
+- Caja y correa con baño ionizado dorado
+- Cristal mineral
+- Visor de fecha
+- Cierre triple de una pulsación
+- **Resistencia al agua:** 50 metros
+- **Batería aproximada:** 3 años
+- **Medidas:** 40 × 35 × 7,4 mm
+- **Peso aproximado:** 82 g
+- **Precisión:** ±20 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779059397547-idm5vgdp7yf.JPG,0.00,80000.00,110000.00,70.00,1,true,2026-05-17 23:11:18.575139+00,2026-05-17 23:11:18.575139+00,stock,false
+369,Casio,Metal Caballero,MTP-VD03D-2A2,"Reloj Casio MTP-VD03D-2A2, analógico para hombre, con diseño clásico y minimalista en acero plateado. Su cuadrante azul le da un toque moderno y elegante, ideal para uso diario, oficina o salidas casuales. Cuenta con visor de fecha, cristal mineral y resistencia al agua para uso cotidiano.
+
+**Características:**
+- **Modelo:** MTP-VD03D-2A2
+- Reloj analógico de 3 agujas
+- Cuadrante azul
+- Caja y malla de acero inoxidable
+- Cierre triple
+- Cristal mineral
+- Visor de fecha
+- Resistente al agua
+- **Batería aproximada:** 3 años
+- **Medidas:** 48 × 41 × 9,6 mm
+- **Peso aproximado:** 106 g
+- **Precisión:** ±20 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779059667542-ejrvcxvpmv8.JPG,0.00,43000.00,80000.00,50.00,1,true,2026-05-17 23:15:48.5191+00,2026-05-17 23:15:48.5191+00,stock,false
+370,Casio,Metal Caballero,MTP-V006D-7B,"Reloj Casio MTP-V006D-7B, analógico para hombre, con diseño clásico y elegante en acero plateado. Su cuadrante claro con números romanos y visor de día y fecha le da un estilo formal, sobrio y muy práctico para uso diario, oficina o eventos. Cuenta con malla de acero inoxidable, cristal mineral y resistencia al agua.
+
+**Características:**
+- **Modelo:** MTP-V006D-7B
+- Reloj analógico de 3 agujas
+- Cuadrante claro con números romanos
+- Visor de día y fecha
+- Malla de acero inoxidable
+- Cierre triple
+- Cristal mineral
+- Resistente al agua
+- **Batería aproximada:** 2 años
+- **Medidas:** 45,1 × 38 × 9,4 mm
+- **Peso aproximado:** 93 g
+- **Precisión:** ±20 segundos por mes",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779059993091-6kvmtj0qxef.JPG,0.00,42000.00,70000.00,50.00,1,true,2026-05-17 23:21:02.732434+00,2026-05-17 23:21:02.732434+00,stock,false
+371,Citizen,Caballero,BI1054-12E,"Reloj Citizen BI1054-12E, analógico para hombre, con diseño clásico y elegante. Su caja dorada de acero inoxidable, cuadrante negro y correa de cuero marrón le dan un estilo formal, sobrio y fácil de combinar. Es ideal para uso diario, oficina o eventos, con movimiento de cuarzo y resistencia al agua de 50 metros / 5 ATM.
+
+**Características:**
+- **Modelo:** BI1054-12E
+- **Marca:** Citizen
+- Reloj analógico para hombre
+- **Movimiento:** cuarzo
+- Caja de acero inoxidable
+- Color de caja: dorado
+- Correa de cuero
+- Cuadrante negro
+- Cristal mineral
+- Visor de fecha
+- Agujas luminosas
+- **Resistencia al agua:** 50 metros / 5 ATM
+- **Medida de caja:** 40 mm
+- **Espesor aproximado:** 9 mm
+- Cierre con hebilla
+
+Un reloj elegante, clásico y con muy buena presencia, perfecto para quienes buscan un Citizen formal con correa de cuero y detalles dorados.",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779060133808-b6zqm8i9d2l.JPG,0.00,133000.00,180000.00,90.00,1,true,2026-05-17 23:25:26.491687+00,2026-05-17 23:25:26.491687+00,stock,false
+372,Seiko,5 Caballero,SNKK25K1,"Reloj Seiko SNKK25K1, automático para hombre, de la línea Seiko 5, con diseño clásico y deportivo en acero inoxidable. Su cuadrante blanco con detalles grises, visor de día y fecha, y fondo transparente le dan un estilo elegante, práctico y con presencia. Al ser automático, funciona con el movimiento de la muñeca, sin necesidad de pila.
+
+**Características:**
+- **Modelo:** SNKK25K1
+- **Marca:** Seiko
+- **Línea:** Seiko 5
+- Reloj analógico automático
+- **Movimiento:** japonés Seiko Calibre 7S26
+- 21 joyas
+- Caja de acero inoxidable
+- Malla de acero inoxidable
+- Cuadrante blanco con marcadores grises
+- Visor de día y fecha
+- Cristal Hardlex / mineral
+- Fondo transparente
+- **Resistencia al agua:** 30 metros
+- **Reserva de marcha aproximada:** 40 horas
+- **Diámetro aproximado:** 37/38 mm
+- **Grosor aproximado:** 11/12 mm
+- **Ancho de correa:** 20 mm
+
+Un Seiko automático clásico, resistente y elegante, ideal para quienes buscan un reloj con maquinaria mecánica, buen diseño y la confiabilidad de la línea Seiko 5.",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779060338497-vjbxv4y1len.JPG,0.00,227000.00,285000.00,190.00,1,true,2026-05-17 23:27:46.168022+00,2026-05-17 23:27:46.168022+00,stock,false
+373,Casio,Edifice,EFV-610DE-2A,"Reloj Casio Edifice EFV-610DE-2A, analógico para hombre, con diseño deportivo y elegante. Su cuadrante azul/turquesa con detalles refinados, caja de acero inoxidable y malla metálica le dan una presencia moderna y resistente. Cuenta con cronógrafo, visor de fecha, cristal mineral y resistencia al agua de 100 metros, ideal para uso diario, oficina o salidas.
+
+**Características:**
+- **Modelo:** EFV-610DE-2A
+- **Línea:** Casio Edifice
+- Reloj analógico cronógrafo
+- Movimiento de cuarzo
+- Cuadrante azul/turquesa
+- Caja y malla de acero inoxidable
+- Cierre triple de una pulsación
+- Cristal mineral
+- Tapa trasera atornillada
+- Visor de fecha
+- Cronómetro de 1/10 segundos
+- **Resistencia al agua:** 100 metros
+- **Batería aproximada:** 2 años
+- **Medidas:** 48,6 × 43,8 × 11 mm
+- **Peso aproximado:** 130 g
+- **Precisión:** ±20 segundos por mes
+
+Un Edifice moderno, robusto y con estilo deportivo, perfecto para quienes buscan un reloj con buena presencia, funciones de cronógrafo y excelente resistencia para todos los días.",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779060506643-f4gpod3trtw.JPG,0.00,140000.00,180000.00,110.00,0,true,2026-05-17 23:29:52.454343+00,2026-05-17 23:29:52.454343+00,stock,false
+374,Citizen,Dama,EU6060-55D,"Reloj Citizen EU6060-55D, analógico para mujer, con diseño elegante y delicado. Su cuadrante de madreperla, bisel con cristales engarzados y malla de acero inoxidable plateada le dan un estilo sofisticado, ideal para uso diario, oficina o looks más formales.
+
+**Características:**
+- **Modelo:** EU6060-55D
+- **Marca:** Citizen
+- Reloj analógico para mujer
+- **Movimiento:** cuarzo
+- Cuadrante de madreperla (Mother of Pearl)
+- Bisel con cristales engarzados
+- Caja y malla de acero inoxidable plateada
+- Cristal mineral
+- Visor de fecha a las 3 en punto
+- Agujas con luminiscencia
+- Cierre desplegable con pulsador
+- **Resistencia al agua:** 50 metros / 5 ATM
+- **Diámetro de caja:** 26 mm
+- **Espesor:** 8 mm
+- **Ancho de malla:** 13 mm
+
+Un reloj femenino, elegante y refinado, perfecto para quienes buscan un Citizen clásico con detalles de cristal y cuadrante de nácar.",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779109680012-baebt66qc89.JPG,0.00,125000.00,185000.00,100.00,0,true,2026-05-18 13:12:19.266392+00,2026-05-18 13:12:19.266392+00,stock,false
+375,Casio,Caballero,Caja Casio,,,3.00,0.00,3.00,3.00,3,false,2026-05-22 20:01:48.228845+00,2026-05-22 20:01:48.228845+00,pedido,true
+376,Citizen,Caballero,Caja Citizen,,,5.00,0.00,0.00,0.00,1,false,2026-05-22 20:02:18.467869+00,2026-05-22 20:02:18.467869+00,pedido,true
+377,Casio,G-Shock,Ga-2100-1a1,"El G-SHOCK GA-2100-1A1 combina un diseño moderno, urbano y resistente con el estilo clásico de la línea G-SHOCK. Su caja octogonal ultrafina, en color negro total, le da una estética minimalista y deportiva, ideal para uso diario o looks más streetwear.
+
+Cuenta con estructura Carbon Core Guard, que mejora la resistencia sin sumar peso, además de protección contra impactos y resistencia al agua de hasta 200 metros. Su formato analógico-digital incluye hora mundial, cronómetro, temporizador, alarmas, calendario automático y luz LED para una mejor visualización.
+
+Un modelo liviano, cómodo y versátil, perfecto para quienes buscan un reloj resistente, moderno y con presencia.
+
+Características destacadas:
+
+Diseño octogonal estilo “CasiOak”
+Color negro total
+Resistente a impactos
+Resistencia al agua 200 m
+Estructura Carbon Core Guard
+Hora analógica y digital
+Cronómetro, temporizador y alarmas
+Luz LED
+Correa de resina cómoda y resistente
+
+Ideal para: uso diario, deporte, outfits urbanos y quienes buscan un reloj fuerte con diseño moderno.",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779480218744-bp3s5p1skg.png,90.00,0.00,180000.00,120.00,1,true,2026-05-22 20:04:58.322092+00,2026-05-22 20:04:58.322092+00,stock,false
+378,Casio,Metal Caballero,MTP-1302DS-1AV,"**Casio MTP-1302DS-1AV**
+
+El **Casio MTP-1302DS-1AV** destaca por su combinación de elegancia clásica y detalles modernos. Su diseño en acero inoxidable con esfera tornasolada le da un look sofisticado y diferente, ideal para quienes buscan un reloj versátil pero con personalidad.
+
+La esfera presenta reflejos en tonos verdes, violetas y negros que cambian según la luz, generando un efecto premium muy llamativo. Además, incorpora calendario con fechador, resistencia al agua de hasta **50 metros** y un diseño cómodo para uso diario.
+
+Un modelo perfecto para outfits formales, casuales o street-luxury, manteniendo el estilo minimalista característico de Casio.
+
+**Características destacadas:**
+
+* Caja y malla de acero inoxidable
+* Esfera tornasolada multicolor
+* Diseño elegante y moderno
+* Fechador a las 3
+* Resistencia al agua 50 m
+* Movimiento analógico preciso
+* Cristal mineral resistente
+* Cierre seguro y cómodo
+
+**Ideal para:** uso diario, ocasiones formales, looks urbanos elegantes y quienes buscan un reloj distinto sin perder la esencia clásica.
+",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779483762424-3f7joxbvtdg.png,50.00,0.00,140000.00,90.00,1,true,2026-05-22 21:03:11.526453+00,2026-05-22 21:03:11.526453+00,stock,false
+379,Citizen,Dama,EQ0530-51N,"**Citizen EQ0530-51N**
+
+El **Citizen EQ0530-51N** combina elegancia y simplicidad en un diseño moderno de acero inoxidable. Su esfera azul profunda aporta un estilo sofisticado y versátil, ideal tanto para uso diario como para ocasiones más formales.
+
+Gracias a su estética limpia y minimalista, este modelo logra un equilibrio perfecto entre lo clásico y lo contemporáneo. La caja y brazalete de acero le brindan una presencia premium, mientras que su construcción liviana y cómoda permite usarlo durante todo el día.
+
+Además, cuenta con resistencia al agua y la confiabilidad característica de Citizen, convirtiéndolo en una excelente opción para quienes buscan un reloj elegante, funcional y atemporal.
+
+**Características destacadas:**
+
+* Caja y brazalete de acero inoxidable
+* Esfera azul elegante
+* Diseño clásico y minimalista
+* Movimiento analógico preciso
+* Resistencia al agua
+* Cristal resistente
+* Cómodo y liviano para uso diario
+
+**Ideal para:** looks elegantes, oficina, salidas y quienes buscan un reloj sofisticado con estilo moderno.
+",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779483882822-1g5qbqdnxd3.JPG,90.00,0.00,180000.00,120.00,1,true,2026-05-22 21:05:01.29876+00,2026-05-22 21:05:01.29876+00,stock,false
+380,Casio,Deportivo Caballero,Casio AE-1300WH-8A,"**Casio AE-1300WH-8A**
+
+El **Casio AE-1300WH-8A** es un reloj digital pensado para quienes buscan funcionalidad, resistencia y un diseño deportivo con mucha personalidad. Su estética robusta, combinada con detalles en gris y negro, le da un look moderno ideal para uso diario.
+
+Cuenta con una pantalla digital de gran tamaño y múltiples funciones útiles, incluyendo temporizador de cuenta regresiva, cronómetro, alarmas, hora mundial y luz LED. Además, incorpora batería de larga duración de hasta **10 años**, convirtiéndolo en un modelo práctico y confiable para el día a día.
+
+Su diseño inspirado en relojes tácticos y deportivos lo hace perfecto tanto para actividades cotidianas como para entrenamientos o viajes.
+
+**Características destacadas:**
+
+* Diseño deportivo y resistente
+* Pantalla digital amplia y fácil de leer
+* Temporizador de cuenta regresiva
+* Cronómetro y alarmas
+* Hora mundial
+* Luz LED
+* Batería de hasta 10 años
+* Resistencia al agua 100 m
+* Correa de resina cómoda y durable
+
+**Ideal para:** deporte, uso diario, viajes y quienes buscan un reloj funcional con estilo urbano y moderno.
+",https://afoxqoopexnpuclbzogb.supabase.co/storage/v1/object/public/fotos/1779486682488-37d6zgcqqvz.png,0.00,0.00,65000.00,0.00,1,true,2026-05-22 21:53:51.06837+00,2026-05-22 21:53:51.06837+00,stock,false
