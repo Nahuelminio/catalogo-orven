@@ -308,7 +308,7 @@ export default function VentasAdmin() {
                   <select
                     value={form.producto_caja_id}
                     onChange={(e) => {
-                      const caja = cajas.find((c) => c.id === e.target.value);
+                      const caja = cajas.find((c) => c.id === Number(e.target.value));
                       setForm((f) => ({
                         ...f,
                         producto_caja_id: e.target.value,

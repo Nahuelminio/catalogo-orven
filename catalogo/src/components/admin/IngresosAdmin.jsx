@@ -7,8 +7,8 @@ const MEDIOS_PAGO = ["Efectivo", "Transferencia", "Débito", "Crédito", "Mercad
 const FORM_VACIO = { fecha: hoy(), descripcion: "", categoria: "Otro", monto_ars: "", monto_usd: "", medio_pago: "Transferencia", notas: "" };
 const MESES = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 
-const fmt    = (n) => `$ ${Number(n).toLocaleString("es-AR")}`;
-const fmtUSD = (n) => `USD ${Number(n).toLocaleString("es-AR")}`;
+const fmt    = (n) => `$ ${Number(n || 0).toLocaleString("es-AR")}`;
+const fmtUSD = (n) => `USD ${Number(n || 0).toLocaleString("es-AR")}`;
 
 export default function IngresosAdmin() {
   const now = new Date();

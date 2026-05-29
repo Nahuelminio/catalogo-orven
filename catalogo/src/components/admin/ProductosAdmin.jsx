@@ -44,6 +44,7 @@ export default function ProductosAdmin() {
         precio_minorista: p.precio_minorista || 0,
         precio_mayorista: p.precio_mayorista || 0,
         stock:            p.stock            || 0,
+        en_stock:         p.en_stock         ?? true,
         tipo_seccion:     p.tipo_seccion     || "pedido",
         es_caja:          p.es_caja          || false,
       };
@@ -84,7 +85,7 @@ export default function ProductosAdmin() {
 
   const handleChange = (id, campo, valor) => {
     const esNum  = ["precio_costo_usd","precio_minorista","precio_mayorista","stock"].includes(campo);
-    const esBool = ["es_caja"].includes(campo);
+    const esBool = ["es_caja","en_stock"].includes(campo);
     setEdiciones((prev) => ({
       ...prev,
       [id]: { ...prev[id], [campo]: esNum ? Number(valor) : esBool ? Boolean(valor) : valor },
@@ -107,6 +108,7 @@ export default function ProductosAdmin() {
         precio_minorista: vals.precio_minorista,
         precio_mayorista: vals.precio_mayorista,
         stock:            vals.stock,
+        en_stock:         vals.en_stock,
         tipo_seccion:     vals.tipo_seccion,
         es_caja:          vals.es_caja,
       });
@@ -377,6 +379,10 @@ export default function ProductosAdmin() {
                     <label><span>Mayorista</span><input type="number" value={vals.precio_mayorista ?? ""} onChange={(e) => handleChange(p.id, "precio_mayorista", e.target.value)} placeholder="0" /></label>
                     <label><span>Stock</span><input type="number" value={vals.stock ?? ""} onChange={(e) => handleChange(p.id, "stock", e.target.value)} placeholder="0" min="0" className={(vals.stock || 0) > 0 ? "admin-input-stock-ok" : ""} /></label>
                   </div>
+                  <label className="admin-check" style={{ marginBottom: "4px" }}>
+                    <input type="checkbox" checked={vals.en_stock ?? true} onChange={(e) => handleChange(p.id, "en_stock", e.target.checked)} />
+                    Visible en catálogo
+                  </label>
                   <label className="admin-check" style={{ marginBottom: "4px" }}>
                     <input type="checkbox" checked={vals.tipo_seccion === "stock"} onChange={(e) => handleChange(p.id, "tipo_seccion", e.target.checked ? "stock" : "pedido")} />
                     Sección En Stock
