@@ -1,26 +1,41 @@
 import { useState, useEffect, useRef } from "react";
 import { fetchFotosProducto, agregarFotoProducto, deleteFotoProducto, updateProducto } from "../../services/admin";
 
-export default function GaleriaFotos({ producto }) {
-  const [fotos, setFotos]       = useState([]);
-  const [subiendo, setSubiendo] = useState(false);
-  const inputRef                = useRef();
+// onFotoActualizada(url) → le avisa al padre para que actualice producto.foto en el estado
+export default function GaleriaFotos({ producto, onFotoActualizada }) {
+  const [fotos,     setFotos]     = useState([]);
+  const [subiendo,  setSubiendo]  = useState(false);
+  const [error,     setError]     = useState("");
+  // foto principal local (para refrescar sin esperar al padre)
+  const [fotoPrincipal, setFotoPrincipal] = useState(producto.foto || "");
+  const inputRef = useRef();
 
-  const cargar = () =>
-    fetchFotosProducto(producto.id).then(setFotos);
+  const cargar = () => fetchFotosProducto(producto.id).then(setFotos);
 
   useEffect(() => { cargar(); }, [producto.id]);
+  // sincronizar si el padre cambia foto
+  useEffect(() => { setFotoPrincipal(producto.foto || ""); }, [producto.foto]);
 
   const handleSubir = async (files) => {
     if (!files?.length) return;
     setSubiendo(true);
+    setError("");
+    let primeraUrl = null;
     for (const file of Array.from(files)) {
       try {
         const url = await agregarFotoProducto(producto.id, file);
-        // Si el producto no tiene foto principal, la primera sube como principal
-        if (!producto.foto) {
-          await updateProducto(producto.id, { foto: url });
-        }
+        if (!primeraUrl) primeraUrl = url;
+      } catch (err) {
+        console.error(err);
+        setError("Error al subir: " + (err.message || "revisá las credenciales de Cloudinary en Render"));
+      }
+    }
+    // Si no tenía foto principal, la primera subida queda como principal
+    if (primeraUrl && !fotoPrincipal) {
+      try {
+        await updateProducto(producto.id, { foto: primeraUrl });
+        setFotoPrincipal(primeraUrl);
+        onFotoActualizada?.(producto.id, primeraUrl);
       } catch (err) { console.error(err); }
     }
     await cargar();
@@ -34,29 +49,33 @@ export default function GaleriaFotos({ producto }) {
   };
 
   const setPrincipal = async (url) => {
-    await updateProducto(producto.id, { foto: url });
-    // Actualizar visualmente (la tarjeta se refresca en el próximo recargar general)
-    alert("Foto principal actualizada. Recargá para ver el cambio.");
+    try {
+      await updateProducto(producto.id, { foto: url });
+      setFotoPrincipal(url);
+      onFotoActualizada?.(producto.id, url);
+    } catch (err) {
+      setError("No se pudo cambiar la foto principal");
+    }
   };
 
   return (
     <div className="galeria-admin">
       <div className="galeria-thumbs">
-        {/* Foto principal del producto */}
-        {producto.foto && !fotos.find((f) => f.url === producto.foto) && (
+        {/* Foto principal */}
+        {fotoPrincipal && !fotos.find((f) => f.url === fotoPrincipal) && (
           <div className="galeria-thumb principal">
-            <img src={producto.foto} alt="principal" />
+            <img src={fotoPrincipal} alt="principal" />
             <span className="galeria-badge">Principal</span>
           </div>
         )}
 
-        {/* Fotos adicionales */}
+        {/* Fotos de la galería */}
         {fotos.map((f) => (
-          <div key={f.id} className={`galeria-thumb ${f.url === producto.foto ? "principal" : ""}`}>
+          <div key={f.id} className={`galeria-thumb ${f.url === fotoPrincipal ? "principal" : ""}`}>
             <img src={f.url} alt="" />
-            {f.url === producto.foto && <span className="galeria-badge">Principal</span>}
+            {f.url === fotoPrincipal && <span className="galeria-badge">Principal</span>}
             <div className="galeria-thumb-acciones">
-              {f.url !== producto.foto && (
+              {f.url !== fotoPrincipal && (
                 <button onClick={() => setPrincipal(f.url)} title="Usar como principal">⭐</button>
               )}
               <button onClick={() => handleEliminar(f.id)} title="Eliminar">✕</button>
@@ -65,10 +84,7 @@ export default function GaleriaFotos({ producto }) {
         ))}
 
         {/* Botón agregar */}
-        <div
-          className="galeria-thumb galeria-add"
-          onClick={() => inputRef.current?.click()}
-        >
+        <div className="galeria-thumb galeria-add" onClick={() => inputRef.current?.click()}>
           {subiendo ? <span className="galeria-loading">⏳</span> : <span>+</span>}
         </div>
         <input
@@ -77,10 +93,19 @@ export default function GaleriaFotos({ producto }) {
           accept="image/*"
           multiple
           style={{ display: "none" }}
-          onChange={(e) => handleSubir(e.target.files)}
+          onChange={(e) => { handleSubir(e.target.files); e.target.value = ""; }}
         />
       </div>
-      <p className="galeria-hint">{fotos.length} foto{fotos.length !== 1 ? "s" : ""} · ⭐ = principal · podés subir varias a la vez</p>
+
+      {error && (
+        <p style={{ color: "var(--rojo)", fontSize: "0.75rem", marginTop: "4px" }}>
+          ⚠️ {error}
+        </p>
+      )}
+
+      <p className="galeria-hint">
+        {fotos.length} foto{fotos.length !== 1 ? "s" : ""} · ⭐ = principal · podés subir varias a la vez
+      </p>
     </div>
   );
 }

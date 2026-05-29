@@ -363,7 +363,12 @@ export default function ProductosAdmin() {
                   </div>
                   {(vals.stock || 0) > 0 && <span className="chip-stock-admin">{vals.stock} en stock</span>}
                 </div>
-                <GaleriaFotos producto={p} />
+                <GaleriaFotos
+                  producto={p}
+                  onFotoActualizada={(id, url) =>
+                    setProductos((prev) => prev.map((x) => x.id === id ? { ...x, foto: url } : x))
+                  }
+                />
                 <div className="admin-info">
                   <select className="admin-select-marca" value={vals.marca ?? ""} onChange={(e) => handleChange(p.id, "marca", e.target.value)}>
                     {todasMarcas.map((m) => <option key={m} value={m}>{m}</option>)}
