@@ -21,7 +21,10 @@ export async function subirFoto(file) {
   const formData = new FormData();
   formData.append("file", file);
   const res = await fetch(`${BASE}/api/fotos/upload`, { method: "POST", body: formData });
-  if (!res.ok) throw new Error("Error subiendo imagen");
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({ error: `HTTP ${res.status}` }));
+    throw new Error(body.error || `HTTP ${res.status}`);
+  }
   const data = await res.json();
   return data.url;
 }
