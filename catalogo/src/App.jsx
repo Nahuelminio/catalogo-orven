@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import FiltroMarcas from "./components/FiltroMarcas";
 import GrillaProductos from "./components/GrillaProductos";
@@ -11,6 +11,15 @@ import "./App.css";
 
 function App() {
   const { productos, marcas, loading, error, categoriasPorMarca } = useProductos();
+
+  // Mantiene el backend de Render despierto: ping cada 8 minutos
+  useEffect(() => {
+    const BASE = import.meta.env.VITE_API_URL || "http://localhost:3001";
+    const ping = () => fetch(`${BASE}/`).catch(() => {});
+    ping();
+    const id = setInterval(ping, 8 * 60 * 1000);
+    return () => clearInterval(id);
+  }, []);
   const [marcaActiva, setMarcaActiva] = useState("Todas");
   const [categoriaActiva, setCategoriaActiva] = useState("Todas");
   const [carritoAbierto, setCarritoAbierto] = useState(false);

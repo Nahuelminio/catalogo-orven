@@ -1,8 +1,11 @@
 require("dotenv").config();
-const express = require("express");
-const cors    = require("cors");
+const express     = require("express");
+const cors        = require("cors");
+const compression = require("compression");
 
 const app = express();
+
+app.use(compression()); // gzip todas las respuestas
 
 // ── CORS ─────────────────────────────────────────────────
 const allowedOrigins = [

@@ -8,17 +8,24 @@ import ComprasAdmin    from "./admin/ComprasAdmin";
 import WhatsAppAdmin   from "./admin/WhatsAppAdmin";
 
 const TABS = [
-  { key: "dashboard", label: "📊 Dashboard" },
-  { key: "productos", label: "📦 Productos" },
-  { key: "ventas",    label: "💰 Ventas" },
-  { key: "compras",   label: "🛒 Compras" },
-  { key: "ingresos",  label: "💵 Ingresos" },
-  { key: "gastos",    label: "💸 Gastos" },
-  { key: "whatsapp",  label: "📲 WhatsApp" },
+  { key: "dashboard", label: "📊 Dashboard",  Comp: DashboardAdmin },
+  { key: "productos", label: "📦 Productos",  Comp: ProductosAdmin },
+  { key: "ventas",    label: "💰 Ventas",     Comp: VentasAdmin    },
+  { key: "compras",   label: "🛒 Compras",    Comp: ComprasAdmin   },
+  { key: "ingresos",  label: "💵 Ingresos",   Comp: IngresosAdmin  },
+  { key: "gastos",    label: "💸 Gastos",     Comp: GastosAdmin    },
+  { key: "whatsapp",  label: "📲 WhatsApp",   Comp: WhatsAppAdmin  },
 ];
 
 export default function AdminPanel() {
-  const [tab, setTab] = useState("dashboard");
+  const [tab,     setTab]     = useState("dashboard");
+  // Rastrea qué tabs ya fueron visitados para montarlos y no desmontarlos nunca
+  const [montados, setMontados] = useState(new Set(["dashboard"]));
+
+  const cambiarTab = (key) => {
+    setTab(key);
+    setMontados((prev) => new Set([...prev, key]));
+  };
 
   return (
     <div className="admin-panel">
@@ -33,22 +40,22 @@ export default function AdminPanel() {
           <button
             key={t.key}
             className={`admin-tab ${tab === t.key ? "activo" : ""}`}
-            onClick={() => setTab(t.key)}
+            onClick={() => cambiarTab(t.key)}
           >
             {t.label}
           </button>
         ))}
       </div>
 
-      {/* Contenido */}
+      {/* Contenido — cada tab se monta al visitarse y queda vivo (sin re-fetch) */}
       <div className="admin-tab-content">
-        {tab === "dashboard" && <DashboardAdmin />}
-        {tab === "productos" && <ProductosAdmin />}
-        {tab === "ventas"    && <VentasAdmin />}
-        {tab === "compras"   && <ComprasAdmin />}
-        {tab === "ingresos"  && <IngresosAdmin />}
-        {tab === "gastos"    && <GastosAdmin />}
-        {tab === "whatsapp"  && <WhatsAppAdmin />}
+        {TABS.map(({ key, Comp }) =>
+          montados.has(key) ? (
+            <div key={key} style={{ display: tab === key ? "block" : "none" }}>
+              <Comp />
+            </div>
+          ) : null
+        )}
       </div>
     </div>
   );
