@@ -2054,6 +2054,22 @@
 .prod-drop-precio { font-size: 0.82rem; font-weight: 700; color: var(--rojo); flex-shrink: 0; }
 .prod-dropdown li { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 
+/* Badge sección en dropdown de ventas */
+.prod-drop-seccion { font-size: 0.7rem; font-weight: 600; padding: 1px 6px; border-radius: 10px; }
+.prod-drop-seccion.en-stock { background: #e6f4ea; color: #1e7e34; }
+.prod-drop-seccion.pedido   { background: #f0f0f0; color: #555; }
+
+/* Filtros de sección encima del buscador */
+.prod-filtro-seccion { display: flex; gap: 6px; margin-bottom: 6px; flex-wrap: wrap; }
+.prod-filtro-btn {
+  font-size: 0.75rem; font-weight: 600; padding: 4px 10px;
+  border: 1.5px solid #ddd; border-radius: 20px;
+  background: #fff; color: var(--gris-txt); cursor: pointer;
+  transition: all 0.15s;
+}
+.prod-filtro-btn:hover  { border-color: var(--negro); color: var(--negro); }
+.prod-filtro-btn.activo { background: var(--negro); color: #fff; border-color: var(--negro); }
+
 /* Input con sufijo % */
 .input-con-sufijo { position: relative; display: flex; align-items: center; }
 .input-con-sufijo input { padding-right: 28px; width: 100%; }

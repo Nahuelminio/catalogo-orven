@@ -28,10 +28,11 @@ export default function VentasAdmin() {
   const [cajas,     setCajas]     = useState([]);
   const [dolar,     setDolar]     = useState(1200);
   const [form,      setForm]      = useState(FORM_VACIO);
-  const [busqProd,  setBusqProd]  = useState("");
-  const [dropOpen,  setDropOpen]  = useState(false);
-  const [guardando, setGuardando] = useState(false);
-  const [loading,   setLoading]   = useState(true);
+  const [busqProd,      setBusqProd]      = useState("");
+  const [dropOpen,      setDropOpen]      = useState(false);
+  const [filtroSeccion, setFiltroSeccion] = useState("todos"); // "todos" | "stock" | "pedido"
+  const [guardando,     setGuardando]     = useState(false);
+  const [loading,       setLoading]       = useState(true);
   const inputRef = useRef();
 
   const cargarVentas = () =>
@@ -43,14 +44,23 @@ export default function VentasAdmin() {
   useEffect(() => { setLoading(true); cargarVentas(); }, [mes, anio]);
 
   // ── Producto seleccionado ──────────────────────────────
-  const prodsFiltrados = useMemo(() =>
-    busqProd.length > 0
-      ? productos.filter((p) =>
-          p.nombre.toLowerCase().includes(busqProd.toLowerCase()) ||
-          p.marca.toLowerCase().includes(busqProd.toLowerCase())
-        ).slice(0, 8)
-      : [],
-  [busqProd, productos]);
+  const prodsFiltrados = useMemo(() => {
+    // Excluir cajas del buscador de ventas
+    let lista = productos.filter((p) => !p.es_caja);
+    // Filtro por sección
+    if (filtroSeccion === "stock")  lista = lista.filter((p) => p.tipo_seccion === "stock");
+    if (filtroSeccion === "pedido") lista = lista.filter((p) => p.tipo_seccion !== "stock");
+    // Filtro por texto (si hay búsqueda)
+    if (busqProd.length > 0) {
+      const q = busqProd.toLowerCase();
+      lista = lista.filter((p) =>
+        p.nombre.toLowerCase().includes(q) || p.marca.toLowerCase().includes(q)
+      );
+    }
+    // Sin texto y sin filtro de sección → no mostrar nada
+    if (!busqProd && filtroSeccion === "todos") return [];
+    return lista.slice(0, 10);
+  }, [busqProd, filtroSeccion, productos]);
 
   const seleccionarProducto = (p) => {
     const precio     = form.tipo === "mayorista" ? p.precio_mayorista : p.precio_minorista;
@@ -202,6 +212,25 @@ export default function VentasAdmin() {
           {/* Producto */}
           <div className="form-label" style={{ position: "relative" }}>
             <span>Producto</span>
+
+            {/* Filtros de sección */}
+            <div className="prod-filtro-seccion">
+              {[
+                { key: "todos",  label: "Todos" },
+                { key: "stock",  label: "⚡ En Stock" },
+                { key: "pedido", label: "📋 Por Pedido" },
+              ].map(({ key, label }) => (
+                <button
+                  key={key}
+                  type="button"
+                  className={`prod-filtro-btn ${filtroSeccion === key ? "activo" : ""}`}
+                  onMouseDown={(e) => { e.preventDefault(); setFiltroSeccion(key); setDropOpen(true); inputRef.current?.focus(); }}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+
             <input
               ref={inputRef}
               type="text"
@@ -216,22 +245,32 @@ export default function VentasAdmin() {
               onBlur={() => setTimeout(() => setDropOpen(false), 150)}
               autoComplete="off"
             />
+
             {dropOpen && prodsFiltrados.length > 0 && (
               <ul className="prod-dropdown">
-                {prodsFiltrados.map((p) => (
-                  <li key={p.id} onMouseDown={() => seleccionarProducto(p)}>
-                    <div className="prod-drop-main">
-                      {p.foto && <img src={p.foto} alt="" className="prod-drop-img" />}
-                      <div>
-                        <strong>{p.nombre}</strong>
-                        <span className="prod-drop-marca">{p.marca} · {p.categoria}</span>
+                {prodsFiltrados.map((p) => {
+                  const esStock  = p.tipo_seccion === "stock";
+                  const stockNum = p.stock ?? 0;
+                  return (
+                    <li key={p.id} onMouseDown={() => seleccionarProducto(p)}>
+                      <div className="prod-drop-main">
+                        {p.foto && <img src={p.foto} alt="" className="prod-drop-img" />}
+                        <div>
+                          <strong>{p.nombre}</strong>
+                          <span className="prod-drop-marca">{p.marca} · {p.categoria}</span>
+                        </div>
                       </div>
-                    </div>
-                    <span className="prod-drop-precio">
-                      {form.tipo === "mayorista" ? fmtUSD(p.precio_mayorista) : fmt(p.precio_minorista)}
-                    </span>
-                  </li>
-                ))}
+                      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 2, flexShrink: 0 }}>
+                        <span className="prod-drop-precio">
+                          {form.tipo === "mayorista" ? fmtUSD(p.precio_mayorista) : fmt(p.precio_minorista)}
+                        </span>
+                        <span className={`prod-drop-seccion ${esStock ? "en-stock" : "pedido"}`}>
+                          {esStock ? `⚡ Stock: ${stockNum}` : "📋 Pedido"}
+                        </span>
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
             )}
           </div>
