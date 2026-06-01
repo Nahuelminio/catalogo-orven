@@ -3,10 +3,13 @@ import {
   fetchCompras, createCompra, deleteCompra,
   fetchProductosAdmin, incrementarStock, fetchDolar,
 } from "../../services/admin";
+import Toast from "./Toast";
+import { useToast } from "../../hooks/useToast";
 
-const hoy  = () => new Date().toISOString().split("T")[0];
-const MESES = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
-const fmt   = (n) => `$ ${Number(n || 0).toLocaleString("es-AR")}`;
+const hoy      = () => new Date().toISOString().split("T")[0];
+const MESES    = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+const fmt      = (n) => `$ ${Number(n || 0).toLocaleString("es-AR")}`;
+const fmtFecha = (f) => f ? `${f.slice(8,10)}/${f.slice(5,7)}` : "—";
 
 const FORM_VACIO = {
   fecha: hoy(), proveedor: "", producto_id: "", producto_nombre: "",
@@ -25,6 +28,7 @@ export default function ComprasAdmin() {
   const [dropOpen,  setDropOpen]  = useState(false);
   const [guardando, setGuardando] = useState(false);
   const [loading,   setLoading]   = useState(true);
+  const { toast, mostrar, cerrar } = useToast();
   const inputRef = useRef();
 
   const cargar = () =>
@@ -87,8 +91,10 @@ export default function ComprasAdmin() {
       setForm({ ...FORM_VACIO, fecha: form.fecha });
       setBusqProd("");
       cargar();
+      mostrar("Compra registrada");
     } catch (err) {
       console.error(err);
+      mostrar("Error al registrar", "error");
     } finally {
       setGuardando(false);
     }
@@ -98,6 +104,7 @@ export default function ComprasAdmin() {
     if (!confirm("¿Eliminar esta compra? El stock NO se revertirá automáticamente.")) return;
     await deleteCompra(id);
     cargar();
+    mostrar("Compra eliminada", "warn");
   };
 
   // ── Stats ─────────────────────────────────────────────
@@ -110,6 +117,7 @@ export default function ComprasAdmin() {
 
   return (
     <div>
+      <Toast mensaje={toast.mensaje} tipo={toast.tipo} onClose={cerrar} />
       {/* Selector período */}
       <div className="admin-periodo">
         <select value={mes}  onChange={(e) => setMes(Number(e.target.value))}>
@@ -268,7 +276,7 @@ export default function ComprasAdmin() {
             </div>
             {compras.map((c) => (
               <div key={c.id} className="admin-lista-row compra-grid">
-                <span className="admin-lista-sub">{c.fecha?.slice(5).replace("-", "/")}</span>
+                <span className="admin-lista-sub">{fmtFecha(c.fecha)}</span>
                 <div style={{ minWidth: 0 }}>
                   <span style={{ fontSize: "0.83rem", fontWeight: 700, color: "var(--negro)", display: "block", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.producto_nombre}</span>
                   {c.notas && <span className="admin-lista-sub">{c.notas}</span>}

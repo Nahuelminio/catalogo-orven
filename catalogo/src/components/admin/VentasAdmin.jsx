@@ -1,5 +1,9 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { fetchVentas, createVenta, deleteVenta, fetchProductosAdmin, fetchCajas, decrementarStock, fetchDolar } from "../../services/admin";
+import Toast from "./Toast";
+import { useToast } from "../../hooks/useToast";
+
+const fmtFecha = (f) => f ? `${f.slice(8,10)}/${f.slice(5,7)}` : "—";
 
 const hoy = () => new Date().toISOString().split("T")[0];
 
@@ -30,9 +34,11 @@ export default function VentasAdmin() {
   const [form,      setForm]      = useState(FORM_VACIO);
   const [busqProd,      setBusqProd]      = useState("");
   const [dropOpen,      setDropOpen]      = useState(false);
-  const [filtroSeccion, setFiltroSeccion] = useState("todos"); // "todos" | "stock" | "pedido"
+  const [filtroSeccion, setFiltroSeccion] = useState("todos");
+  const [stockSelec,    setStockSelec]    = useState(null); // stock del producto seleccionado
   const [guardando,     setGuardando]     = useState(false);
   const [loading,       setLoading]       = useState(true);
+  const { toast, mostrar, cerrar } = useToast();
   const inputRef = useRef();
 
   const cargarVentas = () =>
@@ -76,6 +82,7 @@ export default function VentasAdmin() {
       producto_caja_id: cajaMatch?.id || "",
       precio_caja_usd:  cajaMatch?.precio_mayorista || 0,
     }));
+    setStockSelec(p.stock ?? null);
     setBusqProd(p.nombre);
     setDropOpen(false);
   };
@@ -137,9 +144,13 @@ export default function VentasAdmin() {
       }
       setForm({ ...FORM_VACIO, fecha: form.fecha });
       setBusqProd("");
+      setStockSelec(null);
       cargarVentas();
+      mostrar("Venta registrada");
+      setTimeout(() => inputRef.current?.focus(), 100);
     } catch (err) {
       console.error(err);
+      mostrar("Error al registrar", "error");
     } finally {
       setGuardando(false);
     }
@@ -149,6 +160,7 @@ export default function VentasAdmin() {
     if (!confirm("¿Eliminar esta venta?\nNota: el stock del producto NO se restaurará automáticamente.")) return;
     await deleteVenta(id);
     cargarVentas();
+    mostrar("Venta eliminada", "warn");
   };
 
   // ── Stats ─────────────────────────────────────────────
@@ -165,6 +177,7 @@ export default function VentasAdmin() {
 
   return (
     <div>
+      <Toast mensaje={toast.mensaje} tipo={toast.tipo} onClose={cerrar} />
       {/* Selector período */}
       <div className="admin-periodo">
         <select value={mes}  onChange={(e) => setMes(Number(e.target.value))}>
@@ -245,6 +258,18 @@ export default function VentasAdmin() {
               onBlur={() => setTimeout(() => setDropOpen(false), 150)}
               autoComplete="off"
             />
+
+            {/* Aviso stock agotado */}
+            {stockSelec !== null && stockSelec === 0 && (
+              <div className="aviso-sin-stock">
+                ⚠️ Este producto no tiene stock disponible
+              </div>
+            )}
+            {stockSelec !== null && stockSelec > 0 && stockSelec <= 2 && (
+              <div className="aviso-sin-stock" style={{ background: "#fff8e1", borderColor: "#ffd54f", color: "#7a5500" }}>
+                ⚠️ Último{stockSelec > 1 ? "s" : ""} {stockSelec} en stock
+              </div>
+            )}
 
             {dropOpen && prodsFiltrados.length > 0 && (
               <ul className="prod-dropdown">
@@ -417,7 +442,7 @@ export default function VentasAdmin() {
                 : fmt(v.total_ars    || v.precio_unitario * v.cantidad);
               return (
                 <div key={v.id} className="admin-lista-row venta-grid">
-                  <span className="admin-lista-sub">{v.fecha?.slice(5).replace("-", "/")}</span>
+                  <span className="admin-lista-sub">{fmtFecha(v.fecha)}</span>
                   <div style={{ minWidth: 0 }}>
                     <span style={{ fontSize: "0.83rem", fontWeight: 700, color: "var(--negro)", display: "block", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                       {v.producto_nombre}

@@ -2425,3 +2425,47 @@
   .prod-dropdown { font-size: 0.82rem; }
   .prod-drop-img { width: 28px; height: 28px; }
 }
+
+/* ── Toast ───────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  z-index: 9999;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  cursor: pointer;
+  animation: toastIn 0.25s ease;
+  white-space: nowrap;
+}
+.toast-ok    { background: #1e7e34; }
+.toast-error { background: var(--rojo); }
+.toast-warn  { background: #b07a00; }
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(14px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ── Aviso stock cero en ventas ──────────────────────────── */
+.aviso-sin-stock {
+  display: flex; align-items: center; gap: 6px;
+  background: #fff3cd; border: 1.5px solid #ffc107;
+  border-radius: 8px; padding: 8px 12px;
+  font-size: 0.82rem; font-weight: 600; color: #856404;
+  margin-top: 4px;
+}
+
+/* ── Botón eliminar producto ─────────────────────────────── */
+.btn-eliminar-producto {
+  background: none; border: none; cursor: pointer;
+  color: #bbb; font-size: 1rem; padding: 4px 6px;
+  border-radius: 6px; transition: color 0.15s, background 0.15s;
+  line-height: 1;
+}
+.btn-eliminar-producto:hover { color: var(--rojo); background: #fff0f0; }

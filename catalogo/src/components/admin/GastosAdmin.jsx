@@ -1,5 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { fetchGastos, createGasto, deleteGasto } from "../../services/admin";
+import Toast from "./Toast";
+import { useToast } from "../../hooks/useToast";
 
 const hoy = () => new Date().toISOString().split("T")[0];
 const CATEGORIAS = ["CM/Plataformas", "Logística", "Operativo", "Otros"];
@@ -13,6 +15,7 @@ export default function GastosAdmin() {
   const [form, setForm]       = useState(FORM_VACIO);
   const [guardando, setGuardando] = useState(false);
   const [loading, setLoading] = useState(true);
+  const { toast, mostrar, cerrar } = useToast();
 
   const cargarGastos = () =>
     fetchGastos(mes, anio).then((d) => { setGastos(d); setLoading(false); });
@@ -38,8 +41,10 @@ export default function GastosAdmin() {
       });
       setForm({ ...FORM_VACIO, fecha: form.fecha });
       cargarGastos();
+      mostrar("Gasto registrado");
     } catch (err) {
       console.error(err);
+      mostrar("Error al registrar", "error");
     } finally {
       setGuardando(false);
     }
@@ -49,6 +54,7 @@ export default function GastosAdmin() {
     if (!confirm("¿Eliminar este gasto?")) return;
     await deleteGasto(id);
     cargarGastos();
+    mostrar("Gasto eliminado", "warn");
   };
 
   const stats = useMemo(() => {
@@ -70,6 +76,7 @@ export default function GastosAdmin() {
 
   return (
     <div>
+      <Toast mensaje={toast.mensaje} tipo={toast.tipo} onClose={cerrar} />
       {/* Selector período */}
       <div className="admin-periodo">
         <select value={mes}  onChange={(e) => setMes(Number(e.target.value))}>

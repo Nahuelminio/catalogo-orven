@@ -1,5 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { fetchIngresos, createIngreso, deleteIngreso } from "../../services/admin";
+import Toast from "./Toast";
+import { useToast } from "../../hooks/useToast";
 
 const hoy = () => new Date().toISOString().split("T")[0];
 const CATEGORIAS = ["Venta mayorista", "Consignación", "Transferencia cliente", "Reembolso", "Otro"];
@@ -19,6 +21,7 @@ export default function IngresosAdmin() {
   const [form,      setForm]      = useState(FORM_VACIO);
   const [guardando, setGuardando] = useState(false);
   const [loading,   setLoading]   = useState(true);
+  const { toast, mostrar, cerrar } = useToast();
 
   const cargarIngresos = () =>
     fetchIngresos(mes, anio).then((d) => { setIngresos(d); setLoading(false); });
@@ -41,8 +44,10 @@ export default function IngresosAdmin() {
       });
       setForm({ ...FORM_VACIO, fecha: form.fecha });
       cargarIngresos();
+      mostrar("Ingreso registrado");
     } catch (err) {
       console.error(err);
+      mostrar("Error al registrar", "error");
     } finally {
       setGuardando(false);
     }
@@ -52,6 +57,7 @@ export default function IngresosAdmin() {
     if (!confirm("¿Eliminar este ingreso?")) return;
     await deleteIngreso(id);
     cargarIngresos();
+    mostrar("Ingreso eliminado", "warn");
   };
 
   const stats = useMemo(() => {
@@ -66,6 +72,7 @@ export default function IngresosAdmin() {
 
   return (
     <div>
+      <Toast mensaje={toast.mensaje} tipo={toast.tipo} onClose={cerrar} />
       {/* Selector período */}
       <div className="admin-periodo">
         <select value={mes}  onChange={(e) => setMes(Number(e.target.value))}>

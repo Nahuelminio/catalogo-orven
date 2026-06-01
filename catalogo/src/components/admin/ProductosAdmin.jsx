@@ -1,5 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from "react";
-import { fetchProductosAdmin, updateProducto, createProducto, subirFoto, vincularFotoProducto } from "../../services/admin";
+import { fetchProductosAdmin, updateProducto, createProducto, deleteProducto, subirFoto, vincularFotoProducto } from "../../services/admin";
+import Toast from "./Toast";
+import { useToast } from "../../hooks/useToast";
 import GaleriaFotos from "./GaleriaFotos";
 import SelectOCrear from "./SelectOCrear";
 import DropZona from "./DropZona";
@@ -28,7 +30,8 @@ export default function ProductosAdmin() {
   const [mostrarFormNuevo, setMostrarFormNuevo] = useState(false);
   const [formNuevo, setFormNuevo]     = useState(FORM_NUEVO_VACIO);
   const [creando, setCreando]         = useState(false);
-  const [subiendoFoto, setSubiendoFoto] = useState({});  // { [id]: true/false }
+  const [subiendoFoto, setSubiendoFoto] = useState({});
+  const { toast, mostrar, cerrar } = useToast();
   const fileInputRefs = useRef({});
 
   const recargar = () => fetchProductosAdmin().then((data) => {
@@ -125,6 +128,18 @@ export default function ProductosAdmin() {
     setGuardandoTodo(true);
     for (const p of productos.filter((p) => modificados.has(p.id))) await guardar(p);
     setGuardandoTodo(false);
+    mostrar("Cambios guardados");
+  };
+
+  const eliminar = async (p) => {
+    if (!confirm(`¿Eliminar "${p.nombre}"?\nEsto es permanente y no se puede deshacer.`)) return;
+    try {
+      await deleteProducto(p.id);
+      setProductos((prev) => prev.filter((x) => x.id !== p.id));
+      mostrar("Producto eliminado", "warn");
+    } catch (err) {
+      mostrar("Error al eliminar", "error");
+    }
   };
 
   const handleFotoExistente = async (productoId, file) => {
@@ -180,6 +195,7 @@ export default function ProductosAdmin() {
 
   return (
     <div>
+      <Toast mensaje={toast.mensaje} tipo={toast.tipo} onClose={cerrar} />
       {/* Cabecera con acciones */}
       <div className="admin-section-header">
         <div>
@@ -396,9 +412,12 @@ export default function ProductosAdmin() {
                     <input type="checkbox" checked={vals.es_caja || false} onChange={(e) => handleChange(p.id, "es_caja", e.target.checked)} />
                     🗃️ Es caja
                   </label>
-                  <button className={`admin-guardar ${estado}`} onClick={() => guardar(p)} disabled={estado === "saving"}>
-                    {estado === "saving" ? "Guardando..." : estado === "ok" ? "✓ Guardado" : estado === "error" ? "✗ Error" : modificado ? "● Guardar" : "Guardar"}
-                  </button>
+                  <div style={{ display: "flex", gap: 6 }}>
+                    <button className={`admin-guardar ${estado}`} style={{ flex: 1 }} onClick={() => guardar(p)} disabled={estado === "saving"}>
+                      {estado === "saving" ? "Guardando..." : estado === "ok" ? "✓ Guardado" : estado === "error" ? "✗ Error" : modificado ? "● Guardar" : "Guardar"}
+                    </button>
+                    <button className="btn-eliminar-producto" onClick={() => eliminar(p)} title="Eliminar producto">🗑</button>
+                  </div>
                 </div>
               </div>
             );
@@ -440,9 +459,12 @@ export default function ProductosAdmin() {
                 <input type="number" className="admin-lista-input" value={vals.precio_minorista ?? ""} onChange={(e) => handleChange(p.id, "precio_minorista", e.target.value)} placeholder="0" />
                 <input type="number" className="admin-lista-input" value={vals.precio_mayorista ?? ""} onChange={(e) => handleChange(p.id, "precio_mayorista", e.target.value)} placeholder="0" />
                 <input type="number" className={`admin-lista-input ${(vals.stock || 0) > 0 ? "admin-input-stock-ok" : ""}`} value={vals.stock ?? ""} onChange={(e) => handleChange(p.id, "stock", e.target.value)} placeholder="0" min="0" />
-                <button className={`admin-guardar-mini ${estado}`} onClick={() => guardar(p)} disabled={estado === "saving"}>
-                  {estado === "saving" ? "…" : estado === "ok" ? "✓" : estado === "error" ? "✗" : modificado ? "●" : "↑"}
-                </button>
+                <div style={{ display: "flex", gap: 4 }}>
+                  <button className={`admin-guardar-mini ${estado}`} onClick={() => guardar(p)} disabled={estado === "saving"}>
+                    {estado === "saving" ? "…" : estado === "ok" ? "✓" : estado === "error" ? "✗" : modificado ? "●" : "↑"}
+                  </button>
+                  <button className="btn-eliminar-producto" onClick={() => eliminar(p)} title="Eliminar">🗑</button>
+                </div>
               </div>
             );
           })}
