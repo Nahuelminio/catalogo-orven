@@ -16,8 +16,12 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Permitir requests sin origin (mobile apps, curl, etc.)
-    if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
+    // Sin origin (apps móviles, curl, Postman, etc.) → permitir
+    if (!origin) return callback(null, true);
+    // localhost en cualquier puerto → permitir (desarrollo local)
+    if (/^http:\/\/localhost(:\d+)?$/.test(origin)) return callback(null, true);
+    // Orígenes de producción autorizados
+    if (allowedOrigins.includes(origin)) return callback(null, true);
     callback(new Error(`CORS: origen no permitido: ${origin}`));
   },
   credentials: true,
