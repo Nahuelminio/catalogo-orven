@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 
 const STORAGE_KEY = "orven_carrito";
 
-export function useCarrito() {
+export function useCarrito(storageKey = STORAGE_KEY) {
   const [items, setItems] = useState(() => {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
+      const saved = localStorage.getItem(storageKey);
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -13,8 +13,8 @@ export function useCarrito() {
   });
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-  }, [items]);
+    localStorage.setItem(storageKey, JSON.stringify(items));
+  }, [items, storageKey]);
 
   const agregar = (producto, modo) => {
     const precio = modo === "mayorista" ? producto.precio_mayorista : producto.precio_minorista;

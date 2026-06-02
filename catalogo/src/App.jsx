@@ -5,6 +5,7 @@ import GrillaProductos from "./components/GrillaProductos";
 import CarritoDrawer from "./components/CarritoDrawer";
 import ModalProducto from "./components/ModalProducto";
 import AdminPanel from "./components/AdminPanel";
+import VistaCentral from "./pages/VistaCentral";
 import { useProductos } from "./hooks/useProductos";
 import { useCarrito } from "./hooks/useCarrito";
 import "./App.css";
@@ -32,7 +33,8 @@ function App() {
   const vista = new URLSearchParams(window.location.search).get("vista");
   const modo = vista === "mayorista" ? "mayorista" : "minorista";
 
-  if (vista === "admin") return <AdminPanel />;
+  if (vista === "admin")   return <AdminPanel />;
+  if (vista === "central") return <VistaCentral />;
 
   const handleMarcaChange = (marca) => {
     setMarcaActiva(marca);

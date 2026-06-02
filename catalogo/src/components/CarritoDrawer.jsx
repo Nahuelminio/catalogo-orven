@@ -1,14 +1,13 @@
 import { formatPrecio } from "../utils/precio";
 
-const WA_NUMERO = "5493764216818";
+const WA_DEFAULT = "5493764216818";
 
-export default function CarritoDrawer({ items, total, onCambiar, onVaciar, onCerrar, modo }) {
+export default function CarritoDrawer({ items, total, onCambiar, onVaciar, onCerrar, modo, waNumero = WA_DEFAULT, mensajeExtra = "" }) {
   const enviarWhatsapp = () => {
     if (items.length === 0) return;
 
     const lineas = items
       .map((i) => {
-        const precioUnit = formatPrecio(i.precio, modo);
         const precioTotal = formatPrecio(i.precio * i.cantidad, modo);
         return `• ${i.nombre} x${i.cantidad} — ${precioTotal}`;
       })
@@ -16,8 +15,9 @@ export default function CarritoDrawer({ items, total, onCambiar, onVaciar, onCer
 
     const tipo = modo === "mayorista" ? "mayorista" : "minorista";
     const totalFormateado = formatPrecio(total, modo);
-    const msg = `Hola! Quiero hacer el siguiente pedido (${tipo}):\n\n${lineas}\n\n*Total: ${totalFormateado}*`;
-    const url = `https://wa.me/${WA_NUMERO}?text=${encodeURIComponent(msg)}`;
+    const intro = mensajeExtra || `Hola! Quiero hacer el siguiente pedido (${tipo}):`;
+    const msg = `${intro}\n\n${lineas}\n\n*Total: ${totalFormateado}*`;
+    const url = `https://wa.me/${waNumero}?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
   };
 
