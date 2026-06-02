@@ -65,6 +65,7 @@ export async function fetchTotalesGenerales() {
 export const fetchVentas      = (mes, anio)    => get(`/api/ventas?mes=${mes}&anio=${anio}`);
 export const fetchVentasRango = (desde, hasta) => get(`/api/ventas?desde=${desde}&hasta=${hasta}`);
 export const createVenta      = (v)            => post("/api/ventas", v);
+export const updateVenta      = (id, v)        => put(`/api/ventas/${id}`, v);
 export const deleteVenta      = (id)           => del(`/api/ventas/${id}`);
 
 // ── INGRESOS ────────────────────────────────────────────

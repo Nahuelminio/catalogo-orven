@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from "react";
-import { fetchVentas, createVenta, deleteVenta, fetchProductosAdmin, fetchCajas, decrementarStock, fetchDolar } from "../../services/admin";
+import { fetchVentas, createVenta, updateVenta, deleteVenta, fetchProductosAdmin, fetchCajas, decrementarStock, fetchDolar } from "../../services/admin";
 import Toast from "./Toast";
 import { useToast } from "../../hooks/useToast";
 
@@ -35,11 +35,13 @@ export default function VentasAdmin() {
   const [busqProd,      setBusqProd]      = useState("");
   const [dropOpen,      setDropOpen]      = useState(false);
   const [filtroSeccion, setFiltroSeccion] = useState("todos");
-  const [stockSelec,    setStockSelec]    = useState(null); // stock del producto seleccionado
+  const [stockSelec,    setStockSelec]    = useState(null);
+  const [editandoId,    setEditandoId]    = useState(null); // null = nueva venta, number = editando
   const [guardando,     setGuardando]     = useState(false);
   const [loading,       setLoading]       = useState(true);
   const { toast, mostrar, cerrar } = useToast();
-  const inputRef = useRef();
+  const inputRef  = useRef();
+  const formRef   = useRef();
 
   const cargarVentas = () =>
     fetchVentas(mes, anio).then((d) => { setVentas(d); setLoading(false); });
@@ -87,6 +89,40 @@ export default function VentasAdmin() {
     setDropOpen(false);
   };
 
+  const cargarParaEditar = (v) => {
+    setEditandoId(v.id);
+    setForm({
+      fecha:           v.fecha || hoy(),
+      producto_id:     v.producto_id || "",
+      producto_nombre: v.producto_nombre || "",
+      marca:           v.marca || "",
+      categoria:       v.categoria || "",
+      cantidad:        v.cantidad || 1,
+      precio_unitario: v.precio_unitario || 0,
+      costo_unitario:  v.costo_unitario  || 0,
+      descuento_pct:   v.descuento_pct   || 0,
+      medio_pago:      v.medio_pago      || "Efectivo",
+      tipo:            v.tipo            || "minorista",
+      canal:           v.canal           || "Mostrador",
+      cliente:         v.cliente         || "",
+      notas:           v.notas           || "",
+      con_caja:        v.con_caja        || false,
+      producto_caja_id: v.producto_caja_id || "",
+      precio_caja_usd:  v.precio_caja_usd  || 0,
+    });
+    setBusqProd(v.producto_nombre || "");
+    setStockSelec(null);
+    // Scroll suave al formulario
+    setTimeout(() => formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+  };
+
+  const cancelarEdicion = () => {
+    setEditandoId(null);
+    setForm({ ...FORM_VACIO, fecha: form.fecha });
+    setBusqProd("");
+    setStockSelec(null);
+  };
+
   const handleTipo = (tipo) => {
     const prod = productos.find((p) => p.id === form.producto_id);
     const precio = prod
@@ -110,47 +146,54 @@ export default function VentasAdmin() {
     (precioConDescuento - (Number(form.costo_unitario) || 0)) * (Number(form.cantidad) || 1),
   [precioConDescuento, form.costo_unitario, form.cantidad]);
 
-  // ── Registrar ─────────────────────────────────────────
+  // ── Registrar / Actualizar ────────────────────────────
   const registrar = async (e) => {
     e.preventDefault();
     if (!form.producto_nombre) return;
     setGuardando(true);
+
+    const payload = {
+      fecha:           form.fecha,
+      producto_id:     form.producto_id || null,
+      producto_nombre: form.producto_nombre,
+      marca:           form.marca,
+      categoria:       form.categoria,
+      cantidad:        Number(form.cantidad),
+      precio_unitario: precioConDescuento,
+      costo_unitario:  Number(form.costo_unitario),
+      descuento_pct:   Number(form.descuento_pct) || 0,
+      medio_pago:      form.medio_pago,
+      tipo:            form.tipo,
+      canal:           form.canal,
+      cliente:         form.cliente,
+      notas:           form.notas,
+      total_ars:       form.tipo === "minorista" ? totalVenta : 0,
+      total_usd:       form.tipo === "mayorista" ? totalVenta : 0,
+      con_caja:        form.con_caja,
+      precio_caja_usd: form.con_caja ? Number(form.precio_caja_usd) || 0 : 0,
+    };
+
     try {
-      await createVenta({
-        fecha:           form.fecha,
-        producto_id:     form.producto_id || null,
-        producto_nombre: form.producto_nombre,
-        marca:           form.marca,
-        categoria:       form.categoria,
-        cantidad:        Number(form.cantidad),
-        precio_unitario: precioConDescuento,
-        costo_unitario:  Number(form.costo_unitario),
-        descuento_pct:   Number(form.descuento_pct) || 0,
-        medio_pago:      form.medio_pago,
-        tipo:            form.tipo,
-        canal:           form.canal,
-        cliente:         form.cliente,
-        notas:           form.notas,
-        total_ars:       form.tipo === "minorista" ? totalVenta : 0,
-        total_usd:       form.tipo === "mayorista" ? totalVenta : 0,
-        con_caja:        form.con_caja,
-        precio_caja_usd: form.con_caja ? Number(form.precio_caja_usd) || 0 : 0,
-      });
-      if (form.producto_id) {
-        await decrementarStock(form.producto_id, Number(form.cantidad));
-      }
-      if (form.con_caja && form.producto_caja_id) {
-        await decrementarStock(form.producto_caja_id, Number(form.cantidad));
+      if (editandoId) {
+        // ── Editar venta existente ──
+        await updateVenta(editandoId, payload);
+        setEditandoId(null);
+        mostrar("Venta actualizada");
+      } else {
+        // ── Nueva venta ──
+        await createVenta(payload);
+        if (form.producto_id) await decrementarStock(form.producto_id, Number(form.cantidad));
+        if (form.con_caja && form.producto_caja_id) await decrementarStock(form.producto_caja_id, Number(form.cantidad));
+        mostrar("Venta registrada");
+        setTimeout(() => inputRef.current?.focus(), 100);
       }
       setForm({ ...FORM_VACIO, fecha: form.fecha });
       setBusqProd("");
       setStockSelec(null);
       cargarVentas();
-      mostrar("Venta registrada");
-      setTimeout(() => inputRef.current?.focus(), 100);
     } catch (err) {
       console.error(err);
-      mostrar("Error al registrar", "error");
+      mostrar("Error al guardar", "error");
     } finally {
       setGuardando(false);
     }
@@ -197,8 +240,23 @@ export default function VentasAdmin() {
       </div>
 
       {/* ── Formulario ── */}
-      <div className="admin-form-card">
-        <h3 className="admin-form-title">+ Registrar venta</h3>
+      <div className="admin-form-card" ref={formRef}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+          <h3 className="admin-form-title" style={{ margin: 0 }}>
+            {editandoId ? "✏️ Editando venta" : "+ Registrar venta"}
+          </h3>
+          {editandoId && (
+            <button type="button" onClick={cancelarEdicion}
+              style={{ background: "none", border: "1.5px solid #ddd", borderRadius: 8, padding: "5px 14px", fontSize: "0.82rem", cursor: "pointer", color: "var(--gris-txt)" }}>
+              ✕ Cancelar
+            </button>
+          )}
+        </div>
+        {editandoId && (
+          <div style={{ background: "#fff8e1", border: "1.5px solid #ffd54f", borderRadius: 8, padding: "8px 12px", marginBottom: 14, fontSize: "0.82rem", color: "#856404", fontWeight: 600 }}>
+            ✏️ Modificando venta existente — el stock <strong>no</strong> se ajustará al guardar
+          </div>
+        )}
         <form onSubmit={registrar} className="venta-form">
 
           {/* Fila 1: fecha, tipo, canal */}
@@ -414,7 +472,7 @@ export default function VentasAdmin() {
           )}
 
           <button type="submit" className="btn-registrar" disabled={guardando || !form.producto_nombre}>
-            {guardando ? "Guardando..." : "✓ Registrar venta"}
+            {guardando ? "Guardando..." : editandoId ? "✓ Guardar cambios" : "✓ Registrar venta"}
           </button>
         </form>
       </div>
@@ -456,7 +514,10 @@ export default function VentasAdmin() {
                   <span className="admin-lista-sub">{v.medio_pago || "—"}</span>
                   <span className="admin-lista-sub">{v.canal}</span>
                   <span className={`badge-tipo ${v.tipo}`}>{v.tipo}</span>
-                  <button className="btn-eliminar" onClick={() => eliminar(v.id)} title="Eliminar">✕</button>
+                  <div style={{ display: "flex", gap: 4 }}>
+                    <button className="btn-editar" onClick={() => cargarParaEditar(v)} title="Editar">✏️</button>
+                    <button className="btn-eliminar" onClick={() => eliminar(v.id)} title="Eliminar">✕</button>
+                  </div>
                 </div>
               );
             })}
