@@ -32,6 +32,20 @@ router.post("/", async (req, res) => {
   } catch (err) { res.status(500).json({ error: err.message }); }
 });
 
+router.put("/:id", async (req, res) => {
+  const { fecha, proveedor, producto_nombre, cantidad, precio_costo_unitario, total_ars, notas, costo_caja_usd, dolar_dia } = req.body;
+  try {
+    await pool.query(
+      `UPDATE compras SET fecha=?, proveedor=?, producto_nombre=?, cantidad=?,
+       precio_costo_unitario=?, total_ars=?, notas=?, costo_caja_usd=?, dolar_dia=? WHERE id=?`,
+      [fecha, proveedor||null, producto_nombre, cantidad||1,
+       precio_costo_unitario||0, total_ars||0, notas||null, costo_caja_usd||0, dolar_dia||0, req.params.id]
+    );
+    const [rows] = await pool.query("SELECT * FROM compras WHERE id = ?", [req.params.id]);
+    res.json(rows[0]);
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
 router.delete("/:id", async (req, res) => {
   try {
     await pool.query("DELETE FROM compras WHERE id = ?", [req.params.id]);

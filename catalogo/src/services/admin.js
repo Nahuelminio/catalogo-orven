@@ -84,4 +84,5 @@ export const deleteGasto      = (id)           => del(`/api/gastos/${id}`);
 export const fetchCompras      = (mes, anio)    => get(`/api/compras?mes=${mes}&anio=${anio}`);
 export const fetchComprasRango = (desde, hasta) => get(`/api/compras?desde=${desde}&hasta=${hasta}`);
 export const createCompra      = (c)            => post("/api/compras", c);
+export const updateCompra      = (id, c)        => put(`/api/compras/${id}`, c);
 export const deleteCompra      = (id)           => del(`/api/compras/${id}`);

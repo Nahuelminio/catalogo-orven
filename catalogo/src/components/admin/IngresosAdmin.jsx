@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { fetchIngresos, createIngreso, deleteIngreso } from "../../services/admin";
 import Toast from "./Toast";
 import { useToast } from "../../hooks/useToast";
+import { descargarCSV } from "../../utils/csv";
 
 const hoy = () => new Date().toISOString().split("T")[0];
 const CATEGORIAS = ["Venta mayorista", "Consignación", "Transferencia cliente", "Reembolso", "Otro"];
@@ -160,7 +161,15 @@ export default function IngresosAdmin() {
 
       {/* Lista */}
       <div className="admin-lista-ventas">
-        <h3 className="admin-form-title">{MESES[mes-1]} {anio} — {ingresos.length} ingresos</h3>
+        <div className="admin-lista-toolbar">
+          <h3 className="admin-form-title" style={{ margin:0 }}>{MESES[mes-1]} {anio} — {ingresos.length} ingresos</h3>
+          <button className="btn-csv" onClick={() => descargarCSV(
+            ingresos,
+            ["fecha","descripcion","categoria","monto_ars","monto_usd","medio_pago","notas"],
+            ["Fecha","Descripción","Categoría","Monto ARS","Monto USD","Medio pago","Notas"],
+            `ingresos-${MESES[mes-1].toLowerCase()}-${anio}`
+          )} disabled={!ingresos.length}>⬇ CSV</button>
+        </div>
         {loading ? <p className="estado">Cargando...</p> : ingresos.length === 0 ? (
           <p className="admin-empty">No hay ingresos registrados este mes.</p>
         ) : (

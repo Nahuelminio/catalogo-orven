@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { fetchProductosAdmin } from "../services/admin";
 import DashboardAdmin  from "./admin/DashboardAdmin";
 import ProductosAdmin  from "./admin/ProductosAdmin";
 import VentasAdmin     from "./admin/VentasAdmin";
@@ -18,9 +19,18 @@ const TABS = [
 ];
 
 export default function AdminPanel() {
-  const [tab,     setTab]     = useState("dashboard");
-  // Rastrea qué tabs ya fueron visitados para montarlos y no desmontarlos nunca
-  const [montados, setMontados] = useState(new Set(["dashboard"]));
+  const [tab,       setTab]      = useState("dashboard");
+  const [montados,  setMontados] = useState(new Set(["dashboard"]));
+  const [stockBadge, setStockBadge] = useState(0);
+
+  useEffect(() => {
+    fetchProductosAdmin()
+      .then((prods) => {
+        const bajo = prods.filter((p) => !p.es_caja && p.en_stock && (p.stock ?? 0) <= 2).length;
+        setStockBadge(bajo);
+      })
+      .catch(() => {});
+  }, []);
 
   const cambiarTab = (key) => {
     setTab(key);
@@ -41,8 +51,12 @@ export default function AdminPanel() {
             key={t.key}
             className={`admin-tab ${tab === t.key ? "activo" : ""}`}
             onClick={() => cambiarTab(t.key)}
+            style={{ position: "relative" }}
           >
             {t.label}
+            {t.key === "productos" && stockBadge > 0 && (
+              <span className="tab-badge">{stockBadge}</span>
+            )}
           </button>
         ))}
       </div>

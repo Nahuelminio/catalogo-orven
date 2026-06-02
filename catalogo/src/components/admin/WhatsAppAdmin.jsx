@@ -14,7 +14,8 @@ export default function WhatsAppAdmin() {
   const [modo,         setModo]        = useState("minorista");
   const [marcaFiltro,  setMarcaFiltro] = useState("Todas");
   const [soloStock,    setSoloStock]   = useState(false);
-  const [copiados,     setCopiados]    = useState({});   // { id: true }
+  const [busqueda,     setBusqueda]    = useState("");
+  const [copiados,     setCopiados]    = useState({});
   const [copiadoTodo,  setCopiadoTodo] = useState(false);
   const [loading,      setLoading]     = useState(true);
 
@@ -29,14 +30,16 @@ export default function WhatsAppAdmin() {
 
   const marcas = ["Todas", ...new Set(productos.map((p) => p.marca))];
 
-  const filtrados = useMemo(() =>
-    productos.filter((p) => {
-      const okMarca = marcaFiltro === "Todas" || p.marca === marcaFiltro;
+  const filtrados = useMemo(() => {
+    const q = busqueda.toLowerCase();
+    return productos.filter((p) => {
+      const okMarca  = marcaFiltro === "Todas" || p.marca === marcaFiltro;
       const tieneStock = (p.stock || 0) > 0;
-      const okStock = soloStock ? tieneStock : (p.tipo_seccion === "stock" ? tieneStock : true);
-      return okMarca && okStock;
-    }),
-  [productos, marcaFiltro, soloStock]);
+      const okStock  = soloStock ? tieneStock : (p.tipo_seccion === "stock" ? tieneStock : true);
+      const okBusq   = !q || p.nombre.toLowerCase().includes(q) || p.marca.toLowerCase().includes(q);
+      return okMarca && okStock && okBusq;
+    });
+  }, [productos, marcaFiltro, soloStock, busqueda]);
 
   // Copiar caption de UN producto
   const copiarUno = (p) => {
@@ -120,6 +123,14 @@ export default function WhatsAppAdmin() {
             <input type="checkbox" checked={soloStock} onChange={(e) => setSoloStock(e.target.checked)} />
             Solo con stock
           </label>
+          <input
+            type="text"
+            className="admin-search"
+            placeholder="Buscar..."
+            value={busqueda}
+            onChange={(e) => setBusqueda(e.target.value)}
+            style={{ width: 150 }}
+          />
           <span className="contador" style={{ margin: 0 }}>{filtrados.length} productos</span>
         </div>
         <button

@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import { fetchVentas, createVenta, updateVenta, deleteVenta, fetchProductosAdmin, fetchCajas, decrementarStock, fetchDolar } from "../../services/admin";
 import Toast from "./Toast";
 import { useToast } from "../../hooks/useToast";
+import { descargarCSV } from "../../utils/csv";
 
 const fmtFecha = (f) => f ? `${f.slice(8,10)}/${f.slice(5,7)}` : "—";
 
@@ -36,7 +37,8 @@ export default function VentasAdmin() {
   const [dropOpen,      setDropOpen]      = useState(false);
   const [filtroSeccion, setFiltroSeccion] = useState("todos");
   const [stockSelec,    setStockSelec]    = useState(null);
-  const [editandoId,    setEditandoId]    = useState(null); // null = nueva venta, number = editando
+  const [editandoId,    setEditandoId]    = useState(null);
+  const [busqLista,     setBusqLista]     = useState(""); // null = nueva venta, number = editando
   const [guardando,     setGuardando]     = useState(false);
   const [loading,       setLoading]       = useState(true);
   const { toast, mostrar, cerrar } = useToast();
@@ -206,6 +208,22 @@ export default function VentasAdmin() {
     mostrar("Venta eliminada", "warn");
   };
 
+  // ── Hoy ───────────────────────────────────────────────
+  const hoyStr = useMemo(() => new Date().toISOString().split("T")[0], []);
+  const ventasHoy = useMemo(() => ventas.filter((v) => v.fecha === hoyStr), [ventas, hoyStr]);
+  const totalHoy  = useMemo(() => ventasHoy.reduce((s, v) => s + (v.total_ars || 0), 0), [ventasHoy]);
+
+  // ── Filtro lista ──────────────────────────────────────
+  const ventasFiltradas = useMemo(() => {
+    if (!busqLista) return ventas;
+    const q = busqLista.toLowerCase();
+    return ventas.filter((v) =>
+      (v.producto_nombre || "").toLowerCase().includes(q) ||
+      (v.cliente         || "").toLowerCase().includes(q) ||
+      (v.canal           || "").toLowerCase().includes(q)
+    );
+  }, [ventas, busqLista]);
+
   // ── Stats ─────────────────────────────────────────────
   const stats = useMemo(() => {
     const totalARS  = ventas.filter((v) => v.tipo === "minorista").reduce((s, v) => s + (v.total_ars || v.precio_unitario * v.cantidad), 0);
@@ -230,6 +248,14 @@ export default function VentasAdmin() {
           {[2024,2025,2026].map((a) => <option key={a}>{a}</option>)}
         </select>
       </div>
+
+      {/* Banner HOY */}
+      {ventasHoy.length > 0 && (
+        <div className="banner-hoy">
+          <span>📅 Hoy: <strong>{ventasHoy.length} venta{ventasHoy.length !== 1 ? "s" : ""}</strong></span>
+          <span className="banner-hoy-total">{fmt(totalHoy)}</span>
+        </div>
+      )}
 
       {/* Stats */}
       <div className="admin-stats">
@@ -479,22 +505,42 @@ export default function VentasAdmin() {
 
       {/* ── Lista ventas ── */}
       <div className="admin-lista-ventas">
-        <h3 className="admin-form-title">{MESES[mes-1]} {anio} — {ventas.length} ventas</h3>
+        <div className="admin-lista-toolbar">
+          <h3 className="admin-form-title" style={{ margin: 0 }}>{MESES[mes-1]} {anio} — {ventas.length} ventas</h3>
+          <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+            <input
+              className="admin-search"
+              style={{ width: 200 }}
+              placeholder="Buscar producto, cliente..."
+              value={busqLista}
+              onChange={(e) => setBusqLista(e.target.value)}
+            />
+            <button
+              className="btn-csv"
+              onClick={() => descargarCSV(
+                ventas,
+                ["fecha","producto_nombre","marca","cantidad","precio_unitario","descuento_pct","total_ars","total_usd","tipo","canal","medio_pago","cliente","notas"],
+                ["Fecha","Producto","Marca","Cantidad","Precio unit.","Desc %","Total ARS","Total USD","Tipo","Canal","Medio pago","Cliente","Notas"],
+                `ventas-${MESES[mes-1].toLowerCase()}-${anio}`
+              )}
+              disabled={!ventas.length}
+            >
+              ⬇ CSV
+            </button>
+          </div>
+        </div>
+
         {loading ? <p className="estado">Cargando...</p> : ventas.length === 0 ? (
           <p className="admin-empty">No hay ventas registradas este mes.</p>
+        ) : ventasFiltradas.length === 0 ? (
+          <p className="admin-empty">Sin resultados para "{busqLista}".</p>
         ) : (
           <div className="admin-lista">
             <div className="admin-lista-header venta-grid">
-              <span>Fecha</span>
-              <span>Producto</span>
-              <span>Cant.</span>
-              <span>Total</span>
-              <span>Pago</span>
-              <span>Canal</span>
-              <span>Tipo</span>
-              <span></span>
+              <span>Fecha</span><span>Producto</span><span>Cant.</span>
+              <span>Total</span><span>Pago</span><span>Canal</span><span>Tipo</span><span></span>
             </div>
-            {ventas.map((v) => {
+            {ventasFiltradas.map((v) => {
               const total = v.tipo === "mayorista"
                 ? fmtUSD(v.total_usd || v.precio_unitario * v.cantidad)
                 : fmt(v.total_ars    || v.precio_unitario * v.cantidad);

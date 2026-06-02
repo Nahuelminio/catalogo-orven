@@ -1,10 +1,11 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import {
-  fetchCompras, createCompra, deleteCompra,
+  fetchCompras, createCompra, updateCompra, deleteCompra,
   fetchProductosAdmin, incrementarStock, fetchDolar,
 } from "../../services/admin";
 import Toast from "./Toast";
 import { useToast } from "../../hooks/useToast";
+import { descargarCSV } from "../../utils/csv";
 
 const hoy      = () => new Date().toISOString().split("T")[0];
 const MESES    = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
@@ -26,10 +27,12 @@ export default function ComprasAdmin() {
   const [form,      setForm]      = useState(FORM_VACIO);
   const [busqProd,  setBusqProd]  = useState("");
   const [dropOpen,  setDropOpen]  = useState(false);
-  const [guardando, setGuardando] = useState(false);
-  const [loading,   setLoading]   = useState(true);
+  const [guardando,  setGuardando]  = useState(false);
+  const [loading,    setLoading]    = useState(true);
+  const [editandoId, setEditandoId] = useState(null);
   const { toast, mostrar, cerrar } = useToast();
-  const inputRef = useRef();
+  const inputRef  = useRef();
+  const formRef   = useRef();
 
   const cargar = () =>
     fetchCompras(mes, anio).then((d) => { setCompras(d); setLoading(false); });
@@ -68,33 +71,61 @@ export default function ComprasAdmin() {
   [totalCompraUSD, form.dolar_dia]);
 
   // ── Registrar compra ──────────────────────────────────
+  const cargarParaEditar = (c) => {
+    setEditandoId(c.id);
+    setForm({
+      fecha:            c.fecha            || hoy(),
+      proveedor:        c.proveedor        || "",
+      producto_id:      c.producto_id      || "",
+      producto_nombre:  c.producto_nombre  || "",
+      cantidad:         c.cantidad         || 1,
+      precio_costo_usd: c.precio_costo_unitario || 0,
+      costo_caja_usd:   c.costo_caja_usd   || 0,
+      dolar_dia:        c.dolar_dia        || "",
+      notas:            c.notas            || "",
+    });
+    setBusqProd(c.producto_nombre || "");
+    setTimeout(() => formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+  };
+
+  const cancelarEdicion = () => {
+    setEditandoId(null);
+    setForm({ ...FORM_VACIO, fecha: form.fecha });
+    setBusqProd("");
+  };
+
   const registrar = async (e) => {
     e.preventDefault();
     if (!form.producto_nombre) return;
     setGuardando(true);
+    const payload = {
+      fecha:                 form.fecha,
+      proveedor:             form.proveedor,
+      producto_id:           form.producto_id || null,
+      producto_nombre:       form.producto_nombre,
+      cantidad:              Number(form.cantidad),
+      precio_costo_unitario: Number(form.precio_costo_usd),
+      costo_caja_usd:        Number(form.costo_caja_usd) || 0,
+      dolar_dia:             Number(form.dolar_dia) || 0,
+      total_ars:             totalCompraARS,
+      notas:                 form.notas,
+    };
     try {
-      await createCompra({
-        fecha:                 form.fecha,
-        proveedor:             form.proveedor,
-        producto_id:           form.producto_id || null,
-        producto_nombre:       form.producto_nombre,
-        cantidad:              Number(form.cantidad),
-        precio_costo_unitario: Number(form.precio_costo_usd),
-        costo_caja_usd:        Number(form.costo_caja_usd) || 0,
-        dolar_dia:             Number(form.dolar_dia) || 0,
-        total_ars:             totalCompraARS,
-        notas:                 form.notas,
-      });
-      if (form.producto_id) {
-        await incrementarStock(form.producto_id, Number(form.cantidad));
+      if (editandoId) {
+        await updateCompra(editandoId, payload);
+        setEditandoId(null);
+        mostrar("Compra actualizada");
+      } else {
+        await createCompra(payload);
+        if (form.producto_id) await incrementarStock(form.producto_id, Number(form.cantidad));
+        mostrar("Compra registrada");
       }
       setForm({ ...FORM_VACIO, fecha: form.fecha });
       setBusqProd("");
       cargar();
-      mostrar("Compra registrada");
     } catch (err) {
       console.error(err);
-      mostrar("Error al registrar", "error");
+      mostrar("Error al guardar", "error");
     } finally {
       setGuardando(false);
     }
@@ -151,8 +182,23 @@ export default function ComprasAdmin() {
       </div>
 
       {/* Formulario */}
-      <div className="admin-form-card">
-        <h3 className="admin-form-title">+ Registrar compra</h3>
+      <div className="admin-form-card" ref={formRef}>
+        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:12 }}>
+          <h3 className="admin-form-title" style={{ margin:0 }}>
+            {editandoId ? "✏️ Editando compra" : "+ Registrar compra"}
+          </h3>
+          {editandoId && (
+            <button type="button" onClick={cancelarEdicion}
+              style={{ background:"none", border:"1.5px solid #ddd", borderRadius:8, padding:"5px 14px", fontSize:"0.82rem", cursor:"pointer", color:"var(--gris-txt)" }}>
+              ✕ Cancelar
+            </button>
+          )}
+        </div>
+        {editandoId && (
+          <div style={{ background:"#fff8e1", border:"1.5px solid #ffd54f", borderRadius:8, padding:"8px 12px", marginBottom:14, fontSize:"0.82rem", color:"#856404", fontWeight:600 }}>
+            ✏️ Editando compra existente — el stock <strong>no</strong> se ajustará al guardar
+          </div>
+        )}
         <form onSubmit={registrar} className="venta-form">
 
           {/* Fila 1: fecha, proveedor */}
@@ -252,14 +298,22 @@ export default function ComprasAdmin() {
           )}
 
           <button type="submit" className="btn-registrar" disabled={guardando || !form.producto_nombre}>
-            {guardando ? "Guardando..." : "✓ Registrar compra"}
+            {guardando ? "Guardando..." : editandoId ? "✓ Guardar cambios" : "✓ Registrar compra"}
           </button>
         </form>
       </div>
 
       {/* Lista */}
       <div className="admin-lista-ventas">
-        <h3 className="admin-form-title">{MESES[mes-1]} {anio} — {compras.length} compras</h3>
+        <div className="admin-lista-toolbar">
+          <h3 className="admin-form-title" style={{ margin:0 }}>{MESES[mes-1]} {anio} — {compras.length} compras</h3>
+          <button className="btn-csv" onClick={() => descargarCSV(
+            compras,
+            ["fecha","producto_nombre","proveedor","cantidad","precio_costo_unitario","costo_caja_usd","dolar_dia","total_ars","notas"],
+            ["Fecha","Producto","Proveedor","Cantidad","Costo unit. USD","Costo caja USD","Dólar","Total ARS","Notas"],
+            `compras-${MESES[mes-1].toLowerCase()}-${anio}`
+          )} disabled={!compras.length}>⬇ CSV</button>
+        </div>
         {loading ? <p className="estado">Cargando...</p> : compras.length === 0 ? (
           <p className="admin-empty">No hay compras registradas este mes.</p>
         ) : (
@@ -286,7 +340,10 @@ export default function ComprasAdmin() {
                 <span className="admin-lista-sub">USD {Number(c.precio_costo_unitario || 0).toLocaleString("es-AR")}</span>
                 <span className="admin-lista-sub">{c.dolar_dia > 0 ? `$${Number(c.dolar_dia).toLocaleString("es-AR")}` : "—"}</span>
                 <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--negro)" }}>{fmt(c.total_ars)}</span>
-                <button className="btn-eliminar" onClick={() => eliminar(c.id)} title="Eliminar">✕</button>
+                <div style={{ display:"flex", gap:4 }}>
+                  <button className="btn-editar" onClick={() => cargarParaEditar(c)} title="Editar">✏️</button>
+                  <button className="btn-eliminar" onClick={() => eliminar(c.id)} title="Eliminar">✕</button>
+                </div>
               </div>
             ))}
           </div>

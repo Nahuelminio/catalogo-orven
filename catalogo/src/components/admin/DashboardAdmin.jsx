@@ -25,7 +25,17 @@ function getMesActual() {
 const fmt = (n) => n >= 1000 ? `$${(n / 1000).toFixed(0)}k` : `$${n}`;
 const fmtFull = (n) => `$${Number(n || 0).toLocaleString("es-AR")}`;
 
+function getRangoMes(mes, anio) {
+  const desde = `${anio}-${String(mes).padStart(2, "0")}-01`;
+  const hasta  = new Date(anio, mes, 0).toISOString().split("T")[0];
+  return { desde, hasta };
+}
+
 export default function DashboardAdmin() {
+  const now = new Date();
+  const [mesSel,  setMesSel]  = useState(now.getMonth() + 1);
+  const [anioSel, setAnioSel] = useState(now.getFullYear());
+
   const [ventas6m,    setVentas6m]    = useState([]);
   const [ventasMes,   setVentasMes]   = useState([]);
   const [gastosMes,   setGastosMes]   = useState([]);
@@ -40,33 +50,35 @@ export default function DashboardAdmin() {
   const [error,       setError]       = useState("");
 
   useEffect(() => {
+    setLoading(true);
+    setError("");
+    const { desde: dm, hasta: hm } = getRangoMes(mesSel, anioSel);
     const { desde: d6, hasta: h6 } = getRango6Meses();
-    const { desde: dm, hasta: hm } = getMesActual();
     Promise.all([
-      fetchVentasRango(d6, h6),
+      fetchVentasRango(dm, hm),
       fetchGastosRango(dm, hm),
       fetchIngresosRango(dm, hm),
       fetchComprasRango(dm, hm),
       fetchProductosAdmin(),
       fetchTotalesGenerales(),
       fetchSaldoInicial(),
-    ]).then(([v6, gm, im, cm, prods, tots, saldo]) => {
-      setVentas6m(v6);
-      const { desde: dm2, hasta: hm2 } = getMesActual();
-      setVentasMes(v6.filter((v) => v.fecha >= dm2 && v.fecha <= hm2));
+    ]).then(([vm, gm, im, cm, prods, tots, saldo]) => {
+      setVentasMes(vm);
       setGastosMes(gm);
       setIngresosMes(im);
       setComprasMes(cm);
       setProductos(prods);
       setTotales(tots);
       setSaldoInicial(saldo);
+      // Gráfico 6 meses: siempre rolling desde hoy
+      fetchVentasRango(d6, h6).then(setVentas6m);
       setLoading(false);
     }).catch((err) => {
       console.error("Dashboard error:", err);
       setError(err.message || "No se pudo conectar con el servidor");
       setLoading(false);
     });
-  }, []);
+  }, [mesSel, anioSel]);
 
   // ── Stats mes actual ──────────────────────────────────
   const statsMes = useMemo(() => {
@@ -152,7 +164,7 @@ export default function DashboardAdmin() {
     [...ventasMes].sort((a, b) => new Date(b.fecha) - new Date(a.fecha)).slice(0, 8),
   [ventasMes]);
 
-  const mesLabel = MESES_ES[getMesActual().mes] + " " + getMesActual().anio;
+  const mesLabel = MESES_ES[mesSel - 1] + " " + anioSel;
 
   if (loading) return <p className="estado">Cargando dashboard...</p>;
   if (error)   return (
@@ -206,9 +218,18 @@ export default function DashboardAdmin() {
         </div>
       )}
 
-      {/* ── Título mes ── */}
+      {/* ── Título mes + selector ── */}
       <div className="dash-header">
         <h2 className="dash-titulo">Resumen — {mesLabel}</h2>
+        <div className="admin-periodo" style={{ marginBottom: 0 }}>
+          <select value={mesSel} onChange={(e) => setMesSel(Number(e.target.value))}>
+            {["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
+              .map((m, i) => <option key={i} value={i+1}>{m}</option>)}
+          </select>
+          <select value={anioSel} onChange={(e) => setAnioSel(Number(e.target.value))}>
+            {[2024, 2025, 2026].map((a) => <option key={a}>{a}</option>)}
+          </select>
+        </div>
       </div>
 
       {/* ── Caja del mes ── */}
