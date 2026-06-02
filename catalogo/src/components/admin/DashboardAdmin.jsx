@@ -37,6 +37,7 @@ export default function DashboardAdmin() {
   const [editandoSaldo, setEditandoSaldo] = useState(false);
   const [saldoTemp,    setSaldoTemp]   = useState("");
   const [loading,     setLoading]     = useState(true);
+  const [error,       setError]       = useState("");
 
   useEffect(() => {
     const { desde: d6, hasta: h6 } = getRango6Meses();
@@ -59,6 +60,10 @@ export default function DashboardAdmin() {
       setProductos(prods);
       setTotales(tots);
       setSaldoInicial(saldo);
+      setLoading(false);
+    }).catch((err) => {
+      console.error("Dashboard error:", err);
+      setError(err.message || "No se pudo conectar con el servidor");
       setLoading(false);
     });
   }, []);
@@ -150,6 +155,17 @@ export default function DashboardAdmin() {
   const mesLabel = MESES_ES[getMesActual().mes] + " " + getMesActual().anio;
 
   if (loading) return <p className="estado">Cargando dashboard...</p>;
+  if (error)   return (
+    <div style={{ padding: "32px 0", textAlign: "center" }}>
+      <p style={{ color: "var(--rojo)", fontWeight: 700, fontSize: "1rem", marginBottom: 8 }}>
+        ✗ Error al cargar el dashboard
+      </p>
+      <p style={{ color: "var(--gris-sub)", fontSize: "0.85rem", marginBottom: 20 }}>{error}</p>
+      <button className="btn-registrar" style={{ width: "auto", padding: "10px 24px" }} onClick={() => { setError(""); setLoading(true); window.location.reload(); }}>
+        Reintentar
+      </button>
+    </div>
+  );
 
   return (
     <div className="dashboard">
