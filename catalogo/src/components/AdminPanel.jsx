@@ -6,16 +6,18 @@ import VentasAdmin     from "./admin/VentasAdmin";
 import GastosAdmin     from "./admin/GastosAdmin";
 import IngresosAdmin   from "./admin/IngresosAdmin";
 import ComprasAdmin    from "./admin/ComprasAdmin";
-import WhatsAppAdmin   from "./admin/WhatsAppAdmin";
+import WhatsAppAdmin      from "./admin/WhatsAppAdmin";
+import ConsignacionAdmin  from "./admin/ConsignacionAdmin";
 
 const TABS = [
-  { key: "dashboard", label: "📊 Dashboard",  Comp: DashboardAdmin },
-  { key: "productos", label: "📦 Productos",  Comp: ProductosAdmin },
-  { key: "ventas",    label: "💰 Ventas",     Comp: VentasAdmin    },
-  { key: "compras",   label: "🛒 Compras",    Comp: ComprasAdmin   },
-  { key: "ingresos",  label: "💵 Ingresos",   Comp: IngresosAdmin  },
-  { key: "gastos",    label: "💸 Gastos",     Comp: GastosAdmin    },
-  { key: "whatsapp",  label: "📲 WhatsApp",   Comp: WhatsAppAdmin  },
+  { key: "dashboard",    label: "📊 Dashboard",     Comp: DashboardAdmin    },
+  { key: "productos",    label: "📦 Productos",     Comp: ProductosAdmin    },
+  { key: "ventas",       label: "💰 Ventas",        Comp: VentasAdmin       },
+  { key: "compras",      label: "🛒 Compras",       Comp: ComprasAdmin      },
+  { key: "consignacion", label: "🤝 Consignación",  Comp: ConsignacionAdmin },
+  { key: "ingresos",     label: "💵 Ingresos",      Comp: IngresosAdmin     },
+  { key: "gastos",       label: "💸 Gastos",        Comp: GastosAdmin       },
+  { key: "whatsapp",     label: "📲 WhatsApp",      Comp: WhatsAppAdmin     },
 ];
 
 export default function AdminPanel() {

@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from "react";
-import { fetchVentas, createVenta, updateVenta, deleteVenta, fetchProductosAdmin, fetchCajas, decrementarStock, fetchDolar } from "../../services/admin";
+import { fetchVentas, createVenta, updateVenta, deleteVenta, fetchProductosAdmin, fetchCajas, decrementarStock, fetchDolar, updateConfig } from "../../services/admin";
 import Toast from "./Toast";
 import { useToast } from "../../hooks/useToast";
 import { descargarCSV } from "../../utils/csv";
@@ -32,6 +32,8 @@ export default function VentasAdmin() {
   const [productos, setProductos] = useState([]);
   const [cajas,     setCajas]     = useState([]);
   const [dolar,     setDolar]     = useState(1200);
+  const [editDolar, setEditDolar] = useState(false);
+  const [dolarInput,setDolarInput]= useState("");
   const [form,      setForm]      = useState(FORM_VACIO);
   const [busqProd,      setBusqProd]      = useState("");
   const [dropOpen,      setDropOpen]      = useState(false);
@@ -406,7 +408,33 @@ export default function VentasAdmin() {
               </div>
             </label>
             <label className="form-label">
-              <span>Costo ARS <span style={{fontWeight:400,color:"var(--gris-sub)"}}>@ ${dolar.toLocaleString("es-AR")}</span></span>
+              <span>
+                Costo ARS{" "}
+                {editDolar ? (
+                  <input
+                    type="number"
+                    value={dolarInput}
+                    onChange={(e) => setDolarInput(e.target.value)}
+                    onBlur={async () => {
+                      const v = Number(dolarInput);
+                      if (v > 0) { setDolar(v); await updateConfig("dolar", v).catch(() => {}); }
+                      setEditDolar(false);
+                    }}
+                    onKeyDown={(e) => { if (e.key === "Enter") e.target.blur(); if (e.key === "Escape") setEditDolar(false); }}
+                    autoFocus
+                    style={{ width: 80, fontWeight: 600, fontSize: "0.78rem", padding: "1px 4px", border: "1.5px solid var(--acento)", borderRadius: 4, color: "var(--acento)" }}
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                ) : (
+                  <span
+                    title="Click para editar el tipo de cambio"
+                    style={{ fontWeight: 400, color: "var(--acento)", cursor: "pointer", borderBottom: "1px dashed var(--acento)" }}
+                    onClick={() => { setDolarInput(String(dolar)); setEditDolar(true); }}
+                  >
+                    @ ${dolar.toLocaleString("es-AR")} ✏️
+                  </span>
+                )}
+              </span>
               <input type="number" value={form.costo_unitario}
                 onChange={(e) => setForm((f) => ({ ...f, costo_unitario: e.target.value }))} />
             </label>

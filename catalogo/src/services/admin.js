@@ -86,3 +86,13 @@ export const fetchComprasRango = (desde, hasta) => get(`/api/compras?desde=${des
 export const createCompra      = (c)            => post("/api/compras", c);
 export const updateCompra      = (id, c)        => put(`/api/compras/${id}`, c);
 export const deleteCompra      = (id)           => del(`/api/compras/${id}`);
+
+// ── CONSIGNACIONES ───────────────────────────────────────
+export const fetchConsignaciones      = ()          => get("/api/consignaciones");
+export const createConsignacion       = (c)         => post("/api/consignaciones", c);
+export const updateConsignacion       = (id, c)     => put(`/api/consignaciones/${id}`, c);
+export const deleteConsignacion       = (id)        => del(`/api/consignaciones/${id}`);
+export const fetchVentasConsignacion  = (id)        => get(`/api/consignaciones/${id}/ventas`);
+export const venderConsignacion       = (id, v)     => post(`/api/consignaciones/${id}/vender`, v);
+export const cobrarVentaConsignacion  = (id, vid)   => put(`/api/consignaciones/${id}/cobrar/${vid}`, {});
+export const devolverConsignacion     = (id)        => post(`/api/consignaciones/${id}/devolver`, {});
