@@ -121,6 +121,21 @@ router.post("/:id/vender", async (req, res) => {
     // Actualizar estado
     const estado = await calcEstado(req.params.id);
     await pool.query("UPDATE consignaciones SET estado=? WHERE id=?", [estado, req.params.id]);
+
+    // Si se cobra en el momento, registrar como ingreso para q sume al total disponible
+    if (cobrado) {
+      const [consRows] = await pool.query("SELECT producto_nombre, consignatario FROM consignaciones WHERE id=?", [req.params.id]);
+      if (consRows.length) {
+        const { producto_nombre, consignatario } = consRows[0];
+        const montoTotal = (cantidad||1) * (precio_venta||0);
+        const desc = `Consignación: ${producto_nombre} (${consignatario})`;
+        await pool.query(
+          "INSERT INTO ingresos (fecha, descripcion, categoria, monto_ars, monto_usd, medio_pago, notas) VALUES (?,?,?,?,?,?,?)",
+          [fecha, desc, "Consignación", montoTotal, 0, null, notas||null]
+        );
+      }
+    }
+
     res.json({ ok: true, estado });
   } catch (err) { res.status(500).json({ error: err.message }); }
 });
@@ -128,7 +143,27 @@ router.post("/:id/vender", async (req, res) => {
 // ── PUT /:id/cobrar — marcar venta como cobrada ──────────
 router.put("/:id/cobrar/:ventaId", async (req, res) => {
   try {
-    await pool.query("UPDATE consignacion_ventas SET cobrado=1 WHERE id=? AND consignacion_id=?", [req.params.ventaId, req.params.id]);
+    // Obtener datos de la venta antes de marcarla cobrada (para no duplicar si ya estaba cobrada)
+    const [ventaRows] = await pool.query(
+      "SELECT cv.*, c.producto_nombre, c.consignatario FROM consignacion_ventas cv JOIN consignaciones c ON c.id = cv.consignacion_id WHERE cv.id=? AND cv.consignacion_id=?",
+      [req.params.ventaId, req.params.id]
+    );
+    if (!ventaRows.length) return res.status(404).json({ error: "Venta no encontrada" });
+    const venta = ventaRows[0];
+
+    // Solo procesar si no estaba cobrada antes
+    if (!venta.cobrado) {
+      await pool.query("UPDATE consignacion_ventas SET cobrado=1 WHERE id=? AND consignacion_id=?", [req.params.ventaId, req.params.id]);
+
+      // Crear ingreso para q sume al total disponible
+      const montoTotal = venta.cantidad * venta.precio_venta;
+      const desc = `Consignación: ${venta.producto_nombre} (${venta.consignatario})`;
+      await pool.query(
+        "INSERT INTO ingresos (fecha, descripcion, categoria, monto_ars, monto_usd, medio_pago, notas) VALUES (?,?,?,?,?,?,?)",
+        [venta.fecha, desc, "Consignación", montoTotal, 0, null, venta.notas||null]
+      );
+    }
+
     res.json({ ok: true });
   } catch (err) { res.status(500).json({ error: err.message }); }
 });
