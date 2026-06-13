@@ -2299,6 +2299,85 @@
 .dash-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
 .dash-titulo { font-size: 1.1rem; font-weight: 800; color: var(--negro); margin: 0; }
 
+/* ── Barra de período ── */
+.dash-periodo-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1.5px solid #eee;
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+.dash-modo-tabs {
+  display: flex;
+  gap: 4px;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 3px;
+  flex-shrink: 0;
+}
+.dash-modo-tab {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: #6b7280;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.dash-modo-tab.activo {
+  background: #fff;
+  color: var(--negro);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.dash-modo-tab:hover:not(.activo) { color: var(--negro); }
+
+.dash-periodo-ctrl { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; flex: 1; }
+
+/* Nav semana */
+.dash-semana-nav {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.dash-nav-btn {
+  padding: 6px 12px; border-radius: 8px;
+  border: 1.5px solid #e5e7eb; background: #fff;
+  color: var(--negro); font-size: 0.8rem; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.dash-nav-btn:hover:not(:disabled) { border-color: #9ca3af; background: #f9fafb; }
+.dash-nav-btn:disabled { opacity: 0.35; cursor: default; }
+.dash-nav-btn.hoy { background: var(--negro); color: #fff; border-color: var(--negro); }
+.dash-semana-label {
+  font-size: 0.85rem; font-weight: 700; color: var(--negro);
+  padding: 0 4px;
+}
+
+/* Rango personalizado */
+.dash-rango-inputs {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.dash-rango-inputs label {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.dash-rango-inputs label span {
+  font-size: 0.7rem; font-weight: 700; color: var(--gris-sub);
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.dash-rango-inputs input[type="date"] {
+  padding: 6px 10px; border-radius: 8px;
+  border: 1.5px solid #e5e7eb; background: #f9fafb;
+  font-size: 0.83rem; color: var(--negro);
+  cursor: pointer;
+}
+.dash-rango-sep {
+  font-size: 0.9rem; color: var(--gris-sub); font-weight: 600; margin-top: 14px;
+}
+
 /* ── Caja del mes ── */
 /* ── Disponible para pedidos ── */
 .dash-disponible {
@@ -2587,6 +2666,15 @@
   /* ── Dashboard ── */
   .dashboard { gap: 14px; }
   .dash-row   { flex-direction: column !important; }
+
+  /* Período bar */
+  .dash-periodo-bar { flex-direction: column; align-items: flex-start; gap: 10px; padding: 10px 12px; }
+  .dash-modo-tabs   { width: 100%; justify-content: stretch; }
+  .dash-modo-tab    { flex: 1; text-align: center; padding: 7px 8px; }
+  .dash-periodo-ctrl { width: 100%; }
+  .dash-rango-inputs { gap: 8px; }
+  .dash-rango-inputs input[type="date"] { width: 100%; }
+  .dash-semana-nav  { width: 100%; justify-content: space-between; }
   .dash-stats { grid-template-columns: repeat(2, 1fr) !important; }
   .dash-stat-num { font-size: 1.05rem; }
 
