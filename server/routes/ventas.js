@@ -34,17 +34,17 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  const { fecha, producto_nombre, marca, categoria, cantidad, precio_unitario, tipo, canal, cliente, cliente_id, costo_unitario, notas, descuento_pct, medio_pago, total_ars, total_usd, con_caja, precio_caja_usd } = req.body;
+  const { fecha, producto_nombre, marca, categoria, cantidad, precio_unitario, tipo, canal, cliente, cliente_id, costo_unitario, notas, descuento_pct, medio_pago, total_ars, total_usd, con_caja, precio_caja_usd, producto_caja_id } = req.body;
   try {
     await pool.query(
       `UPDATE ventas SET fecha=?, producto_nombre=?, marca=?, categoria=?, cantidad=?, precio_unitario=?,
        tipo=?, canal=?, cliente=?, cliente_id=?, costo_unitario=?, notas=?, descuento_pct=?, medio_pago=?,
-       total_ars=?, total_usd=?, con_caja=?, precio_caja_usd=?
+       total_ars=?, total_usd=?, con_caja=?, precio_caja_usd=?, producto_caja_id=?
        WHERE id=?`,
       [fecha, producto_nombre, marca||null, categoria||null, cantidad||1, precio_unitario||0,
        tipo||"minorista", canal||"Mostrador", cliente||null, cliente_id||null, costo_unitario||0, notas||null,
        descuento_pct||0, medio_pago||"Efectivo", total_ars||0, total_usd||0, con_caja?1:0,
-       precio_caja_usd||0, req.params.id]
+       precio_caja_usd||0, producto_caja_id||null, req.params.id]
     );
     const [rows] = await pool.query("SELECT * FROM ventas WHERE id = ?", [req.params.id]);
     res.json(rows[0]);
