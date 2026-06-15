@@ -39,6 +39,7 @@ app.use("/api/compras",       require("./routes/compras"));
 app.use("/api/configuracion", require("./routes/configuracion"));
 app.use("/api/fotos",         require("./routes/fotos"));
 app.use("/api/consignaciones",require("./routes/consignaciones"));
+app.use("/api/clientes",      require("./routes/clientes"));
 
 // ── HEALTH CHECK ─────────────────────────────────────────
 app.get("/", (req, res) => res.json({ status: "ok", app: "Orven API" }));

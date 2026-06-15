@@ -8,11 +8,13 @@ import IngresosAdmin   from "./admin/IngresosAdmin";
 import ComprasAdmin    from "./admin/ComprasAdmin";
 import WhatsAppAdmin      from "./admin/WhatsAppAdmin";
 import ConsignacionAdmin  from "./admin/ConsignacionAdmin";
+import ClientesAdmin      from "./admin/ClientesAdmin";
 
 const TABS = [
   { key: "dashboard",    label: "📊 Dashboard",     Comp: DashboardAdmin    },
   { key: "productos",    label: "📦 Productos",     Comp: ProductosAdmin    },
   { key: "ventas",       label: "💰 Ventas",        Comp: VentasAdmin       },
+  { key: "clientes",     label: "👤 Clientes",      Comp: ClientesAdmin     },
   { key: "compras",      label: "🛒 Compras",       Comp: ComprasAdmin      },
   { key: "consignacion", label: "🤝 Consignación",  Comp: ConsignacionAdmin },
   { key: "ingresos",     label: "💵 Ingresos",      Comp: IngresosAdmin     },

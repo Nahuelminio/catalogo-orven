@@ -3510,6 +3510,184 @@
   .prod-modal { max-height: 95dvh; border-radius: 16px 16px 0 0; top: auto; bottom: 0; transform: translateX(-50%); }
 }
 
+/* ══════════════════════════════════════════
+   MÓDULO CLIENTES
+══════════════════════════════════════════ */
+.cli-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.cli-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--gris-card);
+  border: 1.5px solid var(--borde);
+  border-radius: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.cli-card:hover  { border-color: #555; }
+.cli-card.activo { border-color: var(--rojo); background: #1a1212; }
+
+.cli-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--rojo);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cli-avatar.grande {
+  width: 52px;
+  height: 52px;
+  font-size: 1.35rem;
+}
+
+.cli-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cli-nombre {
+  font-size: 0.9rem;
+  color: var(--texto);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cli-wa {
+  font-size: 0.78rem;
+  color: #22c55e;
+  text-decoration: none;
+}
+.cli-wa:hover { text-decoration: underline; }
+.cli-notas-preview {
+  font-size: 0.73rem;
+  color: var(--gris-sub);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cli-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.cli-compras-num {
+  font-size: 0.75rem;
+  color: var(--gris-txt);
+}
+.cli-gastado {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.cli-acciones {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+/* ── Perfil drawer ─────────────────────── */
+.cli-perfil-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.cli-perfil {
+  background: var(--gris-card);
+  border-left: 1.5px solid var(--borde);
+  width: min(460px, 100vw);
+  height: 100dvh;
+  overflow-y: auto;
+  padding: 24px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cli-perfil-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.cli-perfil-cerrar {
+  background: none;
+  border: 1.5px solid var(--borde);
+  border-radius: 8px;
+  color: var(--gris-txt);
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.cli-perfil-cerrar:hover { background: #333; }
+
+.cli-perfil-stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.cli-section-title {
+  margin: 20px 0 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gris-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Historial de compras ──────────────── */
+.cli-compras-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cli-compra-row {
+  display: grid;
+  grid-template-columns: 70px 1fr auto auto auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #1e1e1e;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+.cli-compra-fecha  { color: var(--gris-sub); font-size: 0.75rem; }
+.cli-compra-prod   { min-width: 0; overflow: hidden; }
+.cli-compra-prod strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cli-compra-total  { font-weight: 700; color: var(--texto); font-size: 0.83rem; white-space: nowrap; }
+
+@media (max-width: 768px) {
+  .cli-perfil { width: 100vw; }
+  .cli-compra-row { grid-template-columns: 60px 1fr auto auto; }
+  .cli-compra-row > span:last-child { display: none; }
+}
+
 /* ── Dashboard — pantallas muy chicas (≤ 420px) ── */
 @media (max-width: 420px) {
   .dash-stats { grid-template-columns: 1fr 1fr !important; gap: 8px; }

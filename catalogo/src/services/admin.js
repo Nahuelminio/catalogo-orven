@@ -87,6 +87,13 @@ export const createCompra      = (c)            => post("/api/compras", c);
 export const updateCompra      = (id, c)        => put(`/api/compras/${id}`, c);
 export const deleteCompra      = (id)           => del(`/api/compras/${id}`);
 
+// ── CLIENTES ─────────────────────────────────────────────
+export const fetchClientes        = ()      => get("/api/clientes");
+export const createCliente        = (c)     => post("/api/clientes", c);
+export const updateCliente        = (id, c) => put(`/api/clientes/${id}`, c);
+export const deleteCliente        = (id)    => del(`/api/clientes/${id}`);
+export const fetchVentasCliente   = (id)    => get(`/api/clientes/${id}/ventas`);
+
 // ── CONSIGNACIONES ───────────────────────────────────────
 export const fetchConsignaciones      = ()          => get("/api/consignaciones");
 export const createConsignacion       = (c)         => post("/api/consignaciones", c);

@@ -21,12 +21,12 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const { fecha, producto_id, producto_nombre, marca, categoria, cantidad, precio_unitario, tipo, canal, cliente, costo_unitario, notas, descuento_pct, medio_pago, total_ars, total_usd, con_caja, precio_caja_usd, producto_caja_id } = req.body;
+  const { fecha, producto_id, producto_nombre, marca, categoria, cantidad, precio_unitario, tipo, canal, cliente, cliente_id, costo_unitario, notas, descuento_pct, medio_pago, total_ars, total_usd, con_caja, precio_caja_usd, producto_caja_id } = req.body;
   try {
     const [result] = await pool.query(
-      `INSERT INTO ventas (fecha, producto_id, producto_nombre, marca, categoria, cantidad, precio_unitario, tipo, canal, cliente, costo_unitario, notas, descuento_pct, medio_pago, total_ars, total_usd, con_caja, precio_caja_usd, producto_caja_id)
-       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
-      [fecha, producto_id||null, producto_nombre, marca||null, categoria||null, cantidad||1, precio_unitario||0, tipo||"minorista", canal||"Mostrador", cliente||null, costo_unitario||0, notas||null, descuento_pct||0, medio_pago||"Efectivo", total_ars||0, total_usd||0, con_caja?1:0, precio_caja_usd||0, producto_caja_id||null]
+      `INSERT INTO ventas (fecha, producto_id, producto_nombre, marca, categoria, cantidad, precio_unitario, tipo, canal, cliente, cliente_id, costo_unitario, notas, descuento_pct, medio_pago, total_ars, total_usd, con_caja, precio_caja_usd, producto_caja_id)
+       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+      [fecha, producto_id||null, producto_nombre, marca||null, categoria||null, cantidad||1, precio_unitario||0, tipo||"minorista", canal||"Mostrador", cliente||null, cliente_id||null, costo_unitario||0, notas||null, descuento_pct||0, medio_pago||"Efectivo", total_ars||0, total_usd||0, con_caja?1:0, precio_caja_usd||0, producto_caja_id||null]
     );
     const [rows] = await pool.query("SELECT * FROM ventas WHERE id = ?", [result.insertId]);
     res.status(201).json(rows[0]);
@@ -34,15 +34,15 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  const { fecha, producto_nombre, marca, categoria, cantidad, precio_unitario, tipo, canal, cliente, costo_unitario, notas, descuento_pct, medio_pago, total_ars, total_usd, con_caja, precio_caja_usd } = req.body;
+  const { fecha, producto_nombre, marca, categoria, cantidad, precio_unitario, tipo, canal, cliente, cliente_id, costo_unitario, notas, descuento_pct, medio_pago, total_ars, total_usd, con_caja, precio_caja_usd } = req.body;
   try {
     await pool.query(
       `UPDATE ventas SET fecha=?, producto_nombre=?, marca=?, categoria=?, cantidad=?, precio_unitario=?,
-       tipo=?, canal=?, cliente=?, costo_unitario=?, notas=?, descuento_pct=?, medio_pago=?,
+       tipo=?, canal=?, cliente=?, cliente_id=?, costo_unitario=?, notas=?, descuento_pct=?, medio_pago=?,
        total_ars=?, total_usd=?, con_caja=?, precio_caja_usd=?
        WHERE id=?`,
       [fecha, producto_nombre, marca||null, categoria||null, cantidad||1, precio_unitario||0,
-       tipo||"minorista", canal||"Mostrador", cliente||null, costo_unitario||0, notas||null,
+       tipo||"minorista", canal||"Mostrador", cliente||null, cliente_id||null, costo_unitario||0, notas||null,
        descuento_pct||0, medio_pago||"Efectivo", total_ars||0, total_usd||0, con_caja?1:0,
        precio_caja_usd||0, req.params.id]
     );

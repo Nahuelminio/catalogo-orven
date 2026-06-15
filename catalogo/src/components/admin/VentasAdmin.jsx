@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from "react";
-import { fetchVentas, createVenta, updateVenta, deleteVenta, fetchProductosAdmin, fetchCajas, decrementarStock, fetchDolar, updateConfig } from "../../services/admin";
+import { fetchVentas, createVenta, updateVenta, deleteVenta, fetchProductosAdmin, fetchCajas, decrementarStock, fetchDolar, updateConfig, fetchClientes, createCliente } from "../../services/admin";
 import Toast from "./Toast";
 import { useToast } from "../../hooks/useToast";
 import { descargarCSV } from "../../utils/csv";
@@ -16,7 +16,7 @@ const FORM_VACIO = {
   fecha: hoy(), producto_id: "", producto_nombre: "", marca: "", categoria: "",
   cantidad: 1, precio_unitario: 0, costo_unitario: 0,
   descuento_pct: 0, medio_pago: "Efectivo",
-  tipo: "minorista", canal: "Mostrador", cliente: "", notas: "",
+  tipo: "minorista", canal: "Mostrador", cliente: "", cliente_id: null, notas: "",
   con_caja: false, producto_caja_id: "", precio_caja_usd: 0,
 };
 
@@ -31,6 +31,7 @@ export default function VentasAdmin() {
   const [ventas,    setVentas]    = useState([]);
   const [productos, setProductos] = useState([]);
   const [cajas,     setCajas]     = useState([]);
+  const [clientes,  setClientes]  = useState([]);
   const [dolar,     setDolar]     = useState(1200);
   const [editDolar, setEditDolar] = useState(false);
   const [dolarInput,setDolarInput]= useState("");
@@ -40,8 +41,10 @@ export default function VentasAdmin() {
   const [filtroSeccion, setFiltroSeccion] = useState("todos");
   const [stockSelec,    setStockSelec]    = useState(null);
   const [editandoId,    setEditandoId]    = useState(null);
-  const [busqLista,     setBusqLista]     = useState(""); // null = nueva venta, number = editando
-  const [guardando,     setGuardando]     = useState(false);
+  const [busqLista,       setBusqLista]       = useState("");
+  const [dropClienteOpen, setDropClienteOpen] = useState(false);
+  const [creandoCliente,  setCreandoCliente]  = useState(false);
+  const [guardando,       setGuardando]       = useState(false);
   const [loading,       setLoading]       = useState(true);
   const { toast, mostrar, cerrar } = useToast();
   const inputRef  = useRef();
@@ -53,6 +56,7 @@ export default function VentasAdmin() {
   useEffect(() => { fetchProductosAdmin().then(setProductos); }, []);
   useEffect(() => { fetchCajas().then(setCajas); }, []);
   useEffect(() => { fetchDolar().then(setDolar); }, []);
+  useEffect(() => { fetchClientes().then(setClientes).catch(() => {}); }, []);
   useEffect(() => { setLoading(true); cargarVentas(); }, [mes, anio]);
 
   // ── Producto seleccionado ──────────────────────────────
@@ -93,6 +97,33 @@ export default function VentasAdmin() {
     setDropOpen(false);
   };
 
+  // ── Cliente typeahead ─────────────────────────────────
+  const clientesFiltrados = useMemo(() => {
+    const q = (form.cliente || "").toLowerCase().trim();
+    if (!q) return clientes.slice(0, 6);
+    return clientes.filter((c) =>
+      c.nombre.toLowerCase().includes(q) || (c.whatsapp || "").includes(q)
+    ).slice(0, 6);
+  }, [form.cliente, clientes]);
+
+  const seleccionarCliente = (c) => {
+    setForm((f) => ({ ...f, cliente: c.nombre, cliente_id: c.id }));
+    setDropClienteOpen(false);
+  };
+
+  const crearYSeleccionar = async () => {
+    if (!form.cliente.trim()) return;
+    setCreandoCliente(true);
+    try {
+      const nuevo = await createCliente({ nombre: form.cliente.trim() });
+      setClientes((prev) => [...prev, { ...nuevo, total_compras: 0, total_gastado: 0 }]);
+      setForm((f) => ({ ...f, cliente: nuevo.nombre, cliente_id: nuevo.id }));
+    } catch { /* silent */ } finally {
+      setCreandoCliente(false);
+      setDropClienteOpen(false);
+    }
+  };
+
   const cargarParaEditar = (v) => {
     setEditandoId(v.id);
     setForm({
@@ -109,6 +140,7 @@ export default function VentasAdmin() {
       tipo:            v.tipo            || "minorista",
       canal:           v.canal           || "Mostrador",
       cliente:         v.cliente         || "",
+      cliente_id:      v.cliente_id      || null,
       notas:           v.notas           || "",
       con_caja:        v.con_caja        || false,
       producto_caja_id: v.producto_caja_id || "",
@@ -170,6 +202,7 @@ export default function VentasAdmin() {
       tipo:            form.tipo,
       canal:           form.canal,
       cliente:         form.cliente,
+      cliente_id:      form.cliente_id || null,
       notas:           form.notas,
       total_ars:       form.tipo === "minorista" ? totalVenta : 0,
       total_usd:       form.tipo === "mayorista" ? totalVenta : 0,
@@ -448,11 +481,50 @@ export default function VentasAdmin() {
                 {MEDIOS_PAGO.map((m) => <option key={m}>{m}</option>)}
               </select>
             </label>
-            <label className="form-label">
-              <span>Cliente (opcional)</span>
-              <input type="text" value={form.cliente}
-                onChange={(e) => setForm((f) => ({ ...f, cliente: e.target.value }))}
-                placeholder="Nombre del cliente" />
+            <label className="form-label" style={{ position: "relative" }}>
+              <span>
+                Cliente (opcional)
+                {form.cliente_id && (
+                  <span style={{ marginLeft: 6, fontSize: "0.72rem", background: "#d1fae5", color: "#065f46",
+                    borderRadius: 4, padding: "1px 6px", fontWeight: 700 }}>
+                    vinculado ✓
+                  </span>
+                )}
+              </span>
+              <input
+                type="text"
+                value={form.cliente}
+                onChange={(e) => {
+                  setForm((f) => ({ ...f, cliente: e.target.value, cliente_id: null }));
+                  setDropClienteOpen(true);
+                }}
+                onFocus={() => setDropClienteOpen(true)}
+                onBlur={() => setTimeout(() => setDropClienteOpen(false), 180)}
+                placeholder="Buscar o escribir nombre..."
+                autoComplete="off"
+              />
+              {dropClienteOpen && (
+                <ul className="prod-dropdown" style={{ top: "100%" }}>
+                  {clientesFiltrados.map((c) => (
+                    <li key={c.id} onMouseDown={() => seleccionarCliente(c)}
+                      style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <div>
+                        <strong style={{ fontSize: "0.85rem" }}>{c.nombre}</strong>
+                        {c.whatsapp && <span className="admin-lista-sub" style={{ marginLeft: 6 }}>📱 {c.whatsapp}</span>}
+                      </div>
+                      <span className="admin-lista-sub" style={{ flexShrink: 0 }}>
+                        {Number(c.total_compras)} compra{Number(c.total_compras) !== 1 ? "s" : ""}
+                      </span>
+                    </li>
+                  ))}
+                  {form.cliente.trim() && !clientes.some((c) => c.nombre.toLowerCase() === form.cliente.trim().toLowerCase()) && (
+                    <li onMouseDown={crearYSeleccionar}
+                      style={{ color: "var(--acento)", fontWeight: 700, fontSize: "0.83rem" }}>
+                      {creandoCliente ? "Creando..." : `➕ Crear cliente "${form.cliente.trim()}"`}
+                    </li>
+                  )}
+                </ul>
+              )}
             </label>
             <label className="form-label">
               <span>Notas</span>
