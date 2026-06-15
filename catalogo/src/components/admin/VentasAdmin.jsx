@@ -8,7 +8,7 @@ const fmtFecha = (f) => f ? `${f.slice(8,10)}/${f.slice(5,7)}` : "—";
 
 const hoy = () => new Date().toISOString().split("T")[0];
 
-const CANALES     = ["Mostrador", "Instagram", "WhatsApp", "MercadoLibre", "Otro"];
+const CANALES     = ["Mostrador", "Instagram", "WhatsApp", "MercadoLibre", "Mayorista", "Otro"];
 const MEDIOS_PAGO = ["Efectivo", "Transferencia", "Débito", "Crédito 1c", "Crédito 3c", "Crédito 6c", "MercadoPago", "Otro"];
 const MESES       = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 
