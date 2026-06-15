@@ -534,7 +534,17 @@ export default function VentasAdmin() {
       {/* ── Lista ventas ── */}
       <div className="admin-lista-ventas">
         <div className="admin-lista-toolbar">
-          <h3 className="admin-form-title" style={{ margin: 0 }}>{MESES[mes-1]} {anio} — {ventas.length} ventas</h3>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <button className="dash-nav-btn" onClick={() => {
+              if (mes === 1) { setMes(12); setAnio(a => a - 1); }
+              else setMes(m => m - 1);
+            }}>‹</button>
+            <h3 className="admin-form-title" style={{ margin: 0 }}>{MESES[mes-1]} {anio} — {ventas.length} ventas</h3>
+            <button className="dash-nav-btn" onClick={() => {
+              if (mes === 12) { setMes(1); setAnio(a => a + 1); }
+              else setMes(m => m + 1);
+            }}>›</button>
+          </div>
           <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
             <input
               className="admin-search"
