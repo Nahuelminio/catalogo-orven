@@ -2282,6 +2282,8 @@
 .venta-preview-medio { margin-left: auto; color: var(--gris-sub); font-size: 0.8rem; }
 
 /* Badge descuento en lista */
+.venta-sin-costo { background: #fffbeb !important; border-left: 3px solid #f59e0b !important; }
+
 .venta-desc-badge {
   display: inline-block;
   background: #fef9c3;
