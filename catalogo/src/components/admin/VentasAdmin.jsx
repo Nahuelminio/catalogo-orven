@@ -573,7 +573,7 @@ export default function VentasAdmin() {
                 ? fmtUSD(v.total_usd || v.precio_unitario * v.cantidad)
                 : fmt(v.total_ars    || v.precio_unitario * v.cantidad);
               return (
-                <div key={v.id} className="admin-lista-row venta-grid">
+                <div key={v.id} className={`admin-lista-row venta-grid${!v.costo_unitario ? " venta-sin-costo" : ""}`}>
                   <span className="admin-lista-sub">{fmtFecha(v.fecha)}</span>
                   <div style={{ minWidth: 0 }}>
                     <span style={{ fontSize: "0.83rem", fontWeight: 700, color: "var(--negro)", display: "block", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
@@ -582,6 +582,7 @@ export default function VentasAdmin() {
                     </span>
                     {v.cliente && <span className="admin-lista-sub">{v.cliente}</span>}
                     {v.descuento_pct > 0 && <span className="venta-desc-badge">-{v.descuento_pct}%</span>}
+                    {!v.costo_unitario && <span style={{ fontSize: "0.68rem", fontWeight: 700, color: "#b45309", background: "#fef3c7", border: "1px solid #fde68a", borderRadius: 4, padding: "1px 5px" }}>sin costo ✏️</span>}
                   </div>
                   <span className="admin-lista-sub" style={{ textAlign: "center" }}>{v.cantidad}</span>
                   <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--rojo)" }}>{total}</span>
