@@ -579,9 +579,21 @@ export default function VentasAdmin() {
               <span>Total</span><span>Pago</span><span>Canal</span><span>Tipo</span><span></span>
             </div>
             {ventasFiltradas.map((v) => {
-              const total = v.tipo === "mayorista"
+              const totalARS  = v.total_ars || v.precio_unitario * v.cantidad;
+              const total     = v.tipo === "mayorista"
                 ? fmtUSD(v.total_usd || v.precio_unitario * v.cantidad)
-                : fmt(v.total_ars    || v.precio_unitario * v.cantidad);
+                : fmt(totalARS);
+              const costo     = (v.costo_unitario || 0) * (v.cantidad || 1);
+              const ganancia  = totalARS - costo;
+              const margenPct = costo > 0 ? (ganancia / totalARS) * 100 : null;
+              const margenColor = margenPct === null ? "#9ca3af"
+                : margenPct >= 30 ? "#16a34a"
+                : margenPct >= 15 ? "#d97706"
+                : "#dc2626";
+              const margenBg = margenPct === null ? "#f3f4f6"
+                : margenPct >= 30 ? "#f0fdf4"
+                : margenPct >= 15 ? "#fffbeb"
+                : "#fff5f5";
               return (
                 <div key={v.id} className={`admin-lista-row venta-grid${!v.costo_unitario ? " venta-sin-costo" : ""}`}>
                   <span className="admin-lista-sub">{fmtFecha(v.fecha)}</span>
@@ -595,7 +607,16 @@ export default function VentasAdmin() {
                     {!v.costo_unitario && <span style={{ fontSize: "0.68rem", fontWeight: 700, color: "#b45309", background: "#fef3c7", border: "1px solid #fde68a", borderRadius: 4, padding: "1px 5px" }}>sin costo ✏️</span>}
                   </div>
                   <span className="admin-lista-sub" style={{ textAlign: "center" }}>{v.cantidad}</span>
-                  <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--rojo)" }}>{total}</span>
+                  <div>
+                    <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--rojo)", display: "block" }}>{total}</span>
+                    <span style={{
+                      fontSize: "0.7rem", fontWeight: 700, color: margenColor,
+                      background: margenBg, borderRadius: 4, padding: "1px 5px",
+                      display: "inline-block", marginTop: 2,
+                    }}>
+                      {margenPct === null ? "sin costo" : `${margenPct.toFixed(0)}% · ${fmt(ganancia)}`}
+                    </span>
+                  </div>
                   <span className="admin-lista-sub">{v.medio_pago || "—"}</span>
                   <span className="admin-lista-sub">{v.canal}</span>
                   <span className={`badge-tipo ${v.tipo}`}>{v.tipo}</span>
