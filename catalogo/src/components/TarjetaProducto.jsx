@@ -4,7 +4,8 @@ export default function TarjetaProducto({ producto, modo, seccion, onAgregar, on
   const { nombre, descripcion, precio_minorista, precio_mayorista, foto, marca, categoria, stock, tipo_seccion } = producto;
   const precio = modo === "mayorista" ? precio_mayorista : precio_minorista;
   const precioFormateado = formatPrecio(precio, modo);
-  const agotado = seccion === "stock" && tipo_seccion === "stock" && (stock || 0) === 0;
+  const agotado   = seccion === "stock" && tipo_seccion === "stock" && (stock || 0) === 0;
+  const stockBajo = !agotado && tipo_seccion === "stock" && stock > 0 && stock <= 2;
 
   return (
     <div className={`tarjeta${agotado ? " agotado" : ""}`}>
@@ -12,14 +13,14 @@ export default function TarjetaProducto({ producto, modo, seccion, onAgregar, on
         {foto ? (
           <img src={foto} alt={nombre} loading="lazy" />
         ) : (
-          <div className="sin-imagen">Sin foto</div>
+          <div className="sin-imagen">📷</div>
         )}
-        {seccion === "stock" && !agotado && stock > 0 && (
-          <span className="chip-disponible">Disponible</span>
+        {stockBajo && (
+          <span className="chip-ultimo">
+            {stock === 1 ? "¡Último!" : `Últimos ${stock}`}
+          </span>
         )}
-        {agotado && (
-          <span className="chip-agotado">Agotado</span>
-        )}
+        {agotado && <span className="chip-agotado">Agotado</span>}
       </div>
       <div className="tarjeta-info">
         <span className="tarjeta-marca">{marca}</span>

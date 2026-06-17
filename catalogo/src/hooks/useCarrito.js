@@ -37,10 +37,12 @@ export function useCarrito() {
     );
   };
 
+  const eliminar = (nombre) => setItems((prev) => prev.filter((i) => i.nombre !== nombre));
+
   const vaciar = () => setItems([]);
 
   const total = items.reduce((sum, i) => sum + i.precio * i.cantidad, 0);
   const totalItems = items.reduce((sum, i) => sum + i.cantidad, 0);
 
-  return { items, agregar, cambiarCantidad, vaciar, total, totalItems };
+  return { items, agregar, cambiarCantidad, eliminar, vaciar, total, totalItems };
 }

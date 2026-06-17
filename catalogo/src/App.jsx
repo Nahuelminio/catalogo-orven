@@ -25,9 +25,10 @@ function App() {
   const [carritoAbierto, setCarritoAbierto] = useState(false);
   const [productoModal, setProductoModal] = useState(null);
 
-  const { items, agregar, cambiarCantidad, vaciar, total, totalItems } = useCarrito();
+  const { items, agregar, cambiarCantidad, eliminar, vaciar, total, totalItems } = useCarrito();
 
   const [seccion, setSeccion] = useState("stock"); // "pedido" | "stock"
+  const [busq, setBusq]       = useState("");
 
   const vista = new URLSearchParams(window.location.search).get("vista");
   const modo = vista === "mayorista" ? "mayorista" : "minorista";
@@ -48,7 +49,9 @@ function App() {
     const okMarca   = marcaActiva === "Todas" || p.marca === marcaActiva;
     const okCat     = categoriaActiva === "Todas" || p.categoria === categoriaActiva;
     const okSeccion = seccion === "pedido" || p.tipo_seccion === "stock";
-    return okMarca && okCat && okSeccion;
+    const q         = busq.trim().toLowerCase();
+    const okBusq    = !q || p.nombre.toLowerCase().includes(q) || p.marca.toLowerCase().includes(q);
+    return okMarca && okCat && okSeccion && okBusq;
   });
 
   const categorias = categoriasPorMarca(marcaActiva);
@@ -58,46 +61,74 @@ function App() {
       <Header subtitulo="Catálogo de Relojes 2026" />
 
       <main className="contenido">
-        {loading && <p className="estado">Cargando productos...</p>}
         {error && <p className="estado error">Error al cargar productos.</p>}
 
-        {!loading && !error && (
+        {!error && (
           <>
             {/* Toggle En Stock / Por Pedido */}
             <div className="seccion-toggle">
               <button
                 className={`seccion-btn ${seccion === "stock" ? "activo" : ""}`}
-                onClick={() => { setSeccion("stock"); setMarcaActiva("Todas"); setCategoriaActiva("Todas"); }}
+                onClick={() => { setSeccion("stock"); setMarcaActiva("Todas"); setCategoriaActiva("Todas"); setBusq(""); }}
               >
                 <span className="seccion-dot" />
                 En Stock
               </button>
               <button
                 className={`seccion-btn ${seccion === "pedido" ? "activo" : ""}`}
-                onClick={() => { setSeccion("pedido"); setMarcaActiva("Todas"); setCategoriaActiva("Todas"); }}
+                onClick={() => { setSeccion("pedido"); setMarcaActiva("Todas"); setCategoriaActiva("Todas"); setBusq(""); }}
               >
                 Por Pedido
               </button>
             </div>
 
-            <FiltroMarcas
-              marcas={marcas}
-              marcaActiva={marcaActiva}
-              onChange={handleMarcaChange}
-            />
-            {categorias.length > 2 && (
-              <FiltroMarcas
-                marcas={categorias}
-                marcaActiva={categoriaActiva}
-                onChange={setCategoriaActiva}
-                secundario
+            {/* Buscador */}
+            <div className="catalogo-busqueda">
+              <span className="catalogo-busqueda-icon">🔍</span>
+              <input
+                type="search"
+                className="catalogo-busqueda-input"
+                placeholder="Buscar reloj por nombre o marca..."
+                value={busq}
+                onChange={(e) => { setBusq(e.target.value); setMarcaActiva("Todas"); setCategoriaActiva("Todas"); }}
               />
+              {busq && (
+                <button className="catalogo-busqueda-clear" onClick={() => setBusq("")}>✕</button>
+              )}
+            </div>
+
+            {!busq && (
+              <>
+                <FiltroMarcas
+                  marcas={marcas}
+                  marcaActiva={marcaActiva}
+                  onChange={handleMarcaChange}
+                />
+                {categorias.length > 2 && (
+                  <FiltroMarcas
+                    marcas={categorias}
+                    marcaActiva={categoriaActiva}
+                    onChange={setCategoriaActiva}
+                    secundario
+                  />
+                )}
+              </>
             )}
-            <p className="contador">{productosFiltrados.length} productos</p>
+
+            {!loading && (
+              <p className="contador">
+                {busq
+                  ? `${productosFiltrados.length} resultado${productosFiltrados.length !== 1 ? "s" : ""} para "${busq}"`
+                  : `${productosFiltrados.length} producto${productosFiltrados.length !== 1 ? "s" : ""}`
+                }
+              </p>
+            )}
+
             <GrillaProductos
               productos={productosFiltrados}
               modo={modo}
               seccion={seccion}
+              loading={loading}
               onAgregar={handleAgregar}
               onVerDetalle={setProductoModal}
             />
@@ -128,6 +159,7 @@ function App() {
           total={total}
           modo={modo}
           onCambiar={cambiarCantidad}
+          onEliminar={eliminar}
           onVaciar={vaciar}
           onCerrar={() => setCarritoAbierto(false)}
         />

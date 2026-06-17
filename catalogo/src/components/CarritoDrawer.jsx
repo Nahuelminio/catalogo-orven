@@ -2,7 +2,7 @@ import { formatPrecio } from "../utils/precio";
 
 const WA_NUMERO = "5493764216818";
 
-export default function CarritoDrawer({ items, total, onCambiar, onVaciar, onCerrar, modo }) {
+export default function CarritoDrawer({ items, total, onCambiar, onEliminar, onVaciar, onCerrar, modo }) {
   const enviarWhatsapp = () => {
     if (items.length === 0) return;
 
@@ -37,8 +37,8 @@ export default function CarritoDrawer({ items, total, onCambiar, onVaciar, onCer
         ) : (
           <>
             <ul className="carrito-lista">
-              {items.map((item, i) => (
-                <li key={`${item.nombre}-${i}`} className="carrito-item">
+              {items.map((item) => (
+                <li key={item.id || item.nombre} className="carrito-item">
                   {item.foto && (
                     <img src={item.foto} alt={item.nombre} className="carrito-item-img" />
                   )}
@@ -53,6 +53,7 @@ export default function CarritoDrawer({ items, total, onCambiar, onVaciar, onCer
                       <button onClick={() => onCambiar(item.nombre, -1)}>−</button>
                       <span>{item.cantidad}</span>
                       <button onClick={() => onCambiar(item.nombre, +1)}>+</button>
+                      <button className="carrito-item-quitar" onClick={() => onEliminar(item.nombre)} title="Quitar">✕</button>
                     </div>
                   </div>
                 </li>
@@ -67,7 +68,7 @@ export default function CarritoDrawer({ items, total, onCambiar, onVaciar, onCer
             <button className="carrito-wa" onClick={enviarWhatsapp}>
               Enviar pedido por WhatsApp
             </button>
-            <button className="carrito-vaciar" onClick={onVaciar}>
+            <button className="carrito-vaciar" onClick={() => { if (confirm("¿Vaciar el carrito?")) onVaciar(); }}>
               Vaciar carrito
             </button>
           </>
