@@ -6,8 +6,9 @@ const pool    = require("../db");
 router.get("/publico", async (req, res) => {
   try {
     const [rows] = await pool.query(
-      "SELECT * FROM productos WHERE en_stock = 1 AND (es_caja = 0 OR es_caja IS NULL) ORDER BY marca, nombre"
+      "SELECT id,marca,categoria,nombre,descripcion,foto,precio_minorista,precio_mayorista,stock,en_stock,tipo_seccion FROM productos WHERE en_stock = 1 AND (es_caja = 0 OR es_caja IS NULL) ORDER BY marca, nombre"
     );
+    res.set("Cache-Control", "public, max-age=120, stale-while-revalidate=600");
     res.json(rows);
   } catch (err) { res.status(500).json({ error: err.message }); }
 });
