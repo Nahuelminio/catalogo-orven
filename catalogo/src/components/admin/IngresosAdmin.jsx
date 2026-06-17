@@ -31,7 +31,10 @@ export default function IngresosAdmin() {
 
   const agregar = async (e) => {
     e.preventDefault();
-    if (!form.descripcion || (!form.monto_ars && !form.monto_usd)) return;
+    if (!form.descripcion || (!form.monto_ars && !form.monto_usd)) {
+      mostrar("Ingresá descripción y al menos un monto", "warn");
+      return;
+    }
     setGuardando(true);
     try {
       await createIngreso({
@@ -56,9 +59,11 @@ export default function IngresosAdmin() {
 
   const eliminar = async (id) => {
     if (!confirm("¿Eliminar este ingreso?")) return;
-    await deleteIngreso(id);
-    cargarIngresos();
-    mostrar("Ingreso eliminado", "warn");
+    try {
+      await deleteIngreso(id);
+      cargarIngresos();
+      mostrar("Ingreso eliminado", "warn");
+    } catch { mostrar("Error al eliminar", "error"); }
   };
 
   const stats = useMemo(() => {
@@ -80,7 +85,7 @@ export default function IngresosAdmin() {
           {MESES.map((m, i) => <option key={i} value={i+1}>{m}</option>)}
         </select>
         <select value={anio} onChange={(e) => setAnio(Number(e.target.value))}>
-          {[2024,2025,2026].map((a) => <option key={a}>{a}</option>)}
+          {[new Date().getFullYear()-1, new Date().getFullYear(), new Date().getFullYear()+1].map((a) => <option key={a}>{a}</option>)}
         </select>
       </div>
 

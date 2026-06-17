@@ -90,7 +90,7 @@ export default function ComprasAdmin() {
 
   const cancelarEdicion = () => {
     setEditandoId(null);
-    setForm({ ...FORM_VACIO, fecha: form.fecha });
+    setForm({ ...FORM_VACIO, fecha: hoy() });
     setBusqProd("");
   };
 
@@ -133,9 +133,11 @@ export default function ComprasAdmin() {
 
   const eliminar = async (id) => {
     if (!confirm("¿Eliminar esta compra? El stock NO se revertirá automáticamente.")) return;
-    await deleteCompra(id);
-    cargar();
-    mostrar("Compra eliminada", "warn");
+    try {
+      await deleteCompra(id);
+      cargar();
+      mostrar("Compra eliminada", "warn");
+    } catch { mostrar("Error al eliminar", "error"); }
   };
 
   // ── Stats ─────────────────────────────────────────────
@@ -155,7 +157,7 @@ export default function ComprasAdmin() {
           {MESES.map((m, i) => <option key={i} value={i+1}>{m}</option>)}
         </select>
         <select value={anio} onChange={(e) => setAnio(Number(e.target.value))}>
-          {[2024,2025,2026].map((a) => <option key={a}>{a}</option>)}
+          {[new Date().getFullYear()-1, new Date().getFullYear(), new Date().getFullYear()+1].map((a) => <option key={a}>{a}</option>)}
         </select>
       </div>
 

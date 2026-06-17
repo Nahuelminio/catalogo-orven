@@ -28,7 +28,10 @@ export default function GastosAdmin() {
 
   const agregar = async (e) => {
     e.preventDefault();
-    if (!form.descripcion || (!form.monto_ars && !form.monto_usd)) return;
+    if (!form.descripcion || (!form.monto_ars && !form.monto_usd)) {
+      mostrar("Ingresá descripción y al menos un monto", "warn");
+      return;
+    }
     setGuardando(true);
     try {
       await createGasto({
@@ -53,9 +56,11 @@ export default function GastosAdmin() {
 
   const eliminar = async (id) => {
     if (!confirm("¿Eliminar este gasto?")) return;
-    await deleteGasto(id);
-    cargarGastos();
-    mostrar("Gasto eliminado", "warn");
+    try {
+      await deleteGasto(id);
+      cargarGastos();
+      mostrar("Gasto eliminado", "warn");
+    } catch { mostrar("Error al eliminar", "error"); }
   };
 
   const stats = useMemo(() => {
@@ -71,9 +76,10 @@ export default function GastosAdmin() {
     };
   }, [gastos]);
 
-  const fmt    = (n) => `$ ${Number(n || 0).toLocaleString("es-AR")}`;
-  const fmtUSD = (n) => `USD ${Number(n || 0).toLocaleString("es-AR")}`;
-  const MESES  = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+  const fmt      = (n) => `$ ${Number(n || 0).toLocaleString("es-AR")}`;
+  const fmtUSD   = (n) => `USD ${Number(n || 0).toLocaleString("es-AR")}`;
+  const fmtFecha = (f) => f ? `${f.slice(8,10)}/${f.slice(5,7)}` : "—";
+  const MESES    = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 
   return (
     <div>
@@ -84,7 +90,7 @@ export default function GastosAdmin() {
           {MESES.map((m, i) => <option key={i} value={i+1}>{m}</option>)}
         </select>
         <select value={anio} onChange={(e) => setAnio(Number(e.target.value))}>
-          {[2024,2025,2026].map((a) => <option key={a}>{a}</option>)}
+          {[new Date().getFullYear()-1, new Date().getFullYear(), new Date().getFullYear()+1].map((a) => <option key={a}>{a}</option>)}
         </select>
       </div>
 
@@ -167,7 +173,7 @@ export default function GastosAdmin() {
             </div>
             {gastos.map((g) => (
               <div key={g.id} className="admin-lista-row" style={{gridTemplateColumns:"90px 1fr 120px 110px 110px 36px"}}>
-                <span className="admin-lista-sub">{g.fecha}</span>
+                <span className="admin-lista-sub">{fmtFecha(g.fecha)}</span>
                 <div>
                   <span style={{fontSize:"0.85rem",fontWeight:600,color:"var(--negro)"}}>{g.descripcion}</span>
                   {g.notas && <span className="admin-lista-sub"> — {g.notas}</span>}

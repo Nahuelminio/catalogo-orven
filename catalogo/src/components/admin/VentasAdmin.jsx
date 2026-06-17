@@ -280,7 +280,7 @@ export default function VentasAdmin() {
           {MESES.map((m, i) => <option key={i} value={i+1}>{m}</option>)}
         </select>
         <select value={anio} onChange={(e) => setAnio(Number(e.target.value))}>
-          {[2024,2025,2026].map((a) => <option key={a}>{a}</option>)}
+          {[new Date().getFullYear()-1, new Date().getFullYear(), new Date().getFullYear()+1].map((a) => <option key={a}>{a}</option>)}
         </select>
       </div>
 

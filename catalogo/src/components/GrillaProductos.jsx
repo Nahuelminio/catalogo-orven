@@ -13,7 +13,7 @@ export default function GrillaProductos({ productos, modo, seccion, onAgregar, o
     <div className="grilla">
       {productos.map((p, i) => (
         <TarjetaProducto
-          key={i}
+          key={p.id}
           producto={p}
           modo={modo}
           seccion={seccion}

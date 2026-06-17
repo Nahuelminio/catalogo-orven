@@ -15,15 +15,13 @@ export default function ModalProducto({ producto, modo, onAgregar, onCerrar }) {
 
   useEffect(() => {
     if (!id) return;
+    let cancelled = false;
     fetchFotosMultiples(id).then((urls) => {
-      const todas = foto
-        ? [foto, ...urls.filter((u) => u !== foto)]
-        : urls;
-      if (todas.length > 0) {
-        setFotos(todas);
-        setFotoActiva(todas[0]);
-      }
-    });
+      if (cancelled) return;
+      const todas = foto ? [foto, ...urls.filter((u) => u !== foto)] : urls;
+      if (todas.length > 0) { setFotos(todas); setFotoActiva(todas[0]); }
+    }).catch(() => {});
+    return () => { cancelled = true; };
   }, [id]);
 
   const handleAgregar = () => { onAgregar(producto); onCerrar(); };
@@ -38,7 +36,7 @@ export default function ModalProducto({ producto, modo, onAgregar, onCerrar }) {
         <div className="modal-imagen">
           {fotoActiva
             ? <img src={fotoActiva} alt={nombre} />
-            : <div className="sin-imagen">Sin foto</div>
+            : <div className="sin-imagen">📷 Sin foto</div>
           }
           {fotos.length > 1 && (
             <div className="modal-thumbs">
